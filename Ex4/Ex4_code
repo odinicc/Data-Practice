@@ -1,1 +1,146 @@
-lalala
+#install specific version of libraries used in lab
+
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+
+#upload file
+df = pd.read_csv ('clean_df2.csv')
+
+#load the modules for linear regression
+from sklearn.linear_model import LinearRegression
+
+#Create the linear regression object
+lm = LinearRegression()
+
+#Create a linear function with "highway-mpg" as the predictor
+X = df[['highway-mpg']]
+Y = df['price']
+
+#Fit the linear model using highway-mpg:
+lm.fit(X,Y)
+
+#We can output a prediction:
+Yhat=lm.predict(X)
+Yhat[0:5] 
+
+#View coefficients Y = X * coef + intercept
+lm.intercept_
+lm.coef_
+
+#Create a linear regression object called "lm1"
+lm1 = LinearRegression()
+
+#Train the model using "engine-size" as the independent variable and "price"
+lm1.fit(df[['engine-size']], df[['price']])
+
+#Find coefficients
+lm1.coef_
+lm1.intercept_
+
+#Show dataset engine-size values
+df[['engine-size','price']].head()
+
+#Predict price value for engine-size = 130
+lm1.predict([[130]])
+
+#POLYNOMIAL REGRESSION AND PIPELINES
+
+def PlotPolly(model, independent_variable, dependent_variabble, Name):
+    x_new = np.linspace(15, 55, 100)
+    y_new = model(x_new)
+
+plt.plot(independent_variable, dependent_variabble, '.', x_new, y_new, '-')
+    plt.title('Polynomial Fit with Matplotlib for Price ~ Length')
+    ax = plt.gca()
+    ax.set_facecolor((0.898, 0.898, 0.898))
+    fig = plt.gcf()
+    plt.xlabel(Name)
+    plt.ylabel('Price of Cars')
+
+    plt.show()
+
+#Get the variables
+    x = df['highway-mpg']
+    y = df['price']
+
+#Fit the polynomial using the function polyfit
+f = np.polyfit(x, y, 3)
+p = np.poly1d(f)
+print(p)
+
+#Create a function for plot polynomial
+def PlotPolly(model, independent_variable, dependent_variabble, Name):
+    x_new = np.linspace(15, 55, 100)
+    y_new = model(x_new)
+
+    plt.plot(independent_variable, dependent_variabble, '.', x_new, y_new, '-')
+    plt.title('Polynomial Fit with Matplotlib for Price ~ Length')
+    ax = plt.gca()
+    ax.set_facecolor((0.898, 0.898, 0.898))
+    fig = plt.gcf()
+    plt.xlabel(Name)
+    plt.ylabel('Price of Cars')
+
+    plt.show()
+    plt.close()
+
+
+#Plot the function 
+PlotPolly(p, x, y, 'highway-mpg')
+
+#Fit the 11rd order polynomial model
+f1 = np.polyfit(x, y, 11)
+p1 = np.poly1d(f1)
+print(p1)
+
+#Watch results
+PlotPolly(p1,x,y, 'Highway MPG')
+
+#import library 
+from sklearn.preprocessing import PolynomialFeatures
+
+#set polynomial features object of degree 2
+pr=PolynomialFeatures(degree=2)
+pr
+Z_pr=pr.fit_transform(Z)
+Z.shape
+Z_pr.shape
+
+#use pipeline for data processing
+from sklearn.pipeline import Pipeline
+from sklearn.preprocessing import StandardScaler
+Input=[('scale',StandardScaler()), ('polynomial', PolynomialFeatures(include_bias=False)), ('model',LinearRegression())]
+pipe=Pipeline(Input)
+pipe
+
+#measure errors
+lm.fit(X, Y)
+
+# Find the R^2
+print('The R-square is: ', lm.score(X, Y))
+
+#predict first 4 values
+Yhat=lm.predict(X)
+print('The output of the first four predicted value is: ', Yhat[0:4])
+
+#Calculate mean squared_error
+from sklearn.metrics import mean_squared_error
+mse = mean_squared_error(df['price'], Yhat)
+print('The mean square error of price and predicted value is: ', mse)
+
+#PREDICTION AND DECISION MAKING PREDICTION
+#import lib
+import matplotlib.pyplot as plt
+import numpy as np
+%matplotlib inline 
+
+#generate sequence of values 
+new_input=np.arange(1, 100, 1).reshape(-1, 1)
+
+lm.fit(X, Y)
+lm
+
+#plot the data 
+plt.plot(new_input, yhat)
+plt.show()
