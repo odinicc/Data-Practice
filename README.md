@@ -11,7 +11,6 @@ The course consists of the following items:
   <li>Exploratory Data Analysis</li>
   <li>Model Development</li>
   <li>Model Evaluation</li>
-  <li>Fourth item</li>
   <li>Final Assignment and Final Exam</li>
 </ol>
 
