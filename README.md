@@ -1,3 +1,6 @@
 # Analyzing-Data-with-Python
 
-Here is the code from my first exercise
+In this repository you can find my Hands-on Lab work on Analyzing Data with Python course. 
+IBM DA0101EN
+
+
