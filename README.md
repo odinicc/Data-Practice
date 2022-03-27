@@ -3,6 +3,8 @@
 In this repository you can find my Hands-on Lab work on Analyzing Data with Python course. 
 IBM DA0101EN
 
+The course consists of the following items:
+
 <ol>
   <li>Importing Datasets</li>
   <li>Data Wrangling</li>
