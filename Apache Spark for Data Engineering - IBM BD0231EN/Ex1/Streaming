@@ -1,1 +1,43 @@
-ddd
+#look to the content of directiry
+%fs ls /databricks-datasets/structured-streaming/events/
+
+################ DEFINE A SHEMA OF PROCESSING ################
+from pyspark.sql.types import *
+from pyspark.sql.functions import *
+
+inputPath = "/databricks-datasets/structured-streaming/events/"
+
+# Since we know the data format already, let's define the schema to speed up processing (no need for Spark to infer schema)
+jsonSchema = StructType([ StructField("time", TimestampType(), True), StructField("action", StringType(), True) ])
+
+# Static DataFrame representing data in the JSON files
+staticInputDF = (
+  spark
+    .read
+    .schema(jsonSchema)
+    .json(inputPath)
+)
+
+display(staticInputDF)
+
+################ DEFINE A SHEMA OF PROCESSING ################
+#Now we can compute the number of "open" and "close" actions with one hour
+#windows. To do this, we will group by the action column and 1 hour windows
+#over the time column
+from pyspark.sql.functions import *      # for window() function
+
+staticCountsDF = (
+  staticInputDF
+    .groupBy(
+       staticInputDF.action, 
+       window(staticInputDF.time, "1 hour"))    
+    .count()
+)
+staticCountsDF.cache()
+
+#Register the DataFrame as table 'static_counts'
+staticCountsDF.createOrReplaceTempView("static_counts")
+
+#Count different action types
+%sql select action, sum(count) as total_count
+from static_counts group by action
