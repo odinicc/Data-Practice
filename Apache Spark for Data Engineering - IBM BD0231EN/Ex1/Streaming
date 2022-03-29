@@ -41,3 +41,42 @@ staticCountsDF.createOrReplaceTempView("static_counts")
 #Count different action types
 %sql select action, sum(count) as total_count
 from static_counts group by action
+
+#####################Stream Processing
+from pyspark.sql.functions import *
+
+# Create dataframe streamingInputDF similar to definition of staticInputDF above, just using `readStream` instead of `read`
+streamingInputDF = (
+  spark
+    .readStream                       
+    .schema(jsonSchema)               # Set the schema of the JSON data
+    .option("maxFilesPerTrigger", 1)  # Treat a sequence of files as a stream by picking one file at a time
+    .json(inputPath)
+)
+
+# Same query as staticInputDF
+streamingCountsDF = (                 
+  streamingInputDF
+    .groupBy(
+      streamingInputDF.action, 
+      window(streamingInputDF.time, "1 hour"))
+    .count()
+)
+
+# Is this DF actually a streaming DF?
+streamingCountsDF.isStreaming
+
+#Create streaming conf
+spark.conf.set("spark.sql.shuffle.partitions", "2")  # keep the size of shuffles small
+
+#query is a handle to the streaming query that is running in the background. 
+#This query is continuously picking up files and updating the windowed counts.
+
+query = (
+  streamingCountsDF
+    .writeStream
+    .format("memory")        # memory = store in-memory table 
+    .queryName("counts")     # counts = name of the in-memory table
+    .outputMode("complete")  # complete = all the counts should be in the table
+    .start()
+)
