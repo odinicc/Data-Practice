@@ -1,1 +1,21 @@
-1111
+#load sample data
+
+%python
+# Use the Spark CSV datasource with options specifying:
+# - First line of file is a header
+# - Automatically infer the schema of the data
+data = spark.read.load("/databricks-datasets/samples/population-vs-price/data_geo.csv",
+                     format="csv", sep=";", inferSchema="true", header="true")
+
+data.cache() # Cache data for faster reuse
+data = data.dropna() # drop rows with missing values
+
+#take top 10 elements to check
+%python
+data.take(10)
+
+#repace spaces by _
+%python
+exprs = [col(column).alias(column.replace(' ', '_')) for column in data.columns]
+
+
