@@ -25,4 +25,76 @@ else
     exit -1
 fi
 
+import fnmatch
+import os
+from pathlib import Path
+from pyspark import SparkConf
+from pyspark import SparkContext
+from pyspark.sql.functions import lit
+from pyspark.sql import SparkSession
+from pyspark.sql.types import IntegerType
+from pyspark.sql.types import StructField
+from pyspark.sql.types import StructType
+import random
+import re
+import shutil
+import sys
 
+
+# path and file name for output (default: data.csv)
+data_csv = os.environ.get('data_csv', 'data.csv')
+
+# url of master (default: local mode)
+master = os.environ.get('master', "local[*]")
+
+# temporal data storage for local execution
+data_dir = os.environ.get('data_dir', '../../data/')
+
+# sample on input data to increase processing speed 0..1 (default: 1.0)
+sample = os.environ.get('sample', '1.0')
+
+# override parameters received from a potential call using %run magic
+parameters = list(
+    map(
+        lambda s: re.sub('$', '"', s),
+        map(
+            lambda s: s.replace('=', '="'),
+            filter(
+                lambda s: s.find('=') > -1,
+                sys.argv
+            )
+        )
+    )
+)
+
+for parameter in parameters:
+    exec(parameter)
+
+# cast parameters to appropriate type
+sample = float(sample)
+
+
+
+#Lets create a local spark context (sc) and session (spark)
+
+sc = SparkContext.getOrCreate(SparkConf().setMaster(master))
+
+spark = SparkSession \
+    .builder \
+    .getOrCreate()
+    
+       
+#Lets pull the data in raw format from the source (github)
+
+!rm -Rf HMP_Dataset
+!git clone https://github.com/wchill/HMP_Dataset
+
+schema = StructType([
+    StructField("x", IntegerType(), True),
+    StructField("y", IntegerType(), True),
+    StructField("z", IntegerType(), True)])
+
+#This step takes a while, it parses through
+# all files and folders and creates a temporary dataframe 
+#for each file which gets appended to an overall data-frame "df".
+# In addition, a column called "class" is added to allow for straightforward usage in Spark afterwards in a supervised machine learning scenario for example.
