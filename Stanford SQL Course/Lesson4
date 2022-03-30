@@ -1,0 +1,48 @@
+--Q1 For every situation where student A likes student B, but student B likes a different student C, 
+-- return the names and grades of A, B, and C.
+SELECT h1.name, h1.grade, h2.name, h2.grade, h3.name, h3.grade
+FROM Highschooler h1, Highschooler h2, Highschooler h3, likes l1, likes l2  
+WHERE h1.ID=l1.ID1 AND l1.ID2=h2.ID and l2.ID1=h2.ID and l2.ID2 = h3.ID 
+and h1.ID <> h3.ID
+GROUP BY h1.name, h1.grade, h2.name, h2.grade, h3.name, h3.grade
+
+--Q2 Find those students for whom all of their friends are in different grades from themselves. 
+-- Return the students' names and grades.
+SELECT name,grade
+FROM Highschooler
+WHERE ID NOT IN
+(SELECT h1.ID
+FROM Highschooler h1, Friend f1, Highschooler h2
+WHERE h1.ID=f1.ID1 AND h2.ID=f1.ID2 AND h2.grade=h1.grade)
+
+--Q3 What is the average number of friends per student? (Your result should be just one number.)
+SELECT  avg(counts)
+  FROM (
+    SELECT id1, COUNT(*) AS counts
+    FROM Friend
+    GROUP BY ID1
+  ) as u
+  
+--Q4 Find the number of students who are either friends with Cassandra or are friends of friends of Cassandra.
+select count(id2) from friend where id1 in (
+select id2 from friend where id1 in (select id from highschooler where name='Cassandra'))
+and id1 not in (select id from highschooler where name='Cassandra')
+
+--Q5 Find the name and grade of the student(s) with the greatest number of friends.
+SELECT n,g
+FROM
+(SELECT h1.name as n, h1.grade as g,count(*) as c
+FROM Highschooler h1, Friend f1, Highschooler h2
+WHERE h1.ID=f1.ID1 AND h2.ID=f1.ID2
+GROUP BY h1.name,h1.grade
+) as gg
+WHERE c IN (
+SELECT MAX(c)
+FROM
+(
+SELECT h1.name as n, h1.grade as g,count(*) as c
+FROM Highschooler h1, Friend f1, Highschooler h2
+WHERE h1.ID=f1.ID1 AND h2.ID=f1.ID2
+GROUP BY h1.name,h1.grade
+) as rr
+)
