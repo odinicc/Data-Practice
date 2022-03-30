@@ -80,3 +80,11 @@ query = (
     .outputMode("complete")  # complete = all the counts should be in the table
     .start()
 )
+
+from time import sleep
+sleep(5)  # wait a bit for computation to start
+
+%sql select action, date_format(window.end, "MMM-dd HH:mm") as time, count from counts order by time, action
+
+
+query.stop()
