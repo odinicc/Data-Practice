@@ -1,0 +1,19 @@
+CREATE DATABASE mydb;
+
+SHOW DATABASES
+
+DESCRIBE DATABASE mydb;
+
+DESCRIBE DATABASE EXTENDED mydb;
+
+ALTER DATABASE mydb SET DBPROPERTIES (Production=true);
+
+CREATE TABLE mytable (name STRING, age int, city STRING)
+TBLPROPERTIES ('created.by.user' = 'Bryan', 'created.date' = '02-21-2021');
+
+USE mydb;
+
+SHOW TABLES;
+
+DROP DATABASE IF EXISTS mydb;
+DROP TABLE IF EXISTS mytable;
