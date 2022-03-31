@@ -1,1 +1,145 @@
+--Change to the aw database context
+USE awproject
 
+--Let's look at the product data...
+--ProductCategoryKey from dimproductcategory
+--ProductSubcategoryKey from dimproductsubcategory
+--ProductKey from dimproduct
+--EnglishProductCategoryName renamed as Category from dimproductcategory
+--EnglishProductSubcategoryName renamed as Subcategory from dimproductsubcategory
+--ModelName as Model from dimproduct
+
+SELECT p.ProductKey, 
+s.ProductSubcategoryKey, 
+c.ProductCategoryKey, 
+EnglishProductCategoryName as Category, 
+EnglishProductSubcategoryName as Subcategory, 
+ModelName as Model
+FROM       dimproduct                    p
+INNER JOIN dimproductsubcategory         s
+ON (p.ProductSubcategoryKey = s.ProductSubcategoryKey)
+INNER JOIN dimproductcategory            c
+ON (s.ProductCategoryKey = c.ProductCategoryKey)
+WHERE p.Status = 'Current' OR p.Status = 'NULL'
+
+--Create table t_productinfo
+DROP TABLE IF EXISTS t_productinfo;
+
+CREATE TABLE t_productinfo as
+SELECT p.ProductKey, s.ProductSubcategoryKey, 
+c.ProductCategoryKey, 
+EnglishProductCategoryName as Category, 
+EnglishProductSubcategoryName as Subcategory, 
+ModelName as Model
+FROM       dimproduct                    p
+INNER JOIN dimproductsubcategory         s
+ON (p.ProductSubcategoryKey = s.ProductSubcategoryKey)
+INNER JOIN dimproductcategory           c
+ON (s.ProductCategoryKey = c.ProductCategoryKey)
+WHERE p.Status = 'Current' OR p.Status = 'NULL';	
+
+--Using the product table
+SELECT DISTINCT Model, SubCategory, Category, count(*) as NumProducts
+FROM t_productinfo 
+GROUP BY Model, SubCategory, Category
+ORDER BY NumProducts DESC
+
+--Create Customer view with a calculated column
+CREATE OR REPLACE VIEW v_customer as
+SELECT CustomerKey, GeographyKey, Gender,  YearlyIncome, BirthDate, TotalChildren,
+NumberChildrenAtHome, 
+EnglishEducation as Education, HouseOwnerFlag, 
+NumberCarsOwned, DateFirstPurchase, 
+EnglishOccupation as Occupation, 
+CommuteDistance, 
+int((DATEDIFF(CURRENT_DATE, birthdate))/365) as Age 
+FROM dimcustomer;
+
+--Create a SQL view named vsalesinfo that contains the followig data.
+CREATE OR REPLACE VIEW v_salesinfo as 
+SELECT  OrderDateKey, DueDateKey, s.CustomerKey, PromotionKey, SalesTerritoryKey,
+SalesAmount, vp.*, Gender, YearlyIncome as Salary, OrderQuantity, DiscountAmount, TotalProductCost, TaxAmt, 
+CASE WHEN NumberChildrenAtHome > 0 THEN 'Y' ELSE 'N' END as HasChildren, 
+HouseOwnerFlag as HomeOwner, 
+CASE WHEN Age < 18 THEN 'Minor' 
+     WHEN Age BETWEEN 19 AND 29 THEN 'Young' 
+     WHEN Age BETWEEN 30 AND 39 THEN 'Middle' 
+     WHEN Age BETWEEN 40 AND 49 THEN 'Late Middle' 
+     WHEN Age > 50 THEN 'Golden' ELSE 'Other' END as AgeBand, 
+vc.Education, vc.NumberCarsOwned, vc.CommuteDistance,
+d.FiscalYear, d.FiscalQuarter, 
+d.EnglishMonthName as Month, MonthNumberOfYear, d.CalendarYear
+FROM factinternetsales                s
+INNER JOIN v_customer                 vc
+ON (s.CustomerKey = vc.CustomerKey)
+INNER JOIN t_productinfo              vp
+ON (s.ProductKey = vp.ProductKey)
+INNER JOIN dimdate                    d
+ON (s.OrderDateKey = d.DateKey)
+
+--Using a CTE to determine what years do we have complete data for?
+WITH cte_check_months as
+(
+SELECT FiscalYear, MonthNumberOfYear, COUNT(*) as NumSales
+FROM v_salesinfo
+GROUP BY  FiscalYear, MonthNumberOfYear
+ORDER BY  FiscalYear, MonthNumberOfYear
+)
+--Using a CTE to determine what years do we have complete data
+SELECT FiscalYear, COUNT(*) as Count, SUM(NumSales)
+FROM cte_check_months
+GROUP BY FiscalYear
+ORDER BY FiscalYear
+
+--Get sales by customer education level from the view vsalesinfo
+SELECT Education, Category, ROUND(SUM(SalesAmount),0) as TotalSales
+FROM v_salesinfo
+GROUP BY Category, Education 
+ORDER BY TotalSales DESC
+
+--Using the CASE statement to translate value
+with cte_countrycodes as
+(
+SELECT salesterritorykey,
+       CASE SalesTerritoryCountry WHEN 'United States' THEN 'USA' WHEN 'United Kingdom' THEN 'GBR' 
+       WHEN 'Canada' THEN 'CAN' 
+       WHEN 'France' THEN 'FRA' WHEN 'Australia' THEN 'AUS' WHEN 'Germany' THEN 'DEU' ELSE 'NA' END as CountryCD
+from dimsalesterritory t
+)
+
+SELECT CountryCD, SalesAmount
+FROM v_salesinfo       s
+JOIN cte_countrycodes t
+ON (s.salesterritorykey = t.salesterritorykey)
+WHERE CountryCD <> "NA"
+
+--Lets save a view to tables
+DROP TABLE IF EXISTS  t_customerinfo;
+   CREATE TABLE t_customerinfo 
+as
+SELECT * FROM v_customer;
+
+DROP TABLE IF EXISTS  t_salesinfo;
+   CREATE TABLE t_salesinfo 
+as
+SELECT * FROM v_salesinfo;
+
+--Lets drop the views
+DROP VIEW IF EXISTS v_customer;
+DROP VIEW IF EXISTS v_salesinfo;
+
+
+--Write a SQL query that returns total sales amount (SalesAmount) by the customer's number of children.
+SELECT DISTINCT dimcustomer.NumberChildrenAtHome, ROUND(SUM(t_salesinfo.SalesAmount),0) as summa    
+FROM t_salesinfo
+inner join dimcustomer
+on dimcustomer.CustomerKey = t_salesinfo.CustomerKey
+group by dimcustomer.NumberChildrenAtHome
+order by summa
+
+--SELECT s.FiscalYear, c.Gender, ROUND(AVG(SalesAmount)) as TotalSales
+FROM t_salesinfo            s
+INNER JOIN t_customerinfo   c
+ON (s.CustomerKey = c.CustomerKey)
+GROUP BY s.FiscalYear, c.Gender
+ORDER BY s.FiscalYear, c.Gender, AVG(SalesAmount)
