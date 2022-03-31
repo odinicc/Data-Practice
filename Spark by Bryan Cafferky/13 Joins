@@ -1,5 +1,0 @@
-%sql
-
-USE awproject
-
-SHOW TABLES

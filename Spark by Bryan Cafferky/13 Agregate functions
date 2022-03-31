@@ -1,0 +1,63 @@
+%sql
+
+USE awproject
+
+SELECT datediff(ShipDate, OrderDate) as DaysToShip,
+       format_string("Ordered on %s and shipped on %s", 
+                     date_format(OrderDate, "y-M-d"), date_format(ShipDate, "yyyy-MM-dd")) as Message,
+       to_json(named_struct('DateShipped', ShipDate)) as json
+FROM factinternetsales limit 5
+
+
+--Time of YEAR
+SELECT OrderDate,
+       year(OrderDate) as Year,
+       dayofmonth(OrderDate) as MonthDay,
+       dayofyear(OrderDate) as DayOfYear,
+       CASE  WHEN  dayofyear(OrderDate) <= 100 THEN 'Early in the year'
+             WHEN  dayofyear(OrderDate) BETWEEN 101 AND 200 THEN 'Middle of year' 
+             ELSE 'Late in the year'
+       END as TimeOfYear
+FROM factinternetsales 
+ORDER BY SalesOrderNumber
+LIMIT 20
+
+--Agregate functions
+
+SELECT year(OrderDate), 
+       sum(SalesAmount) as `Total Sales`,
+       round(sum(SalesAmount), 0) as `Total Sales (rounded)`,
+       count(*) as `Order Count`, 
+       round(avg(SalesAmount), 0) as `Avg Sales`,
+       max(SalesAmount) as `Highest Sale`,
+       min(SalesAmount) as `Lowest Sale`,
+       round(stddev_pop(SalesAmount), 2) as `Std Dev`,
+       round(var_pop(SalesAmount), 2) as `Variance`,
+       round(corr(SalesAmount, UnitPrice), 4) as corr
+FROM factinternetsales 
+GROUP BY 1
+HAVING sum(SalesAmount) > 100000
+ORDER BY 1
+
+--Query factinternetsales showing the OrderDate, the first five characters as SalesOrderNumber,
+--the length of SalesOrderNumber, and the SalesAmount.
+
+Select OrderDate,  left(SalesOrderNumber,5),  LENGTH(SalesOrderNumber), SalesAmount
+from factinternetsales
+limit 5 
+
+--Get the total SalesAmount, average SalesAmount, and the
+-- total SalesAmount minus the average SalesAmount with the column heading Sales Over/Under Avg.
+-- grouped by SalesTerritoryKey returning only results having the total sales amount greater than 6000.
+
+
+with territory_table as
+(
+Select SalesTerritoryKey, round(sum(SalesAmount)) as territory_sum
+from factinternetsales
+Group by SalesTerritoryKey
+)
+Select SalesTerritoryKey, territory_sum, round(mean(territory_sum), 2) as `Std Dev`
+from territory_table
+where territory_sum>6000
+group by SalesTerritoryKey, territory_sum
