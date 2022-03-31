@@ -1,0 +1,5 @@
+--Get results with a cumulative total for each group.
+SELECT SalesYear, SalesMonth, TotalSales, Sum(TotalSales) 
+  OVER ( PARTITION BY (SalesYear) ORDER BY SalesMonth ROWS BETWEEN unbounded preceding AND CURRENT ROW ) cumsum
+FROM v_salessummary
+WHERE SalesYear > 2010
