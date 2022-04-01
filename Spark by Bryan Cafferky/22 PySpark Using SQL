@@ -1,0 +1,56 @@
+#Use Spark SQL to load a PySpark dataframe from the factinternetsales...
+
+spark.sql('use awproject')
+spdf_salesinfo = spark.sql('select * from factinternetsales').dropna()
+
+#Use PySpark dataframe with Notebook Display
+display(spdf_salesinfo)
+
+#SQL Query to extract Customer in the US only...
+getcustgeoqry = '''
+select CustomerKey, CountryRegionCode, EnglishCountryRegionName as CountryName, 
+StateProvinceCode, StateProvinceName, City, PostalCode, UPPER(City) as UpperCity
+from  dimcustomer         c
+inner join  dimgeography  g
+on (c.geographykey = g.geographykey) 
+where countryregioncode = 'US'
+'''
+
+#Run the customer query storing the results in a dataframe
+spdf_custgeo_us = spark.sql(getcustgeoqry)
+display(spdf_custgeo_us)
+
+#Show columns
+spdf_salesinfo.columns
+
+#Adding a column to a dataframe
+spdf_salesinfo = spdf_salesinfo.withColumn('TaxRate',  spdf_salesinfo.TaxAmt / spdf_salesinfo.SalesAmount)
+
+#Showing the new column
+display(spdf_salesinfo[['SalesAmount', 'TaxAmt', 'TaxRate']])
+
+# Create delta table
+%sql DROP TABLE IF EXISTS t_salesinfoextract
+
+spark.sql('''
+create or replace table t_salesinfoextract 
+using delta 
+location '/aw/delta/tables/t_salesinfoextract'
+as
+select CustomerKey, CountryRegionCode, EnglishCountryRegionName as CountryName, 
+StateProvinceCode, StateProvinceName, City, PostalCode, UPPER(City) as UCASECity 
+from  dimcustomer         c
+inner join  dimgeography  g
+on (c.geographykey = g.geographykey) 
+where countryregioncode = 'US'
+''')
+
+#Query the new table
+spark.sql('''select * from t_salesinfoextract limit 3''').collect()
+
+#Display Query Output - list is returned
+lpdf_salesinfo = spark.sql('''select * from t_salesinfoextract limit 3''').collect()
+display(lpdf_salesinfo)
+
+#What type of object is this?
+type(lpdf_salesinfo)
