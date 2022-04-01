@@ -3,3 +3,61 @@ SELECT SalesYear, SalesMonth, TotalSales, Sum(TotalSales)
   OVER ( PARTITION BY (SalesYear) ORDER BY SalesMonth ROWS BETWEEN unbounded preceding AND CURRENT ROW ) cumsum
 FROM v_salessummary
 WHERE SalesYear > 2010
+
+
+--Goal: Get results with a cumulative total for each group insdie the year.
+SELECT SalesYear, SalesMonth, TotalSales, Sum(TotalSales) 
+  OVER ( PARTITION BY (SalesYear) ORDER BY SalesMonth ROWS BETWEEN unbounded preceding AND CURRENT ROW ) cumsum
+FROM v_salessummary
+WHERE SalesYear > 2010
+
+--Goal: Get results with a cumulative average for 1 row before and 
+--1 row after the current row.
+
+SELECT SalesYear, SalesMonth, AVG(SalesMonth)  
+  OVER ( ORDER BY SalesMonth ROWS BETWEEN 1 PRECEDING AND 1 FOLLOWING ) rollingavg
+FROM v_salessummary
+WHERE SalesYear = 2011
+
+--Get the top 2 selling products by product category.
+SELECT
+  Category,
+  Product,
+  SalesAmount,
+  rank
+FROM (
+  SELECT
+    Category,
+    Product,
+    SalesAmount,
+    dense_rank() OVER (PARTITION BY Category ORDER BY SalesAmount DESC) as rank
+  FROM v_productcatalog) 
+WHERE
+  rank <= 2
+
+--Same query simplified with CTE's
+with cte_window_data 
+(
+ SELECT Category, Product, SalesAmount,
+    dense_rank() OVER (PARTITION BY Category ORDER BY SalesAmount DESC) as rank
+ FROM v_productcatalog  
+)
+
+SELECT
+  Category,
+  Product,
+  SalesAmount,
+  rank
+FROM cte_window_data 
+WHERE
+  rank <= 2
+
+
+
+--Get the lowest and highest SalesAmount for each 
+-- customer displayed next to each sale for the customer.
+SELECT CustomerKey, YEAR(OrderDate) as OrderYear, SalesAmount, 
+       MIN(SalesAmount) OVER (PARTITION BY CustomerKey) AS min, 
+       MAX(SalesAmount) OVER (PARTITION BY CustomerKey) AS max  
+FROM factinternetsales  
+ORDER BY CustomerKey, SalesAmount
