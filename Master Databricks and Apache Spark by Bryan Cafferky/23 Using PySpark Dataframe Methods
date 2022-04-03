@@ -1,0 +1,128 @@
+# Use the Spark CSV datasource with options specifying:
+# - First line of file is a header
+# - Automatically infer the schema of the data
+
+# Note using parenthesis so I can include line breaks for readibility. 
+
+spdf_sales =          (sqlContext.read.format("csv")
+                                 .option("header", "true")
+                                 .option("inferSchema", "true")
+                                 .load("dbfs:/FileStore/tables/FactInternetSales.csv"))
+
+spdf_salesterritory = (sqlContext.read.format("csv")
+                            .option("header", "true")
+                            .option("inferSchema", "true")
+                            .load("dbfs:/FileStore/tables/DimSalesTerritory.csv"))
+
+spdf_sales = spdf_sales.dropna() # drop rows with missing values
+
+#Line continuation with \ but not recommended by pep 8 
+spdf_factreason = sqlContext.read.format("csv").option("header", "true").option("inferSchema", "true"). \
+load("dbfs:/FileStore/tables/FactInternetSalesReason.csv"). 
+toDF("SalesOrderNumber", "SalesOrderNumber", "SalesResonKey")
+
+#check dataframe
+display(spdf_sales.head(5))
+
+#Proper Way to Break Up a multiline statement.
+spdf_factreason = (sqlContext.read.format("csv")
+                              .option("header", "false")
+                              .option("inferSchema", "true")
+                              .load("dbfs:/FileStore/tables/FactInternetSalesReason.csv") 
+                              .toDF("SalesOrderNumber", "SalesOrderLineNumber", "SalesResonKey"))
+
+#Using show() to view dataframes
+spdf_factreason.show(4)
+
+#Using toPandas() to convert Spark to Pandas
+spdf_factreason.toPandas()   
+
+#check type of DF
+type(spdf_factreason.toPandas())
+
+#You can cache a dataframe to improve performance
+spdf_sales.cache() # Cache data for faster reuse 
+
+#Renaming a column
+spdf_sales = spdf_sales.withColumnRenamed("CustomerKey","SalesCustomerKey")
+
+#Display some rows using take()
+display(spdf_sales.take(5))
+
+#Run exploratrary data analysis 
+display(spdf_sales.describe(['SalesAmount', 'UnitPrice']))
+
+# awproject is the database
+spdf_customer = spark.sql('''select CustomerKey, GeographyKey, CommuteDistance, BirthDate, Gender 
+                             from awproject.dimcustomer''')
+                             
+                             
+#Join the PySpark dataframes spdf_customer and spdf_sales 
+import pyspark.sql.functions as func
+
+spdf_salescustomer = (spdf_sales.join(
+                      spdf_customer, spdf_sales.SalesCustomerKey == spdf_customer.CustomerKey, 'inner')
+                      .select('*', func.round('SalesAmount',0))
+                      .withColumnRenamed('round(SalesAmount, 0)', 'SalesRounded') 
+                      .filter('OrderDateKey > 20101231'))
+                      
+
+spdf_salescustomer.limit(3).display()
+
+#Dataframe aggregations
+display(spdf_salescustomer.groupby('CommuteDistance')
+        .agg({'SalesAmount': 'sum'})
+        .orderBy('sum(SalesAmount)'))
+        
+#More Aggregations 
+display(spdf_salescustomer.groupby('CommuteDistance')
+        .agg({'SalesAmount': 'sum', '*': 'count', 'TaxAmt': 'avg'})
+        .withColumnRenamed('avg(TaxAmt)', 'Avg_Tax')
+        .orderBy('count(1)'))
+
+#Get Spark DF sample to a pandas dataframe
+# drop column SalesCustomerKey and then
+# take a sample of the DF so you don't bring too much data back to the cluster driver.
+# Doc on sample() method at https://spark.apache.org/docs/latest/api/python/reference/api/pyspark.sql.DataFrame.sample.html
+
+lpdf_salescustomer = (spdf_salescustomer 
+                      .drop('SalesCustomerKey')
+                      .sample(False, 0.7, 42).toPandas() )
+
+#Check the data
+display(lpdf_salescustomer.head(3))
+
+
+type(lpdf_salescustomer)
+
+#Use local Python library with pandas local dataframe
+import pandas as pd
+
+lpdf_salesbygender = lpdf_salescustomer.groupby(['Gender']).agg({'SalesAmount': 'sum'})
+
+lpdf_salesbygender.plot(kind='bar', subplots=True, color='purple')
+display()
+
+#Import plotting libraries
+import matplotlib.pyplot as plt
+plt.style.use('classic')
+%matplotlib inline
+import numpy as np
+import pandas as pd
+
+#Plot with seaborn - boxplot
+import seaborn as sns
+
+with sns.axes_style(style='ticks'):
+    g = sns.catplot("CommuteDistance", "SalesAmount", "Gender", data=lpdf_salescustomer, kind="box")
+    g.set_axis_labels("SalesTerritoryKey", "Total Sales");
+    
+#Using pandas methods
+lpdf_salescustomer.groupby('Gender')['SalesAmount'].sum().round()
+
+#Using broadcast joins  
+from pyspark.sql.functions import broadcast
+spdf_salesterritory = spdf_sales.join(broadcast(spdf_salesterritory), ['SalesTerritoryKey','SalesTerritoryKey'], how='left')
+
+#Show results
+spdf_salesterritory[['SalesOrderNumber', 'SalesAmount',  'SalesTerritoryGroup', 'SalesTerritoryRegion']].display()
