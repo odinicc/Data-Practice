@@ -1,5 +1,4 @@
-#Use Spark SQL to load a PySpark dataframe from the factinternetsales...
-
+#Use Spark SQL to load a PySpark dataframe from the factinternetsales.
 spark.sql('use awproject')
 spdf_salesinfo = spark.sql('select * from factinternetsales').dropna()
 
@@ -45,7 +44,8 @@ on (c.geographykey = g.geographykey)
 where countryregioncode = 'US'
 ''')
 
-#Query the new table
+#Query the new table. Statment 'collect()' force to run statment now
+# collect() is an action operation that is used to retrieve all the elements of the dataset (from all nodes) to the driver node.
 spark.sql('''select * from t_salesinfoextract limit 3''').collect()
 
 #Display Query Output - list is returned
@@ -54,3 +54,51 @@ display(lpdf_salesinfo)
 
 #What type of object is this?
 type(lpdf_salesinfo)
+
+#Convert the Spark dataframe to pandas
+lpdf_salesinfo = spark.sql('''select * from t_salesinfoextract limit 3''').toPandas()
+lpdf_salesinfo
+
+#Check the type
+type(lpdf_salesinfo)
+
+#delete table
+%sql DROP TABLE IF EXISTS salesdatafrompython1
+
+#Spark Dataframe writer saveAsTable
+import pyspark
+from pyspark.sql import DataFrameWriter
+
+#Spark Dataframe writer saveAsTable in many tables partition by SalesTerritoryKey
+spdf_salesinfo_writer = pyspark.sql.DataFrameWriter(spdf_salesinfo)
+spdf_salesinfo_writer.partitionBy('SalesTerritoryKey').saveAsTable('salesinfopython1', 
+                                                                   format='delta', 
+                                                                   mode='overwrite', 
+                                                                   path='/aw/delta/tables/salesinfopython1')
+
+#Check created tables
+%fs ls /aw/delta/tables/salesinfopython1
+
+
+%sql
+DESCRIBE TABLE EXTENDED salesinfopython1 
+
+#Save table without explicitly using dataframewriter
+spdf_salesinfo.write.mode("overwrite").format("parquet").option("path","/aw/parquet/tables/salesinfopython2").saveAsTable("salesinfopython2")
+
+#Spark Dataframe createOrReplaceTempView
+spdf_salesinfo.createOrReplaceTempView("tv_salesinfo") 
+
+#Using the view from SQL   
+%sql
+
+SELECT * FROM tv_salesinfo limit 3
+
+#Create aggregation Queries and run it      
+spdfSalesSummary = spark.sql('''
+select SalesTerritoryKey, count(*), sum(SalesAmount) as TotalSales, avg(SalesAmount) as AverageSales 
+from  t_salesinfo      
+group by SalesTerritoryKey
+''')
+
+display(spdfSalesSummary)                                                      
