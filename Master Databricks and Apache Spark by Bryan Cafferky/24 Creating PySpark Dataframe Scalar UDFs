@@ -1,0 +1,87 @@
+#Use Spark SQL to load a PySpark dataframe from table factinternetsales
+spark.sql('use awproject')
+spdf_salesinfo = spark.sql('select * from factinternetsales').dropna()
+
+#Display some data
+display(spdf_salesinfo.take(3))
+
+#Show Dataframe Schema
+spdf_salesinfo.printSchema()
+
+#Show All Spark Configuration Settings
+sc.getConf().getAll()    
+
+#Get a Specific Spark Configuration Setting Value
+spark.conf.get("spark.sql.execution.arrow.enabled")
+
+#Enable Apache Arrow as follows
+spark.conf.set("spark.sql.execution.arrow.enabled", "true")
+
+#Change Database Context
+%sql USE awproject
+
+#DESCRIBE factinternetsales
+%sql describe table dimproduct
+
+#Using Spark SQL Scalar Functions
+SELECT ModelName , instr(ModelName, 'Mount'), substring(ModelName, 1,2), translate(ModelName, 'o', 'X') 
+FROM dimproduct
+WHERE instr(ModelName, 'Mount') > 0;
+
+#Load table dimproduct into a PySpark dataframe
+spdf_dimproduct = spark.sql('''select * from awproject.dimproduct''')
+
+#Using SQL Scalar Functions on a PySpark dataframe
+from pyspark.sql.functions import instr, translate, substring
+
+# Note:  where() is an alias for filter()
+
+display(
+spdf_dimproduct.select(instr("ModelName", "Mount"), substring("ModelName",1,2), translate('ModelName', 'o', 'X')).
+                where(instr("ModelName", "Mount") > 0)
+)
+
+#Define the function
+from pyspark.sql.types import DoubleType
+
+def margin_precent_type(productcost, saleamt):
+  return (saleamt - productcost) / saleamt
+
+spark.udf.register("margin_percent", margin_precent_type, DoubleType())
+
+#Call your UDF from Spark SQL
+%sql 
+
+SELECT margin_percent(TotalProductCost, SalesAmount) as gross_margin, TotalProductCost, SalesAmount 
+FROM  awproject.factinternetsales LIMIT 2;
+
+
+#Enable your UDF to be used with Python
+from pyspark.sql.functions import udf
+from pyspark.sql.types import DoubleType
+margin_percent_udf = udf(margin_precent_type, DoubleType())
+
+#Use UDF with Spark Dataframe
+display(spdf_salesinfo.select("SalesAmount", "TotalProductCost", 
+                              margin_percent_udf("TotalProductCost", "SalesAmount").alias("MarginPercent")))
+                              
+                              
+
+#Define UDF via Method 2 using a decorator
+from pyspark.sql.functions import udf
+
+@udf("double")
+def margin_percent_decorator_udf(productcost, saleamt):
+  return (saleamt - productcost) / saleamt
+  
+#Calling the UDF Created using a Decorator
+display(spdf_salesinfo.select("SalesAmount", "TotalProductCost", 
+                               margin_percent_decorator_udf("TotalProductCost", "SalesAmount").alias("MarginPercent")).limit(3))
+                               
+
+#Register the UDF that used the Decorator
+spark.udf.register("margin_percent_decorator", margin_percent_decorator_udf)
+
+#Use the UDF Created with a Decorator in Spark SQL
+SELECT margin_percent_decorator(TotalProductCost, SalesAmount) as gross_margin, TotalProductCost, SalesAmount 
+FROM  awproject.factinternetsales LIMIT 3;
