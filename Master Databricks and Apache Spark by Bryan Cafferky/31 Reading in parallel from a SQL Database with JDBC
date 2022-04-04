@@ -1,0 +1,62 @@
+#Build the connection url and properties
+
+%python
+
+jdbcUrl = "jdbc:sqlserver://{0}:{1};database={2}".format(jdbcHostname, jdbcPort, jdbcDatabase)
+
+connectionProperties = {
+  "user" : userid,
+  "password" : dbpassword,
+  "driver" : "com.microsoft.sqlserver.jdbc.SQLServerDriver"
+}
+
+#Get the min and max keys to be used for partitioning
+%python
+
+pushdown_query = """(
+select min(CustomerID) as MinID, max(CustomerID) as MaxID
+from SalesLT.Customer          c
+) cust"""
+
+bounds = spark.read.jdbc(url=jdbcUrl, table=pushdown_query, properties=connectionProperties).collect()[0]
+
+bounds
+
+#Query a table into a dataframe
+%python
+
+spdf_sales = spark.read.jdbc(url=jdbcUrl, table='SalesLT.Customer', 
+                             properties=connectionProperties, 
+                             numPartitions=6,
+                             column="CustomerID",
+                             lowerBound=bounds.MinID, 
+                             upperBound=bounds.MaxID + 1)
+
+display(spdf_sales)
+
+
+
+%python
+
+spdf_sales.rdd.getNumPartitions()
+
+#query
+%python
+
+pushdown_query = """(
+select oh.CustomerID, oh.OrderDate, oh.Status, oh.SubTotal, oh.Freight, 
+       oh.TaxAmt, c.CompanyName, c.SalesPerson
+from       SalesLT.SalesOrderHeader oh
+inner join SalesLT.Customer          c
+on (oh.CustomerID = c.CustomerID)
+) cust"""
+
+spdf_pushdown = spark.read.jdbc(url=jdbcUrl, 
+                                table=pushdown_query, 
+                                properties=connectionProperties,
+                                numPartitions=4,
+                                column="CustomerID",
+                                lowerBound=bounds.MinID, 
+                                upperBound=bounds.MaxID + 1)
+
+display(spdf_pushdown)
