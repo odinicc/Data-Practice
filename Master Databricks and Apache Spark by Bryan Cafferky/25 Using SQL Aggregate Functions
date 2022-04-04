@@ -1,0 +1,90 @@
+#Use Spark SQL to load a PySpark dataframe from the factinternetsales table
+
+spark.sql('use awproject')
+spdf_salesinfo = spark.sql('select * from factinternetsales').dropna()
+
+#Just using SQL directly...
+%sql
+
+SELECT avg(SalesAmount) as avg_sales, 
+       stddev(SalesAmount) as std_sales, 
+       min(SalesAmount) as min_sales, 
+       max(SalesAmount) as max_sales, 
+       approx_count_distinct(ProductKey) as count_productkey, 
+       approx_count_distinct(CustomerKey) as count_customerkey
+FROM factinternetsales
+
+#Using SQL from Python
+
+spdf_salesagg = spark.sql('''
+SELECT avg(SalesAmount) as avg_sales, 
+       stddev(SalesAmount) as std_sales, 
+       min(SalesAmount) as min_sales, 
+       max(SalesAmount) as max_sales, 
+       approx_count_distinct(ProductKey) as count_productkey, 
+       approx_count_distinct(CustomerKey) as count_customerkey
+FROM factinternetsales''')
+
+display(spdf_salesagg)
+
+#Perform aggregations on the DataFrame
+spdf_agg = spdf_salesinfo.agg(
+    avg(spdf_salesinfo.SalesAmount).alias("avg_sales"), 
+    stddev("SalesAmount").alias("stddev_sales"),
+    min(spdf_salesinfo.SalesAmount).alias("min_sales"),
+    max(spdf_salesinfo.SalesAmount).alias("max_sales"),
+    countDistinct(spdf_salesinfo.ProductKey).alias("distinct_products"), 
+    countDistinct(spdf_salesinfo['CustomerKey']).alias('distinct_customers')
+)
+
+# Convert the results to Pandas DataFrame
+spdf_agg.toPandas()
+
+#Show Type
+type(spdf_agg)
+
+#groupBy()
+import pyspark.sql.functions
+spdf_salesinfo.groupBy("ProductKey").avg("SalesAmount").toPandas()\
+
+#Using SQL Aggregate Functions without individually importing them
+import pyspark.sql.functions
+
+# Notice, groupBy() before the agg() functions.
+# Calculate promotion information 
+spdf_salesinfo.groupBy("PromotionKey").agg(
+    avg("SalesAmount").alias("avg_sales"), 
+    stddev("SalesAmount").alias("stddev_sales"),
+    min(spdf_salesinfo.SalesAmount).alias("min_sales"),
+    max(spdf_salesinfo.SalesAmount).alias("max_sales"),
+    countDistinct(spdf_salesinfo.ProductKey).alias("distinct_products"), 
+    countDistinct(spdf_salesinfo['CustomerKey']).alias('distinct_customers')
+).toPandas()
+
+
+# Modifed example from https://spark.apache.org/docs/latest/api/python/reference/api/pyspark.sql.GroupedData.agg.html
+
+from pyspark.sql import functions as F
+
+lpls_salesagg = spdf_salesinfo.agg(F.min(spdf_salesinfo.SalesAmount), F.max(spdf_salesinfo.SalesAmount)).collect()
+lpls_salesagg
+
+#Show Type
+type(lpls_salesagg)
+
+#run agg() returning pandas dataframe
+from pyspark.sql import functions as F
+lpdf_salesagg = spdf_salesinfo.agg(F.min(spdf_salesinfo.SalesAmount), F.max(spdf_salesinfo.SalesAmount)).toPandas()
+lpdf_salesagg
+
+
+#Another Example, multiple columns in aggregate function.
+from pyspark.sql.functions import col
+
+spdf_salesinfo.groupBy("SalesTerritoryKey").agg(
+                   avg("SalesAmount"), 
+                   stddev("SalesAmount"), 
+                   min("SalesAmount"), 
+                   max("SalesAmount"), 
+                   countDistinct("ProductKey"), countDistinct("CustomerKey"),
+                   countDistinct("ProductKey", "CustomerKey")).where(col("count(ProductKey)") > 1).toPandas()
