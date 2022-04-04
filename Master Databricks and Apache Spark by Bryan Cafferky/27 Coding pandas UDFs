@@ -1,0 +1,83 @@
+sc.version
+
+#Check if Arrow is Enabled
+# See if Arrow is enabled.
+spark.conf.get("spark.sql.execution.arrow.enabled")
+
+#You can enable Apache Arrow as follows.
+# Enable Arrow-based columnar data transfers
+spark.conf.set("spark.sql.execution.arrow.enabled", "true")
+
+#Confirm PyArrow is enabled.
+# Enable Arrow-based columnar data transfers
+spark.conf.get("spark.sql.execution.arrow.pyspark.enabled")
+
+
+# Enable Arrow-based columnar data transfers
+spark.conf.set("spark.sql.execution.arrow.pyspark.enabled", "true")
+spark.conf.get("spark.sql.execution.arrow.pyspark.enabled")
+
+spark.conf.set("spark.sql.execution.arrow.pyspark.fallback.enabled", "true")
+
+#pandas an PyArrow
+import pandas as pd
+pd.show_versions()
+
+#Checking pyarrow version
+import pyarrow
+pyarrow.__version__
+
+#Use Spark SQL to load a PySpark dataframe from the t_salesinfo table
+spark.sql('use awproject')
+spdf_sales = spark.sql('select CustomerKey, OrderDateKey, SalesAmount, TotalProductCost from factinternetsales limit 10').dropna()
+
+display(spdf_sales)
+
+
+import pandas as pd
+from pyspark.sql.functions import pandas_udf       
+
+#Series to Series
+@pandas_udf('double')  
+def margin_precent_udf(salesamount: pd.Series, productcost: pd.Series) -> pd.Series:
+  return (salesamount - productcost) / salesamount
+
+spdf_sales.select("SalesAmount", "TotalProductCost", margin_precent_udf("SalesAmount", "TotalProductCost")).show()
+
+#Broadcast a variable
+b_taxrate = sc.broadcast(.07)
+
+#Retrieve the value of a broadcast variable
+b_taxrate.value
+
+#Iterator of Series to Iterator of Series
+from typing import Iterator
+import pandas as pd
+from pyspark.sql.functions import pandas_udf      
+
+@pandas_udf("long")
+def tax_udf(iterator: Iterator[pd.Series]) -> Iterator[pd.Series]:
+
+    # Do some expensive initialization with a state   
+    taxrate = b_taxrate.value
+    
+    for salesamount in iterator:
+        # Use that state for the whole iterator.
+        yield (taxrate * salesamount)
+
+spdf_sales.select(tax_udf("SalesAmount").alias("Tax")).show()
+
+#Iterator of Multiple Series to Iterator of Series
+from typing import Iterator, Tuple
+import pandas as pd
+
+from pyspark.sql.functions import pandas_udf
+
+@pandas_udf('double')  
+def margin_precent_multi_iter_udf(iterator: Iterator[Tuple[pd.Series, pd.Series]]) -> Iterator[pd.Series]:
+   for salesamount, productcost in iterator:
+        yield (salesamount - productcost) / salesamount
+        
+
+#Calling Iterator of Multiple Series to Iterator of Series
+spdf_sales.select("SalesAmount", "TotalProductCost", margin_precent_multi_iter_udf("SalesAmount", "TotalProductCost")).show()

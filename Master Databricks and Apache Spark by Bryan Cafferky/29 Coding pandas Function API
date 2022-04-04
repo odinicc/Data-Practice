@@ -1,0 +1,77 @@
+sc.version
+
+# See if Arrow is enabled.
+spark.conf.get("spark.sql.execution.arrow.enabled")
+
+# Enable Arrow-based columnar data transfers
+spark.conf.set("spark.sql.execution.arrow.enabled", "true")
+
+# Enable Arrow-based columnar data transfers
+spark.conf.get("spark.sql.execution.arrow.pyspark.enabled")
+
+# Enable Arrow-based columnar data transfers
+spark.conf.set("spark.sql.execution.arrow.pyspark.enabled", "true")
+
+spark.conf.get("spark.sql.execution.arrow.pyspark.enabled")
+
+spark.conf.set("spark.sql.execution.arrow.pyspark.fallback.enabled", "true")
+
+import pandas as pd
+pd.show_versions()
+
+
+import pyarrow
+pyarrow.__version__
+
+#Load our Spark data frame
+spark.sql('use awproject')
+spdf_sales = spark.sql('select CustomerKey, SalesAmount from factinternetsales limit 15000').dropna()
+
+#View the data
+display(spdf_sales)
+
+#Simple Group Map example
+df = spark.createDataFrame(
+    [(1, 1.0), (1, 2.0), (2, 3.0), (2, 5.0), (2, 10.0)],
+    ("id", "v"))
+
+def subtract_mean(pdf):
+    # pdf is a pandas.DataFrame
+    v = pdf.v
+    return pdf.assign(v_minus_mean = v - v.mean())
+
+df.groupby("id").applyInPandas(subtract_mean, schema="id long, v double, v_minus_mean double").show()
+
+#Map - Simple Example
+df = spark.createDataFrame([(1, 21), (2, 30)], ("id", "age"))
+
+def filter_func(iterator):
+    for pdf in iterator:
+        yield pdf[pdf.id == 1]
+
+df.mapInPandas(filter_func, schema=df.schema).show()
+
+#Broadcast a variable
+b_multiplier = sc.broadcast(2)
+b_multiplier.value
+
+#A bit more complex and experimental
+df = spark.createDataFrame([(1, 21), (1, 15), (2, 30)], ("id", "age"))
+
+def filter_func(iterator):
+  
+    # Do some expensive initialization with a state  - This is not mentioned in the docs
+    # so beware.  It may not be a good idea but wanted to see if it worked.  :-) 
+    multiplier = b_multiplier.value
+    
+    for pdf in iterator:
+        yield pdf[pdf.id == 1].assign(age_times_x = pdf.age[pdf.id == 1] * multiplier)
+
+df.mapInPandas(filter_func, schema="id long, age long, age_times_x double").show()
+
+#Map - Create a function to filter the sales dataframe
+def filter_func(iterator):
+    for pdf in iterator:
+        yield pdf[pdf.CustomerKey == 11000]
+
+spdf_sales.mapInPandas(filter_func, schema=spdf_sales.schema).show()
