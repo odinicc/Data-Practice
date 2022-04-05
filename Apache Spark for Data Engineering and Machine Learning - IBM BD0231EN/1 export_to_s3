@@ -1,0 +1,21 @@
+%%bash
+export access_key_id='e88e5a6f92494e61903333617dc05aa9'
+export secret_access_key='7e745e1f6d1eb329fda0b1bd58b9247b11a999e8a5db9633'
+export endpoint='s3.jp-tok.cloud-object-storage.appdomain.cloud'
+export bucket_name='cloud-object-storage-kd-cos-standard-vw3'
+export source_file='data_condensed.parquet'
+export destination_file='data.parquet'
+export data_dir='./data/'
+ipython ./claimed/component-library/output/upload-to-cos.ipynb $access_key_id $secret_access_key $endpoint $bucket_name $source_file $destination_file $data_dir
+
+
+
+%%bash
+export access_key_id='access_key_id=<your_access_key_id_goes_here>'
+export secret_access_key='secret_access_key=<your_secret_access_key_goes_here>'
+export endpoint='endpoint=https://<your_endpoint_goes_here>'
+export bucket_name='bucket_name=<your_cos_bucket_name_goes_here>'
+export source_file='source_file=data_condensed.parquet'
+export destination_file='destination_file=data.parquet'
+export data_dir='data_dir=./data/'
+ipython ./claimed/component-library/output/upload-to-cos.ipynb $access_key_id $secret_access_key $endpoint $bucket_name $source_file $destination_file $data_dir
