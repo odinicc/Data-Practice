@@ -1,0 +1,2 @@
+https://cloud.ibm.com/schematics/workspaces/us-south.workspace.mysql-04-06-2023.2e483844/jobs?region=us
+https://cloud.ibm.com/services/appconnect/35d0045e-acc6-4c48-98d6-b0d64c410be3?paneId=manage&new=true&ace_config=%7B%22crn%22%3A%22crn%3Av1%3Abluemix%3Apublic%3Aappconnect%3Aus-south%3As%2Fe2e22713-e89a-45af-abf7-ef3ae0057868%3A35d0045e-acc6-4c48-98d6-b0d64c410be3%3Acf-service-instance%3A%22%7D&org=360461b3-c8ea-492b-a8ba-0c74758475d0&space=e2e22713-e89a-45af-abf7-ef3ae0057868&env_id=us-south

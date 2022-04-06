@@ -1,0 +1,872 @@
+ 2022/04/06 07:59:52 [1m-----  New Workspace Action  -----[21m[0m
+ 2022/04/06 07:59:52 Request: activitId=8dd6f2f5540a50766574d4c6b9a361cf, account=8fd1f87c08d443adbe0e4c67f55c4619, owner=iodintsov@sbdagroup.com, requestID=0ec7c56e-0d24-4c3a-a1ba-8f00a81060e7
+ 2022/04/06 07:59:52 Related Activity: action=HELM_WORKSPACE_CREATE, workspaceID=us-south.workspace.mysql-04-06-2023.2e483844, processedBy=orchestrator-f9db9cb79-gtp2j
+ 2022/04/06 07:59:55 Related Workspace: name=mysql-04-06-2023, sourcerelease=(not specified), sourceurl=https://charts.bitnami.com/ibm/mysql-8.8.31.tgz, folder=mysql
+ 2022/04/06 07:59:58  --- Ready to execute the command --- 
+ 2022/04/06 07:59:58 [1m-----  New Action  -----[21m[0m
+ 2022/04/06 07:59:58 Request: RepoURL=https://charts.bitnami.com/ibm/mysql-8.8.31.tgz, WorkspaceSource=Schematics, Branch=, Release=, Folder=
+ 2022/04/06 07:59:58 Related Activity: action=Helm_CREATE_WORKSPACE,processedBy=sandbox-5784dc6cbf-9jqdp_2417
+ 2022/04/06 07:59:58 Getting tar download command
+ 2022/04/06 07:59:58 Authentication token was not passed along, trying to download the repo without access token
+ 2022/04/06 08:00:08 No README file is found for the template
+ 2022/04/06 08:00:08 [1m[32mDone with the Activity[39m[0m
+ 2022/04/06 08:00:08  --- Ready to execute Helm Action command --- 
+ 2022/04/06 08:00:08 [1m-----  New Action  -----[21m[0m
+ 2022/04/06 08:00:08 Request: requestID=0ec7c56e-0d24-4c3a-a1ba-8f00a81060e7
+ 2022/04/06 08:00:20 Related Activity: action=Apply, workspaceID=us-south.workspace.mysql-04-06-2023.2e483844, processedByOrchestrator=ID:"0ec7c56e-0d24-4c3a-a1ba-8f00a81060e7_8dd6f2f5540a50766574d4c6b9a361cf", processedByJob=helm-job-795f5bc7bd-5j4vj
+ 
+ 2022/04/06 08:00:25 [1m-----  Terraform INIT  -----[21m[0m
+ 2022/04/06 08:00:25 Starting command: terraform init -input=false -no-color
+ 2022/04/06 08:00:25 Terraform init | 
+ 2022/04/06 08:00:25 Terraform init | Initializing the backend...
+ 2022/04/06 08:00:25 Terraform init | 
+ 2022/04/06 08:00:25 Terraform init | Initializing provider plugins...
+ 2022/04/06 08:00:25 Terraform init | - Checking for available provider plugins...
+ 2022/04/06 08:00:26 Terraform init | - Downloading plugin for provider "helm" (hashicorp/helm) 2.0.0...
+ 2022/04/06 08:00:29 Terraform init | 
+ 2022/04/06 08:00:29 Terraform init | The following providers do not have any version constraints in configuration,
+ 2022/04/06 08:00:29 Terraform init | so the latest version was installed.
+ 2022/04/06 08:00:29 Terraform init | 
+ 2022/04/06 08:00:29 Terraform init | To prevent automatic upgrades to new major versions that may contain breaking
+ 2022/04/06 08:00:29 Terraform init | changes, it is recommended to add version = "..." constraints to the
+ 2022/04/06 08:00:29 Terraform init | corresponding provider blocks in configuration, with the constraint strings
+ 2022/04/06 08:00:29 Terraform init | suggested below.
+ 2022/04/06 08:00:29 Terraform init | 
+ 2022/04/06 08:00:29 Terraform init | * provider.ibm: version = "~> 1.38"
+ 2022/04/06 08:00:29 Terraform init | * provider.null: version = "~> 3.1"
+ 2022/04/06 08:00:29 Terraform init | 
+ 2022/04/06 08:00:29 Terraform init | Terraform has been successfully initialized!
+ 2022/04/06 08:00:29 Command finished successfully.
+ 
+ 2022/04/06 08:00:29 [1m-----  Terraform SHOW  -----[21m[0m
+ 2022/04/06 08:00:29 Starting command: terraform show -no-color
+ 2022/04/06 08:00:34 Terraform show | No state.
+ 2022/04/06 08:00:34 Command finished successfully.
+ 
+ 2022/04/06 08:00:34 [1m-----  Terraform APPLY  -----[21m[0m
+ 2022/04/06 08:00:34 Starting command: terraform apply -state=terraform.tfstate -var-file=schematics.tfvars -auto-approve -no-color -parallelism=1
+ 2022/04/06 08:00:43 Terraform apply | data.ibm_container_cluster_config.clusterConfig: Refreshing state...
+ 2022/04/06 08:00:58 Terraform apply | null_resource.pre_exec: Creating...
+ 2022/04/06 08:00:58 Terraform apply | null_resource.pre_exec: Provisioning with 'local-exec'...
+ 2022/04/06 08:00:58 Terraform apply | null_resource.pre_exec (local-exec): Executing: ["/bin/sh" "-c" "/home/nobody/scripts/pre-create-helm3.sh /tmp/tfws-090945328/8d18e3036265f07948ce6515255da96a1fa82ca6d28c8165923b2c40f32665fd_c96jucbf0kiofj0nvg4g_k8sconfig/config.yml default"]
+ 2022/04/06 08:00:59 Terraform apply | null_resource.pre_exec (local-exec): Debug : default namespace available.
+ 2022/04/06 08:00:59 Terraform apply | null_resource.pre_exec: Creation complete after 2s [id=7834158490107225900]
+ 2022/04/06 08:00:59 Terraform apply | helm_release.mysql0: Creating...
+ 2022/04/06 08:01:05 Terraform apply | helm_release.mysql0: Creation complete after 6s [id=mysql3-2e483844]
+ 2022/04/06 08:01:05 Terraform apply | null_resource.post_exec: Creating...
+ 2022/04/06 08:01:05 Terraform apply | null_resource.post_exec: Provisioning with 'local-exec'...
+ 2022/04/06 08:01:05 Terraform apply | null_resource.post_exec (local-exec): Executing: ["/bin/sh" "-c" "/home/nobody/scripts/post-create-helm3.sh /tmp/tfws-090945328/8d18e3036265f07948ce6515255da96a1fa82ca6d28c8165923b2c40f32665fd_c96jucbf0kiofj0nvg4g_k8sconfig/config.yml mysql3-2e483844 default"]
+ 2022/04/06 08:01:05 Terraform apply | null_resource.post_exec (local-exec):  status of helm status ....
+ 2022/04/06 08:01:05 Terraform apply | null_resource.post_exec (local-exec): ### Start ####
+ 2022/04/06 08:01:05 Terraform apply | null_resource.post_exec (local-exec): WARNING: Kubernetes configuration file is group-readable. This is insecure. Location: /tmp/tfws-090945328/8d18e3036265f07948ce6515255da96a1fa82ca6d28c8165923b2c40f32665fd_c96jucbf0kiofj0nvg4g_k8sconfig/config.yml
+ 2022/04/06 08:01:05 Terraform apply | null_resource.post_exec (local-exec): WARNING: Kubernetes configuration file is world-readable. This is insecure. Location: /tmp/tfws-090945328/8d18e3036265f07948ce6515255da96a1fa82ca6d28c8165923b2c40f32665fd_c96jucbf0kiofj0nvg4g_k8sconfig/config.yml
+ 2022/04/06 08:01:07 Terraform apply | null_resource.post_exec (local-exec): NAME: mysql3-2e483844
+ 2022/04/06 08:01:07 Terraform apply | null_resource.post_exec (local-exec): LAST DEPLOYED: Wed Apr  6 08:01:01 2022
+ 2022/04/06 08:01:07 Terraform apply | null_resource.post_exec (local-exec): NAMESPACE: default
+ 2022/04/06 08:01:07 Terraform apply | null_resource.post_exec (local-exec): STATUS: deployed
+ 2022/04/06 08:01:07 Terraform apply | null_resource.post_exec (local-exec): REVISION: 1
+ 2022/04/06 08:01:07 Terraform apply | null_resource.post_exec (local-exec): TEST SUITE: None
+ 2022/04/06 08:01:07 Terraform apply | null_resource.post_exec (local-exec): NOTES:
+ 2022/04/06 08:01:07 Terraform apply | null_resource.post_exec (local-exec): CHART NAME: mysql
+ 2022/04/06 08:01:07 Terraform apply | null_resource.post_exec (local-exec): CHART VERSION: 8.8.31
+ 2022/04/06 08:01:07 Terraform apply | null_resource.post_exec (local-exec): APP VERSION: 8.0.28
+ 2022/04/06 08:01:07 Terraform apply | 
+ 2022/04/06 08:01:07 Terraform apply | null_resource.post_exec (local-exec): ** Please be patient while the chart is being deployed **
+ 2022/04/06 08:01:07 Terraform apply | 
+ 2022/04/06 08:01:07 Terraform apply | null_resource.post_exec (local-exec): Tip:
+ 2022/04/06 08:01:07 Terraform apply | 
+ 2022/04/06 08:01:07 Terraform apply | null_resource.post_exec (local-exec):   Watch the deployment status using the command: kubectl get pods -w --namespace default
+ 2022/04/06 08:01:07 Terraform apply | 
+ 2022/04/06 08:01:07 Terraform apply | null_resource.post_exec (local-exec): Services:
+ 2022/04/06 08:01:07 Terraform apply | 
+ 2022/04/06 08:01:07 Terraform apply | null_resource.post_exec (local-exec):   echo Primary: mysql3-2e483844.default.svc.cluster.local:3306
+ 2022/04/06 08:01:07 Terraform apply | 
+ 2022/04/06 08:01:07 Terraform apply | null_resource.post_exec (local-exec): Execute the following to get the administrator credentials:
+ 2022/04/06 08:01:07 Terraform apply | 
+ 2022/04/06 08:01:07 Terraform apply | null_resource.post_exec (local-exec):   echo Username: root
+ 2022/04/06 08:01:07 Terraform apply | null_resource.post_exec (local-exec):   MYSQL_ROOT_PASSWORD=$(kubectl get secret --namespace default mysql3-2e483844 -o jsonpath="{.data.mysql-root-password}" | base64 --decode)
+ 2022/04/06 08:01:07 Terraform apply | 
+ 2022/04/06 08:01:07 Terraform apply | null_resource.post_exec (local-exec): To connect to your database:
+ 2022/04/06 08:01:07 Terraform apply | 
+ 2022/04/06 08:01:07 Terraform apply | null_resource.post_exec (local-exec):   1. Run a pod that you can use as a client:
+ 2022/04/06 08:01:07 Terraform apply | 
+ 2022/04/06 08:01:07 Terraform apply | null_resource.post_exec (local-exec):       kubectl run mysql3-2e483844-client --rm --tty -i --restart='Never' --image  docker.io/bitnami/mysql:8.0.28-debian-10-r56 --namespace default --command -- bash
+ 2022/04/06 08:01:07 Terraform apply | 
+ 2022/04/06 08:01:07 Terraform apply | null_resource.post_exec (local-exec):   2. To connect to primary service (read/write):
+ 2022/04/06 08:01:07 Terraform apply | 
+ 2022/04/06 08:01:07 Terraform apply | null_resource.post_exec (local-exec):       mysql -h mysql3-2e483844.default.svc.cluster.local -uroot -p"$MYSQL_ROOT_PASSWORD"
+ 2022/04/06 08:01:07 Terraform apply | 
+ 2022/04/06 08:01:07 Terraform apply | 
+ 2022/04/06 08:01:07 Terraform apply | 
+ 2022/04/06 08:01:07 Terraform apply | null_resource.post_exec (local-exec): To upgrade this helm chart:
+ 2022/04/06 08:01:07 Terraform apply | 
+ 2022/04/06 08:01:07 Terraform apply | null_resource.post_exec (local-exec):   1. Obtain the password as described on the 'Administrator credentials' section and set the 'root.password' parameter as shown below:
+ 2022/04/06 08:01:07 Terraform apply | 
+ 2022/04/06 08:01:07 Terraform apply | null_resource.post_exec (local-exec):       ROOT_PASSWORD=$(kubectl get secret --namespace default mysql3-2e483844 -o jsonpath="{.data.mysql-root-password}" | base64 --decode)
+ 2022/04/06 08:01:07 Terraform apply | null_resource.post_exec (local-exec):       helm upgrade --namespace default mysql3-2e483844 bitnami/mysql --set auth.rootPassword=$ROOT_PASSWORD
+ 2022/04/06 08:01:07 Terraform apply | null_resource.post_exec (local-exec): ### End ####
+ 2022/04/06 08:01:07 Terraform apply | null_resource.post_exec: Creation complete after 1s [id=4598272968340778659]
+ 2022/04/06 08:01:07 Terraform apply | 
+ 2022/04/06 08:01:07 Terraform apply | Apply complete! Resources: 3 added, 0 changed, 0 destroyed.
+ 2022/04/06 08:01:07 Command finished successfully.
+ 
+ 2022/04/06 08:01:07 [1m-----  Terraform SHOW  -----[21m[0m
+ 2022/04/06 08:01:07 Starting command: terraform show -no-color
+ 2022/04/06 08:01:11 Terraform show | # data.ibm_container_cluster_config.clusterConfig:
+ 2022/04/06 08:01:11 Terraform show | data "ibm_container_cluster_config" "clusterConfig" {
+ 2022/04/06 08:01:11 Terraform show |     admin             = false
+ 2022/04/06 08:01:11 Terraform show |     ca_certificate    = (sensitive value)
+ 2022/04/06 08:01:11 Terraform show |     cluster_name_id   = "c96jucbf0kiofj0nvg4g"
+ 2022/04/06 08:01:11 Terraform show |     config_dir        = "/tmp/tfws-090945328"
+ 2022/04/06 08:01:11 Terraform show |     config_file_path  = "/tmp/tfws-090945328/8d18e3036265f07948ce6515255da96a1fa82ca6d28c8165923b2c40f32665fd_c96jucbf0kiofj0nvg4g_k8sconfig/config.yml"
+ 2022/04/06 08:01:11 Terraform show |     download          = true
+ 2022/04/06 08:01:11 Terraform show |     host              = "https://c6.mil01.containers.cloud.ibm.com:24734"
+ 2022/04/06 08:01:11 Terraform show |     id                = "c96jucbf0kiofj0nvg4g"
+ 2022/04/06 08:01:11 Terraform show |     network           = false
+ 2022/04/06 08:01:11 Terraform show |     resource_group_id = "1e5c2b5f4c7f41c0970c205dbd2c2591"
+ 2022/04/06 08:01:11 Terraform show |     token             = (sensitive value)
+ 2022/04/06 08:01:11 Terraform show | }
+ 2022/04/06 08:01:11 Terraform show | 
+ 2022/04/06 08:01:11 Terraform show | # helm_release.mysql0:
+ 2022/04/06 08:01:11 Terraform show | resource "helm_release" "mysql0" {
+ 2022/04/06 08:01:11 Terraform show |     atomic                     = false
+ 2022/04/06 08:01:11 Terraform show |     chart                      = "./mysql"
+ 2022/04/06 08:01:11 Terraform show |     cleanup_on_fail            = false
+ 2022/04/06 08:01:11 Terraform show |     create_namespace           = false
+ 2022/04/06 08:01:11 Terraform show |     dependency_update          = false
+ 2022/04/06 08:01:11 Terraform show |     disable_crd_hooks          = false
+ 2022/04/06 08:01:11 Terraform show |     disable_openapi_validation = false
+ 2022/04/06 08:01:11 Terraform show |     disable_webhooks           = false
+ 2022/04/06 08:01:11 Terraform show |     force_update               = false
+ 2022/04/06 08:01:11 Terraform show |     id                         = "mysql3-2e483844"
+ 2022/04/06 08:01:11 Terraform show |     lint                       = false
+ 2022/04/06 08:01:11 Terraform show |     max_history                = 0
+ 2022/04/06 08:01:11 Terraform show |     metadata                   = [
+ 2022/04/06 08:01:11 Terraform show |         {
+ 2022/04/06 08:01:11 Terraform show |             app_version = "8.0.28"
+ 2022/04/06 08:01:11 Terraform show |             chart       = "mysql"
+ 2022/04/06 08:01:11 Terraform show |             name        = "mysql3-2e483844"
+ 2022/04/06 08:01:11 Terraform show |             namespace   = "default"
+ 2022/04/06 08:01:11 Terraform show |             revision    = 1
+ 2022/04/06 08:01:11 Terraform show |             values      = jsonencode(
+ 2022/04/06 08:01:11 Terraform show |                 {
+ 2022/04/06 08:01:11 Terraform show |                     architecture           = "standalone"
+ 2022/04/06 08:01:11 Terraform show |                     auth                   = {
+ 2022/04/06 08:01:11 Terraform show |                         customPasswordFiles = {}
+ 2022/04/06 08:01:11 Terraform show |                         database            = "my_database"
+ 2022/04/06 08:01:11 Terraform show |                         existingSecret      = ""
+ 2022/04/06 08:01:11 Terraform show |                         forcePassword       = false
+ 2022/04/06 08:01:11 Terraform show |                         password            = ""
+ 2022/04/06 08:01:11 Terraform show |                         replicationPassword = ""
+ 2022/04/06 08:01:11 Terraform show |                         replicationUser     = "replicator"
+ 2022/04/06 08:01:11 Terraform show |                         rootPassword        = ""
+ 2022/04/06 08:01:11 Terraform show |                         usePasswordFiles    = false
+ 2022/04/06 08:01:11 Terraform show |                         username            = ""
+ 2022/04/06 08:01:11 Terraform show |                     }
+ 2022/04/06 08:01:11 Terraform show |                     clusterDomain          = "cluster.local"
+ 2022/04/06 08:01:11 Terraform show |                     commonAnnotations      = {}
+ 2022/04/06 08:01:11 Terraform show |                     commonLabels           = {}
+ 2022/04/06 08:01:11 Terraform show |                     diagnosticMode         = {
+ 2022/04/06 08:01:11 Terraform show |                         args    = [
+ 2022/04/06 08:01:11 Terraform show |                             "infinity",
+ 2022/04/06 08:01:11 Terraform show |                         ]
+ 2022/04/06 08:01:11 Terraform show |                         command = [
+ 2022/04/06 08:01:11 Terraform show |                             "sleep",
+ 2022/04/06 08:01:11 Terraform show |                         ]
+ 2022/04/06 08:01:11 Terraform show |                         enabled = false
+ 2022/04/06 08:01:11 Terraform show |                     }
+ 2022/04/06 08:01:11 Terraform show |                     extraDeploy            = []
+ 2022/04/06 08:01:11 Terraform show |                     fullnameOverride       = ""
+ 2022/04/06 08:01:11 Terraform show |                     global                 = {
+ 2022/04/06 08:01:11 Terraform show |                         imagePullSecrets = []
+ 2022/04/06 08:01:11 Terraform show |                         imageRegistry    = ""
+ 2022/04/06 08:01:11 Terraform show |                         storageClass     = "ibmc-block-gold"
+ 2022/04/06 08:01:11 Terraform show |                     }
+ 2022/04/06 08:01:11 Terraform show |                     image                  = {
+ 2022/04/06 08:01:11 Terraform show |                         debug       = false
+ 2022/04/06 08:01:11 Terraform show |                         pullPolicy  = "IfNotPresent"
+ 2022/04/06 08:01:11 Terraform show |                         pullSecrets = []
+ 2022/04/06 08:01:11 Terraform show |                         registry    = "docker.io"
+ 2022/04/06 08:01:11 Terraform show |                         repository  = "bitnami/mysql"
+ 2022/04/06 08:01:11 Terraform show |                         tag         = "8.0.28-debian-10-r56"
+ 2022/04/06 08:01:11 Terraform show |                     }
+ 2022/04/06 08:01:11 Terraform show |                     initdbScripts          = {}
+ 2022/04/06 08:01:11 Terraform show |                     initdbScriptsConfigMap = ""
+ 2022/04/06 08:01:11 Terraform show |                     metrics                = {
+ 2022/04/06 08:01:11 Terraform show |                         enabled        = false
+ 2022/04/06 08:01:11 Terraform show |                         extraArgs      = {
+ 2022/04/06 08:01:11 Terraform show |                             primary   = []
+ 2022/04/06 08:01:11 Terraform show |                             secondary = []
+ 2022/04/06 08:01:11 Terraform show |                         }
+ 2022/04/06 08:01:11 Terraform show |                         image          = {
+ 2022/04/06 08:01:11 Terraform show |                             pullPolicy  = "IfNotPresent"
+ 2022/04/06 08:01:11 Terraform show |                             pullSecrets = []
+ 2022/04/06 08:01:11 Terraform show |                             registry    = "docker.io"
+ 2022/04/06 08:01:11 Terraform show |                             repository  = "bitnami/mysqld-exporter"
+ 2022/04/06 08:01:11 Terraform show |                             tag         = "0.14.0-debian-10-r27"
+ 2022/04/06 08:01:11 Terraform show |                         }
+ 2022/04/06 08:01:11 Terraform show |                         livenessProbe  = {
+ 2022/04/06 08:01:11 Terraform show |                             enabled             = true
+ 2022/04/06 08:01:11 Terraform show |                             failureThreshold    = 3
+ 2022/04/06 08:01:11 Terraform show |                             initialDelaySeconds = 120
+ 2022/04/06 08:01:11 Terraform show |                             periodSeconds       = 10
+ 2022/04/06 08:01:11 Terraform show |                             successThreshold    = 1
+ 2022/04/06 08:01:11 Terraform show |                             timeoutSeconds      = 1
+ 2022/04/06 08:01:11 Terraform show |                         }
+ 2022/04/06 08:01:11 Terraform show |                         readinessProbe = {
+ 2022/04/06 08:01:11 Terraform show |                             enabled             = true
+ 2022/04/06 08:01:11 Terraform show |                             failureThreshold    = 3
+ 2022/04/06 08:01:11 Terraform show |                             initialDelaySeconds = 30
+ 2022/04/06 08:01:11 Terraform show |                             periodSeconds       = 10
+ 2022/04/06 08:01:11 Terraform show |                             successThreshold    = 1
+ 2022/04/06 08:01:11 Terraform show |                             timeoutSeconds      = 1
+ 2022/04/06 08:01:11 Terraform show |                         }
+ 2022/04/06 08:01:11 Terraform show |                         resources      = {
+ 2022/04/06 08:01:11 Terraform show |                             limits   = {}
+ 2022/04/06 08:01:11 Terraform show |                             requests = {}
+ 2022/04/06 08:01:11 Terraform show |                         }
+ 2022/04/06 08:01:11 Terraform show |                         service        = {
+ 2022/04/06 08:01:11 Terraform show |                             annotations = {
+ 2022/04/06 08:01:11 Terraform show |                                 prometheus.io/port   = "{{ .Values.metrics.service.port }}"
+ 2022/04/06 08:01:11 Terraform show |                                 prometheus.io/scrape = "true"
+ 2022/04/06 08:01:11 Terraform show |                             }
+ 2022/04/06 08:01:11 Terraform show |                             port        = 9104
+ 2022/04/06 08:01:11 Terraform show |                             type        = "ClusterIP"
+ 2022/04/06 08:01:11 Terraform show |                         }
+ 2022/04/06 08:01:11 Terraform show |                         serviceMonitor = {
+ 2022/04/06 08:01:11 Terraform show |                             additionalLabels = {}
+ 2022/04/06 08:01:11 Terraform show |                             enabled          = false
+ 2022/04/06 08:01:11 Terraform show |                             honorLabels      = false
+ 2022/04/06 08:01:11 Terraform show |                             interval         = "30s"
+ 2022/04/06 08:01:11 Terraform show |                             namespace        = ""
+ 2022/04/06 08:01:11 Terraform show |                             relabellings     = []
+ 2022/04/06 08:01:11 Terraform show |                             scrapeTimeout    = ""
+ 2022/04/06 08:01:11 Terraform show |                         }
+ 2022/04/06 08:01:11 Terraform show |                     }
+ 2022/04/06 08:01:11 Terraform show |                     nameOverride           = ""
+ 2022/04/06 08:01:11 Terraform show |                     networkPolicy          = {
+ 2022/04/06 08:01:11 Terraform show |                         allowExternal              = true
+ 2022/04/06 08:01:11 Terraform show |                         enabled                    = false
+ 2022/04/06 08:01:11 Terraform show |                         explicitNamespacesSelector = {}
+ 2022/04/06 08:01:11 Terraform show |                     }
+ 2022/04/06 08:01:11 Terraform show |                     offering_version       = "8.0.2204021404"
+ 2022/04/06 08:01:11 Terraform show |                     primary                = {
+ 2022/04/06 08:01:11 Terraform show |                         affinity                 = {}
+ 2022/04/06 08:01:11 Terraform show |                         args                     = []
+ 2022/04/06 08:01:11 Terraform show |                         command                  = []
+ 2022/04/06 08:01:11 Terraform show |                         configuration            = <<~EOT
+ 2022/04/06 08:01:11 Terraform show |                             [mysqld]
+ 2022/04/06 08:01:11 Terraform show |                             default_authentication_plugin=mysql_native_password
+ 2022/04/06 08:01:11 Terraform show |                             skip-name-resolve
+ 2022/04/06 08:01:11 Terraform show |                             explicit_defaults_for_timestamp
+ 2022/04/06 08:01:11 Terraform show |                             basedir=/opt/bitnami/mysql
+ 2022/04/06 08:01:11 Terraform show |                             plugin_dir=/opt/bitnami/mysql/lib/plugin
+ 2022/04/06 08:01:11 Terraform show |                             port=3306
+ 2022/04/06 08:01:11 Terraform show |                             socket=/opt/bitnami/mysql/tmp/mysql.sock
+ 2022/04/06 08:01:11 Terraform show |                             datadir=/bitnami/mysql/data
+ 2022/04/06 08:01:11 Terraform show |                             tmpdir=/opt/bitnami/mysql/tmp
+ 2022/04/06 08:01:11 Terraform show |                             max_allowed_packet=16M
+ 2022/04/06 08:01:11 Terraform show |                             bind-address=0.0.0.0
+ 2022/04/06 08:01:11 Terraform show |                             pid-file=/opt/bitnami/mysql/tmp/mysqld.pid
+ 2022/04/06 08:01:11 Terraform show |                             log-error=/opt/bitnami/mysql/logs/mysqld.log
+ 2022/04/06 08:01:11 Terraform show |                             character-set-server=UTF8
+ 2022/04/06 08:01:11 Terraform show |                             collation-server=utf8_general_ci
+ 2022/04/06 08:01:11 Terraform show |                             
+ 2022/04/06 08:01:11 Terraform show |                             [client]
+ 2022/04/06 08:01:11 Terraform show |                             port=3306
+ 2022/04/06 08:01:11 Terraform show |                             socket=/opt/bitnami/mysql/tmp/mysql.sock
+ 2022/04/06 08:01:11 Terraform show |                             default-character-set=UTF8
+ 2022/04/06 08:01:11 Terraform show |                             plugin_dir=/opt/bitnami/mysql/lib/plugin
+ 2022/04/06 08:01:11 Terraform show |                             
+ 2022/04/06 08:01:11 Terraform show |                             [manager]
+ 2022/04/06 08:01:11 Terraform show |                             port=3306
+ 2022/04/06 08:01:11 Terraform show |                             socket=/opt/bitnami/mysql/tmp/mysql.sock
+ 2022/04/06 08:01:11 Terraform show |                             pid-file=/opt/bitnami/mysql/tmp/mysqld.pid
+ 2022/04/06 08:01:11 Terraform show |                         EOT
+ 2022/04/06 08:01:11 Terraform show |                         containerSecurityContext = {
+ 2022/04/06 08:01:11 Terraform show |                             enabled   = true
+ 2022/04/06 08:01:11 Terraform show |                             runAsUser = 1001
+ 2022/04/06 08:01:11 Terraform show |                         }
+ 2022/04/06 08:01:11 Terraform show |                         customLivenessProbe      = {}
+ 2022/04/06 08:01:11 Terraform show |                         customReadinessProbe     = {}
+ 2022/04/06 08:01:11 Terraform show |                         customStartupProbe       = {}
+ 2022/04/06 08:01:11 Terraform show |                         existingConfigmap        = ""
+ 2022/04/06 08:01:11 Terraform show |                         extraEnvVars             = []
+ 2022/04/06 08:01:11 Terraform show |                         extraEnvVarsCM           = ""
+ 2022/04/06 08:01:11 Terraform show |                         extraEnvVarsSecret       = ""
+ 2022/04/06 08:01:11 Terraform show |                         extraFlags               = ""
+ 2022/04/06 08:01:11 Terraform show |                         extraVolumeMounts        = []
+ 2022/04/06 08:01:11 Terraform show |                         extraVolumes             = []
+ 2022/04/06 08:01:11 Terraform show |                         hostAliases              = []
+ 2022/04/06 08:01:11 Terraform show |                         initContainers           = []
+ 2022/04/06 08:01:11 Terraform show |                         livenessProbe            = {
+ 2022/04/06 08:01:11 Terraform show |                             enabled             = true
+ 2022/04/06 08:01:11 Terraform show |                             failureThreshold    = 3
+ 2022/04/06 08:01:11 Terraform show |                             initialDelaySeconds = 5
+ 2022/04/06 08:01:11 Terraform show |                             periodSeconds       = 10
+ 2022/04/06 08:01:11 Terraform show |                             successThreshold    = 1
+ 2022/04/06 08:01:11 Terraform show |                             timeoutSeconds      = 1
+ 2022/04/06 08:01:11 Terraform show |                         }
+ 2022/04/06 08:01:11 Terraform show |                         nodeAffinityPreset       = {
+ 2022/04/06 08:01:11 Terraform show |                             key    = ""
+ 2022/04/06 08:01:11 Terraform show |                             type   = ""
+ 2022/04/06 08:01:11 Terraform show |                             values = []
+ 2022/04/06 08:01:11 Terraform show |                         }
+ 2022/04/06 08:01:11 Terraform show |                         nodeSelector             = {}
+ 2022/04/06 08:01:11 Terraform show |                         pdb                      = {
+ 2022/04/06 08:01:11 Terraform show |                             enabled        = false
+ 2022/04/06 08:01:11 Terraform show |                             maxUnavailable = ""
+ 2022/04/06 08:01:11 Terraform show |                             minAvailable   = 1
+ 2022/04/06 08:01:11 Terraform show |                         }
+ 2022/04/06 08:01:11 Terraform show |                         persistence              = {
+ 2022/04/06 08:01:11 Terraform show |                             accessModes   = [
+ 2022/04/06 08:01:11 Terraform show |                                 "ReadWriteOnce",
+ 2022/04/06 08:01:11 Terraform show |                             ]
+ 2022/04/06 08:01:11 Terraform show |                             annotations   = {}
+ 2022/04/06 08:01:11 Terraform show |                             enabled       = true
+ 2022/04/06 08:01:11 Terraform show |                             existingClaim = ""
+ 2022/04/06 08:01:11 Terraform show |                             selector      = {}
+ 2022/04/06 08:01:11 Terraform show |                             size          = "8Gi"
+ 2022/04/06 08:01:11 Terraform show |                             storageClass  = ""
+ 2022/04/06 08:01:11 Terraform show |                         }
+ 2022/04/06 08:01:11 Terraform show |                         podAffinityPreset        = ""
+ 2022/04/06 08:01:11 Terraform show |                         podAnnotations           = {}
+ 2022/04/06 08:01:11 Terraform show |                         podAntiAffinityPreset    = "soft"
+ 2022/04/06 08:01:11 Terraform show |                         podLabels                = {}
+ 2022/04/06 08:01:11 Terraform show |                         podSecurityContext       = {
+ 2022/04/06 08:01:11 Terraform show |                             enabled = true
+ 2022/04/06 08:01:11 Terraform show |                             fsGroup = 1001
+ 2022/04/06 08:01:11 Terraform show |                         }
+ 2022/04/06 08:01:11 Terraform show |                         readinessProbe           = {
+ 2022/04/06 08:01:11 Terraform show |                             enabled             = true
+ 2022/04/06 08:01:11 Terraform show |                             failureThreshold    = 3
+ 2022/04/06 08:01:11 Terraform show |                             initialDelaySeconds = 5
+ 2022/04/06 08:01:11 Terraform show |                             periodSeconds       = 10
+ 2022/04/06 08:01:11 Terraform show |                             successThreshold    = 1
+ 2022/04/06 08:01:11 Terraform show |                             timeoutSeconds      = 1
+ 2022/04/06 08:01:11 Terraform show |                         }
+ 2022/04/06 08:01:11 Terraform show |                         resources                = {
+ 2022/04/06 08:01:11 Terraform show |                             limits   = {}
+ 2022/04/06 08:01:11 Terraform show |                             requests = {}
+ 2022/04/06 08:01:11 Terraform show |                         }
+ 2022/04/06 08:01:11 Terraform show |                         rollingUpdatePartition   = ""
+ 2022/04/06 08:01:11 Terraform show |                         service                  = {
+ 2022/04/06 08:01:11 Terraform show |                             annotations              = {}
+ 2022/04/06 08:01:11 Terraform show |                             clusterIP                = ""
+ 2022/04/06 08:01:11 Terraform show |                             externalTrafficPolicy    = "Cluster"
+ 2022/04/06 08:01:11 Terraform show |                             loadBalancerIP           = ""
+ 2022/04/06 08:01:11 Terraform show |                             loadBalancerSourceRanges = []
+ 2022/04/06 08:01:11 Terraform show |                             nodePort                 = ""
+ 2022/04/06 08:01:11 Terraform show |                             port                     = 3306
+ 2022/04/06 08:01:11 Terraform show |                             type                     = "ClusterIP"
+ 2022/04/06 08:01:11 Terraform show |                         }
+ 2022/04/06 08:01:11 Terraform show |                         sidecars                 = []
+ 2022/04/06 08:01:11 Terraform show |                         startupProbe             = {
+ 2022/04/06 08:01:11 Terraform show |                             enabled             = true
+ 2022/04/06 08:01:11 Terraform show |                             failureThreshold    = 10
+ 2022/04/06 08:01:11 Terraform show |                             initialDelaySeconds = 15
+ 2022/04/06 08:01:11 Terraform show |                             periodSeconds       = 10
+ 2022/04/06 08:01:11 Terraform show |                             successThreshold    = 1
+ 2022/04/06 08:01:11 Terraform show |                             timeoutSeconds      = 1
+ 2022/04/06 08:01:11 Terraform show |                         }
+ 2022/04/06 08:01:11 Terraform show |                         tolerations              = []
+ 2022/04/06 08:01:11 Terraform show |                         updateStrategy           = "RollingUpdate"
+ 2022/04/06 08:01:11 Terraform show |                     }
+ 2022/04/06 08:01:11 Terraform show |                     rbac                   = {
+ 2022/04/06 08:01:11 Terraform show |                         create = false
+ 2022/04/06 08:01:11 Terraform show |                     }
+ 2022/04/06 08:01:11 Terraform show |                     schedulerName          = ""
+ 2022/04/06 08:01:11 Terraform show |                     secondary              = {
+ 2022/04/06 08:01:11 Terraform show |                         affinity                 = {}
+ 2022/04/06 08:01:11 Terraform show |                         args                     = []
+ 2022/04/06 08:01:11 Terraform show |                         command                  = []
+ 2022/04/06 08:01:11 Terraform show |                         configuration            = <<~EOT
+ 2022/04/06 08:01:11 Terraform show |                             [mysqld]
+ 2022/04/06 08:01:11 Terraform show |                             default_authentication_plugin=mysql_native_password
+ 2022/04/06 08:01:11 Terraform show |                             skip-name-resolve
+ 2022/04/06 08:01:11 Terraform show |                             explicit_defaults_for_timestamp
+ 2022/04/06 08:01:11 Terraform show |                             basedir=/opt/bitnami/mysql
+ 2022/04/06 08:01:11 Terraform show |                             port=3306
+ 2022/04/06 08:01:11 Terraform show |                             socket=/opt/bitnami/mysql/tmp/mysql.sock
+ 2022/04/06 08:01:11 Terraform show |                             datadir=/bitnami/mysql/data
+ 2022/04/06 08:01:11 Terraform show |                             tmpdir=/opt/bitnami/mysql/tmp
+ 2022/04/06 08:01:11 Terraform show |                             max_allowed_packet=16M
+ 2022/04/06 08:01:11 Terraform show |                             bind-address=0.0.0.0
+ 2022/04/06 08:01:11 Terraform show |                             pid-file=/opt/bitnami/mysql/tmp/mysqld.pid
+ 2022/04/06 08:01:11 Terraform show |                             log-error=/opt/bitnami/mysql/logs/mysqld.log
+ 2022/04/06 08:01:11 Terraform show |                             character-set-server=UTF8
+ 2022/04/06 08:01:11 Terraform show |                             collation-server=utf8_general_ci
+ 2022/04/06 08:01:11 Terraform show |                             
+ 2022/04/06 08:01:11 Terraform show |                             [client]
+ 2022/04/06 08:01:11 Terraform show |                             port=3306
+ 2022/04/06 08:01:11 Terraform show |                             socket=/opt/bitnami/mysql/tmp/mysql.sock
+ 2022/04/06 08:01:11 Terraform show |                             default-character-set=UTF8
+ 2022/04/06 08:01:11 Terraform show |                             
+ 2022/04/06 08:01:11 Terraform show |                             [manager]
+ 2022/04/06 08:01:11 Terraform show |                             port=3306
+ 2022/04/06 08:01:11 Terraform show |                             socket=/opt/bitnami/mysql/tmp/mysql.sock
+ 2022/04/06 08:01:11 Terraform show |                             pid-file=/opt/bitnami/mysql/tmp/mysqld.pid
+ 2022/04/06 08:01:11 Terraform show |                         EOT
+ 2022/04/06 08:01:11 Terraform show |                         containerSecurityContext = {
+ 2022/04/06 08:01:11 Terraform show |                             enabled   = true
+ 2022/04/06 08:01:11 Terraform show |                             runAsUser = 1001
+ 2022/04/06 08:01:11 Terraform show |                         }
+ 2022/04/06 08:01:11 Terraform show |                         customLivenessProbe      = {}
+ 2022/04/06 08:01:11 Terraform show |                         customReadinessProbe     = {}
+ 2022/04/06 08:01:11 Terraform show |                         customStartupProbe       = {}
+ 2022/04/06 08:01:11 Terraform show |                         existingConfigmap        = ""
+ 2022/04/06 08:01:11 Terraform show |                         extraEnvVars             = []
+ 2022/04/06 08:01:11 Terraform show |                         extraEnvVarsCM           = ""
+ 2022/04/06 08:01:11 Terraform show |                         extraEnvVarsSecret       = ""
+ 2022/04/06 08:01:11 Terraform show |                         extraFlags               = ""
+ 2022/04/06 08:01:11 Terraform show |                         extraVolumeMounts        = []
+ 2022/04/06 08:01:11 Terraform show |                         extraVolumes             = []
+ 2022/04/06 08:01:11 Terraform show |                         hostAliases              = []
+ 2022/04/06 08:01:11 Terraform show |                         initContainers           = []
+ 2022/04/06 08:01:11 Terraform show |                         livenessProbe            = {
+ 2022/04/06 08:01:11 Terraform show |                             enabled             = true
+ 2022/04/06 08:01:11 Terraform show |                             failureThreshold    = 3
+ 2022/04/06 08:01:11 Terraform show |                             initialDelaySeconds = 5
+ 2022/04/06 08:01:11 Terraform show |                             periodSeconds       = 10
+ 2022/04/06 08:01:11 Terraform show |                             successThreshold    = 1
+ 2022/04/06 08:01:11 Terraform show |                             timeoutSeconds      = 1
+ 2022/04/06 08:01:11 Terraform show |                         }
+ 2022/04/06 08:01:11 Terraform show |                         nodeAffinityPreset       = {
+ 2022/04/06 08:01:11 Terraform show |                             key    = ""
+ 2022/04/06 08:01:11 Terraform show |                             type   = ""
+ 2022/04/06 08:01:11 Terraform show |                             values = []
+ 2022/04/06 08:01:11 Terraform show |                         }
+ 2022/04/06 08:01:11 Terraform show |                         nodeSelector             = {}
+ 2022/04/06 08:01:11 Terraform show |                         pdb                      = {
+ 2022/04/06 08:01:11 Terraform show |                             enabled        = false
+ 2022/04/06 08:01:11 Terraform show |                             maxUnavailable = ""
+ 2022/04/06 08:01:11 Terraform show |                             minAvailable   = 1
+ 2022/04/06 08:01:11 Terraform show |                         }
+ 2022/04/06 08:01:11 Terraform show |                         persistence              = {
+ 2022/04/06 08:01:11 Terraform show |                             accessModes  = [
+ 2022/04/06 08:01:11 Terraform show |                                 "ReadWriteOnce",
+ 2022/04/06 08:01:11 Terraform show |                             ]
+ 2022/04/06 08:01:11 Terraform show |                             annotations  = {}
+ 2022/04/06 08:01:11 Terraform show |                             enabled      = true
+ 2022/04/06 08:01:11 Terraform show |                             selector     = {}
+ 2022/04/06 08:01:11 Terraform show |                             size         = "8Gi"
+ 2022/04/06 08:01:11 Terraform show |                             storageClass = ""
+ 2022/04/06 08:01:11 Terraform show |                         }
+ 2022/04/06 08:01:11 Terraform show |                         podAffinityPreset        = ""
+ 2022/04/06 08:01:11 Terraform show |                         podAnnotations           = {}
+ 2022/04/06 08:01:11 Terraform show |                         podAntiAffinityPreset    = "soft"
+ 2022/04/06 08:01:11 Terraform show |                         podLabels                = {}
+ 2022/04/06 08:01:11 Terraform show |                         podSecurityContext       = {
+ 2022/04/06 08:01:11 Terraform show |                             enabled = true
+ 2022/04/06 08:01:11 Terraform show |                             fsGroup = 1001
+ 2022/04/06 08:01:11 Terraform show |                         }
+ 2022/04/06 08:01:11 Terraform show |                         readinessProbe           = {
+ 2022/04/06 08:01:11 Terraform show |                             enabled             = true
+ 2022/04/06 08:01:11 Terraform show |                             failureThreshold    = 3
+ 2022/04/06 08:01:11 Terraform show |                             initialDelaySeconds = 5
+ 2022/04/06 08:01:11 Terraform show |                             periodSeconds       = 10
+ 2022/04/06 08:01:11 Terraform show |                             successThreshold    = 1
+ 2022/04/06 08:01:11 Terraform show |                             timeoutSeconds      = 1
+ 2022/04/06 08:01:11 Terraform show |                         }
+ 2022/04/06 08:01:11 Terraform show |                         replicaCount             = 1
+ 2022/04/06 08:01:11 Terraform show |                         resources                = {
+ 2022/04/06 08:01:11 Terraform show |                             limits   = {}
+ 2022/04/06 08:01:11 Terraform show |                             requests = {}
+ 2022/04/06 08:01:11 Terraform show |                         }
+ 2022/04/06 08:01:11 Terraform show |                         rollingUpdatePartition   = ""
+ 2022/04/06 08:01:11 Terraform show |                         service                  = {
+ 2022/04/06 08:01:11 Terraform show |                             annotations              = {}
+ 2022/04/06 08:01:11 Terraform show |                             clusterIP                = ""
+ 2022/04/06 08:01:11 Terraform show |                             externalTrafficPolicy    = "Cluster"
+ 2022/04/06 08:01:11 Terraform show |                             loadBalancerIP           = ""
+ 2022/04/06 08:01:11 Terraform show |                             loadBalancerSourceRanges = []
+ 2022/04/06 08:01:11 Terraform show |                             nodePort                 = ""
+ 2022/04/06 08:01:11 Terraform show |                             port                     = 3306
+ 2022/04/06 08:01:11 Terraform show |                             type                     = "ClusterIP"
+ 2022/04/06 08:01:11 Terraform show |                         }
+ 2022/04/06 08:01:11 Terraform show |                         sidecars                 = []
+ 2022/04/06 08:01:11 Terraform show |                         startupProbe             = {
+ 2022/04/06 08:01:11 Terraform show |                             enabled             = true
+ 2022/04/06 08:01:11 Terraform show |                             failureThreshold    = 15
+ 2022/04/06 08:01:11 Terraform show |                             initialDelaySeconds = 15
+ 2022/04/06 08:01:11 Terraform show |                             periodSeconds       = 10
+ 2022/04/06 08:01:11 Terraform show |                             successThreshold    = 1
+ 2022/04/06 08:01:11 Terraform show |                             timeoutSeconds      = 1
+ 2022/04/06 08:01:11 Terraform show |                         }
+ 2022/04/06 08:01:11 Terraform show |                         tolerations              = []
+ 2022/04/06 08:01:11 Terraform show |                         updateStrategy           = "RollingUpdate"
+ 2022/04/06 08:01:11 Terraform show |                     }
+ 2022/04/06 08:01:11 Terraform show |                     serviceAccount         = {
+ 2022/04/06 08:01:11 Terraform show |                         annotations = {}
+ 2022/04/06 08:01:11 Terraform show |                         create      = true
+ 2022/04/06 08:01:11 Terraform show |                         name        = ""
+ 2022/04/06 08:01:11 Terraform show |                     }
+ 2022/04/06 08:01:11 Terraform show |                     volumePermissions      = {
+ 2022/04/06 08:01:11 Terraform show |                         enabled   = false
+ 2022/04/06 08:01:11 Terraform show |                         image     = {
+ 2022/04/06 08:01:11 Terraform show |                             pullPolicy  = "IfNotPresent"
+ 2022/04/06 08:01:11 Terraform show |                             pullSecrets = []
+ 2022/04/06 08:01:11 Terraform show |                             registry    = "docker.io"
+ 2022/04/06 08:01:11 Terraform show |                             repository  = "bitnami/bitnami-shell"
+ 2022/04/06 08:01:11 Terraform show |                             tag         = "10-debian-10-r382"
+ 2022/04/06 08:01:11 Terraform show |                         }
+ 2022/04/06 08:01:11 Terraform show |                         resources = {}
+ 2022/04/06 08:01:11 Terraform show |                     }
+ 2022/04/06 08:01:11 Terraform show |                 }
+ 2022/04/06 08:01:11 Terraform show |             )
+ 2022/04/06 08:01:11 Terraform show |             version     = "8.8.31"
+ 2022/04/06 08:01:11 Terraform show |         },
+ 2022/04/06 08:01:11 Terraform show |     ]
+ 2022/04/06 08:01:11 Terraform show |     name                       = "mysql3-2e483844"
+ 2022/04/06 08:01:11 Terraform show |     namespace                  = "default"
+ 2022/04/06 08:01:11 Terraform show |     recreate_pods              = true
+ 2022/04/06 08:01:11 Terraform show |     render_subchart_notes      = true
+ 2022/04/06 08:01:11 Terraform show |     replace                    = false
+ 2022/04/06 08:01:11 Terraform show |     reset_values               = false
+ 2022/04/06 08:01:11 Terraform show |     reuse_values               = false
+ 2022/04/06 08:01:11 Terraform show |     skip_crds                  = false
+ 2022/04/06 08:01:11 Terraform show |     status                     = "deployed"
+ 2022/04/06 08:01:11 Terraform show |     timeout                    = 300
+ 2022/04/06 08:01:11 Terraform show |     values                     = [
+ 2022/04/06 08:01:11 Terraform show |         <<~EOT
+ 2022/04/06 08:01:11 Terraform show |             architecture: standalone
+ 2022/04/06 08:01:11 Terraform show |             auth:
+ 2022/04/06 08:01:11 Terraform show |               customPasswordFiles: {}
+ 2022/04/06 08:01:11 Terraform show |               database: my_database
+ 2022/04/06 08:01:11 Terraform show |               existingSecret: ""
+ 2022/04/06 08:01:11 Terraform show |               forcePassword: false
+ 2022/04/06 08:01:11 Terraform show |               password: ""
+ 2022/04/06 08:01:11 Terraform show |               replicationPassword: ""
+ 2022/04/06 08:01:11 Terraform show |               replicationUser: replicator
+ 2022/04/06 08:01:11 Terraform show |               rootPassword: ""
+ 2022/04/06 08:01:11 Terraform show |               usePasswordFiles: false
+ 2022/04/06 08:01:11 Terraform show |               username: ""
+ 2022/04/06 08:01:11 Terraform show |             clusterDomain: cluster.local
+ 2022/04/06 08:01:11 Terraform show |             commonAnnotations: {}
+ 2022/04/06 08:01:11 Terraform show |             commonLabels: {}
+ 2022/04/06 08:01:11 Terraform show |             diagnosticMode:
+ 2022/04/06 08:01:11 Terraform show |               args:
+ 2022/04/06 08:01:11 Terraform show |               - infinity
+ 2022/04/06 08:01:11 Terraform show |               command:
+ 2022/04/06 08:01:11 Terraform show |               - sleep
+ 2022/04/06 08:01:11 Terraform show |               enabled: false
+ 2022/04/06 08:01:11 Terraform show |             extraDeploy: []
+ 2022/04/06 08:01:11 Terraform show |             fullnameOverride: ""
+ 2022/04/06 08:01:11 Terraform show |             global:
+ 2022/04/06 08:01:11 Terraform show |               imagePullSecrets: []
+ 2022/04/06 08:01:11 Terraform show |               imageRegistry: ""
+ 2022/04/06 08:01:11 Terraform show |               storageClass: ibmc-block-gold
+ 2022/04/06 08:01:11 Terraform show |             image:
+ 2022/04/06 08:01:11 Terraform show |               debug: false
+ 2022/04/06 08:01:11 Terraform show |               pullPolicy: IfNotPresent
+ 2022/04/06 08:01:11 Terraform show |               pullSecrets: []
+ 2022/04/06 08:01:11 Terraform show |               registry: docker.io
+ 2022/04/06 08:01:11 Terraform show |               repository: bitnami/mysql
+ 2022/04/06 08:01:11 Terraform show |               tag: 8.0.28-debian-10-r56
+ 2022/04/06 08:01:11 Terraform show |             initdbScripts: {}
+ 2022/04/06 08:01:11 Terraform show |             initdbScriptsConfigMap: ""
+ 2022/04/06 08:01:11 Terraform show |             metrics:
+ 2022/04/06 08:01:11 Terraform show |               enabled: false
+ 2022/04/06 08:01:11 Terraform show |               extraArgs:
+ 2022/04/06 08:01:11 Terraform show |                 primary: []
+ 2022/04/06 08:01:11 Terraform show |                 secondary: []
+ 2022/04/06 08:01:11 Terraform show |               image:
+ 2022/04/06 08:01:11 Terraform show |                 pullPolicy: IfNotPresent
+ 2022/04/06 08:01:11 Terraform show |                 pullSecrets: []
+ 2022/04/06 08:01:11 Terraform show |                 registry: docker.io
+ 2022/04/06 08:01:11 Terraform show |                 repository: bitnami/mysqld-exporter
+ 2022/04/06 08:01:11 Terraform show |                 tag: 0.14.0-debian-10-r27
+ 2022/04/06 08:01:11 Terraform show |               livenessProbe:
+ 2022/04/06 08:01:11 Terraform show |                 enabled: true
+ 2022/04/06 08:01:11 Terraform show |                 failureThreshold: 3
+ 2022/04/06 08:01:11 Terraform show |                 initialDelaySeconds: 120
+ 2022/04/06 08:01:11 Terraform show |                 periodSeconds: 10
+ 2022/04/06 08:01:11 Terraform show |                 successThreshold: 1
+ 2022/04/06 08:01:11 Terraform show |                 timeoutSeconds: 1
+ 2022/04/06 08:01:11 Terraform show |               readinessProbe:
+ 2022/04/06 08:01:11 Terraform show |                 enabled: true
+ 2022/04/06 08:01:11 Terraform show |                 failureThreshold: 3
+ 2022/04/06 08:01:11 Terraform show |                 initialDelaySeconds: 30
+ 2022/04/06 08:01:11 Terraform show |                 periodSeconds: 10
+ 2022/04/06 08:01:11 Terraform show |                 successThreshold: 1
+ 2022/04/06 08:01:11 Terraform show |                 timeoutSeconds: 1
+ 2022/04/06 08:01:11 Terraform show |               resources:
+ 2022/04/06 08:01:11 Terraform show |                 limits: {}
+ 2022/04/06 08:01:11 Terraform show |                 requests: {}
+ 2022/04/06 08:01:11 Terraform show |               service:
+ 2022/04/06 08:01:11 Terraform show |                 annotations:
+ 2022/04/06 08:01:11 Terraform show |                   prometheus.io/port: '{{ .Values.metrics.service.port }}'
+ 2022/04/06 08:01:11 Terraform show |                   prometheus.io/scrape: "true"
+ 2022/04/06 08:01:11 Terraform show |                 port: 9104
+ 2022/04/06 08:01:11 Terraform show |                 type: ClusterIP
+ 2022/04/06 08:01:11 Terraform show |               serviceMonitor:
+ 2022/04/06 08:01:11 Terraform show |                 additionalLabels: {}
+ 2022/04/06 08:01:11 Terraform show |                 enabled: false
+ 2022/04/06 08:01:11 Terraform show |                 honorLabels: false
+ 2022/04/06 08:01:11 Terraform show |                 interval: 30s
+ 2022/04/06 08:01:11 Terraform show |                 namespace: ""
+ 2022/04/06 08:01:11 Terraform show |                 relabellings: []
+ 2022/04/06 08:01:11 Terraform show |                 scrapeTimeout: ""
+ 2022/04/06 08:01:11 Terraform show |             nameOverride: ""
+ 2022/04/06 08:01:11 Terraform show |             networkPolicy:
+ 2022/04/06 08:01:11 Terraform show |               allowExternal: true
+ 2022/04/06 08:01:11 Terraform show |               enabled: false
+ 2022/04/06 08:01:11 Terraform show |               explicitNamespacesSelector: {}
+ 2022/04/06 08:01:11 Terraform show |             primary:
+ 2022/04/06 08:01:11 Terraform show |               affinity: {}
+ 2022/04/06 08:01:11 Terraform show |               args: []
+ 2022/04/06 08:01:11 Terraform show |               command: []
+ 2022/04/06 08:01:11 Terraform show |               configuration: |-
+ 2022/04/06 08:01:11 Terraform show |                 [mysqld]
+ 2022/04/06 08:01:11 Terraform show |                 default_authentication_plugin=mysql_native_password
+ 2022/04/06 08:01:11 Terraform show |                 skip-name-resolve
+ 2022/04/06 08:01:11 Terraform show |                 explicit_defaults_for_timestamp
+ 2022/04/06 08:01:11 Terraform show |                 basedir=/opt/bitnami/mysql
+ 2022/04/06 08:01:11 Terraform show |                 plugin_dir=/opt/bitnami/mysql/lib/plugin
+ 2022/04/06 08:01:11 Terraform show |                 port=3306
+ 2022/04/06 08:01:11 Terraform show |                 socket=/opt/bitnami/mysql/tmp/mysql.sock
+ 2022/04/06 08:01:11 Terraform show |                 datadir=/bitnami/mysql/data
+ 2022/04/06 08:01:11 Terraform show |                 tmpdir=/opt/bitnami/mysql/tmp
+ 2022/04/06 08:01:11 Terraform show |                 max_allowed_packet=16M
+ 2022/04/06 08:01:11 Terraform show |                 bind-address=0.0.0.0
+ 2022/04/06 08:01:11 Terraform show |                 pid-file=/opt/bitnami/mysql/tmp/mysqld.pid
+ 2022/04/06 08:01:11 Terraform show |                 log-error=/opt/bitnami/mysql/logs/mysqld.log
+ 2022/04/06 08:01:11 Terraform show |                 character-set-server=UTF8
+ 2022/04/06 08:01:11 Terraform show |                 collation-server=utf8_general_ci
+ 2022/04/06 08:01:11 Terraform show |             
+ 2022/04/06 08:01:11 Terraform show |                 [client]
+ 2022/04/06 08:01:11 Terraform show |                 port=3306
+ 2022/04/06 08:01:11 Terraform show |                 socket=/opt/bitnami/mysql/tmp/mysql.sock
+ 2022/04/06 08:01:11 Terraform show |                 default-character-set=UTF8
+ 2022/04/06 08:01:11 Terraform show |                 plugin_dir=/opt/bitnami/mysql/lib/plugin
+ 2022/04/06 08:01:11 Terraform show |             
+ 2022/04/06 08:01:11 Terraform show |                 [manager]
+ 2022/04/06 08:01:11 Terraform show |                 port=3306
+ 2022/04/06 08:01:11 Terraform show |                 socket=/opt/bitnami/mysql/tmp/mysql.sock
+ 2022/04/06 08:01:11 Terraform show |                 pid-file=/opt/bitnami/mysql/tmp/mysqld.pid
+ 2022/04/06 08:01:11 Terraform show |               containerSecurityContext:
+ 2022/04/06 08:01:11 Terraform show |                 enabled: true
+ 2022/04/06 08:01:11 Terraform show |                 runAsUser: 1001
+ 2022/04/06 08:01:11 Terraform show |               customLivenessProbe: {}
+ 2022/04/06 08:01:11 Terraform show |               customReadinessProbe: {}
+ 2022/04/06 08:01:11 Terraform show |               customStartupProbe: {}
+ 2022/04/06 08:01:11 Terraform show |               existingConfigmap: ""
+ 2022/04/06 08:01:11 Terraform show |               extraEnvVars: []
+ 2022/04/06 08:01:11 Terraform show |               extraEnvVarsCM: ""
+ 2022/04/06 08:01:11 Terraform show |               extraEnvVarsSecret: ""
+ 2022/04/06 08:01:11 Terraform show |               extraFlags: ""
+ 2022/04/06 08:01:11 Terraform show |               extraVolumeMounts: []
+ 2022/04/06 08:01:11 Terraform show |               extraVolumes: []
+ 2022/04/06 08:01:11 Terraform show |               hostAliases: []
+ 2022/04/06 08:01:11 Terraform show |               initContainers: []
+ 2022/04/06 08:01:11 Terraform show |               livenessProbe:
+ 2022/04/06 08:01:11 Terraform show |                 enabled: true
+ 2022/04/06 08:01:11 Terraform show |                 failureThreshold: 3
+ 2022/04/06 08:01:11 Terraform show |                 initialDelaySeconds: 5
+ 2022/04/06 08:01:11 Terraform show |                 periodSeconds: 10
+ 2022/04/06 08:01:11 Terraform show |                 successThreshold: 1
+ 2022/04/06 08:01:11 Terraform show |                 timeoutSeconds: 1
+ 2022/04/06 08:01:11 Terraform show |               nodeAffinityPreset:
+ 2022/04/06 08:01:11 Terraform show |                 key: ""
+ 2022/04/06 08:01:11 Terraform show |                 type: ""
+ 2022/04/06 08:01:11 Terraform show |                 values: []
+ 2022/04/06 08:01:11 Terraform show |               nodeSelector: {}
+ 2022/04/06 08:01:11 Terraform show |               pdb:
+ 2022/04/06 08:01:11 Terraform show |                 enabled: false
+ 2022/04/06 08:01:11 Terraform show |                 maxUnavailable: ""
+ 2022/04/06 08:01:11 Terraform show |                 minAvailable: 1
+ 2022/04/06 08:01:11 Terraform show |               persistence:
+ 2022/04/06 08:01:11 Terraform show |                 accessModes:
+ 2022/04/06 08:01:11 Terraform show |                 - ReadWriteOnce
+ 2022/04/06 08:01:11 Terraform show |                 annotations: {}
+ 2022/04/06 08:01:11 Terraform show |                 enabled: true
+ 2022/04/06 08:01:11 Terraform show |                 existingClaim: ""
+ 2022/04/06 08:01:11 Terraform show |                 selector: {}
+ 2022/04/06 08:01:11 Terraform show |                 size: 8Gi
+ 2022/04/06 08:01:11 Terraform show |                 storageClass: ""
+ 2022/04/06 08:01:11 Terraform show |               podAffinityPreset: ""
+ 2022/04/06 08:01:11 Terraform show |               podAnnotations: {}
+ 2022/04/06 08:01:11 Terraform show |               podAntiAffinityPreset: soft
+ 2022/04/06 08:01:11 Terraform show |               podLabels: {}
+ 2022/04/06 08:01:11 Terraform show |               podSecurityContext:
+ 2022/04/06 08:01:11 Terraform show |                 enabled: true
+ 2022/04/06 08:01:11 Terraform show |                 fsGroup: 1001
+ 2022/04/06 08:01:11 Terraform show |               readinessProbe:
+ 2022/04/06 08:01:11 Terraform show |                 enabled: true
+ 2022/04/06 08:01:11 Terraform show |                 failureThreshold: 3
+ 2022/04/06 08:01:11 Terraform show |                 initialDelaySeconds: 5
+ 2022/04/06 08:01:11 Terraform show |                 periodSeconds: 10
+ 2022/04/06 08:01:11 Terraform show |                 successThreshold: 1
+ 2022/04/06 08:01:11 Terraform show |                 timeoutSeconds: 1
+ 2022/04/06 08:01:11 Terraform show |               resources:
+ 2022/04/06 08:01:11 Terraform show |                 limits: {}
+ 2022/04/06 08:01:11 Terraform show |                 requests: {}
+ 2022/04/06 08:01:11 Terraform show |               rollingUpdatePartition: ""
+ 2022/04/06 08:01:11 Terraform show |               service:
+ 2022/04/06 08:01:11 Terraform show |                 annotations: {}
+ 2022/04/06 08:01:11 Terraform show |                 clusterIP: ""
+ 2022/04/06 08:01:11 Terraform show |                 externalTrafficPolicy: Cluster
+ 2022/04/06 08:01:11 Terraform show |                 loadBalancerIP: ""
+ 2022/04/06 08:01:11 Terraform show |                 loadBalancerSourceRanges: []
+ 2022/04/06 08:01:11 Terraform show |                 nodePort: ""
+ 2022/04/06 08:01:11 Terraform show |                 port: 3306
+ 2022/04/06 08:01:11 Terraform show |                 type: ClusterIP
+ 2022/04/06 08:01:11 Terraform show |               sidecars: []
+ 2022/04/06 08:01:11 Terraform show |               startupProbe:
+ 2022/04/06 08:01:11 Terraform show |                 enabled: true
+ 2022/04/06 08:01:11 Terraform show |                 failureThreshold: 10
+ 2022/04/06 08:01:11 Terraform show |                 initialDelaySeconds: 15
+ 2022/04/06 08:01:11 Terraform show |                 periodSeconds: 10
+ 2022/04/06 08:01:11 Terraform show |                 successThreshold: 1
+ 2022/04/06 08:01:11 Terraform show |                 timeoutSeconds: 1
+ 2022/04/06 08:01:11 Terraform show |               tolerations: []
+ 2022/04/06 08:01:11 Terraform show |               updateStrategy: RollingUpdate
+ 2022/04/06 08:01:11 Terraform show |             rbac:
+ 2022/04/06 08:01:11 Terraform show |               create: false
+ 2022/04/06 08:01:11 Terraform show |             schedulerName: ""
+ 2022/04/06 08:01:11 Terraform show |             secondary:
+ 2022/04/06 08:01:11 Terraform show |               affinity: {}
+ 2022/04/06 08:01:11 Terraform show |               args: []
+ 2022/04/06 08:01:11 Terraform show |               command: []
+ 2022/04/06 08:01:11 Terraform show |               configuration: |-
+ 2022/04/06 08:01:11 Terraform show |                 [mysqld]
+ 2022/04/06 08:01:11 Terraform show |                 default_authentication_plugin=mysql_native_password
+ 2022/04/06 08:01:11 Terraform show |                 skip-name-resolve
+ 2022/04/06 08:01:11 Terraform show |                 explicit_defaults_for_timestamp
+ 2022/04/06 08:01:11 Terraform show |                 basedir=/opt/bitnami/mysql
+ 2022/04/06 08:01:11 Terraform show |                 port=3306
+ 2022/04/06 08:01:11 Terraform show |                 socket=/opt/bitnami/mysql/tmp/mysql.sock
+ 2022/04/06 08:01:11 Terraform show |                 datadir=/bitnami/mysql/data
+ 2022/04/06 08:01:11 Terraform show |                 tmpdir=/opt/bitnami/mysql/tmp
+ 2022/04/06 08:01:11 Terraform show |                 max_allowed_packet=16M
+ 2022/04/06 08:01:11 Terraform show |                 bind-address=0.0.0.0
+ 2022/04/06 08:01:11 Terraform show |                 pid-file=/opt/bitnami/mysql/tmp/mysqld.pid
+ 2022/04/06 08:01:11 Terraform show |                 log-error=/opt/bitnami/mysql/logs/mysqld.log
+ 2022/04/06 08:01:11 Terraform show |                 character-set-server=UTF8
+ 2022/04/06 08:01:11 Terraform show |                 collation-server=utf8_general_ci
+ 2022/04/06 08:01:11 Terraform show |             
+ 2022/04/06 08:01:11 Terraform show |                 [client]
+ 2022/04/06 08:01:11 Terraform show |                 port=3306
+ 2022/04/06 08:01:11 Terraform show |                 socket=/opt/bitnami/mysql/tmp/mysql.sock
+ 2022/04/06 08:01:11 Terraform show |                 default-character-set=UTF8
+ 2022/04/06 08:01:11 Terraform show |             
+ 2022/04/06 08:01:11 Terraform show |                 [manager]
+ 2022/04/06 08:01:11 Terraform show |                 port=3306
+ 2022/04/06 08:01:11 Terraform show |                 socket=/opt/bitnami/mysql/tmp/mysql.sock
+ 2022/04/06 08:01:11 Terraform show |                 pid-file=/opt/bitnami/mysql/tmp/mysqld.pid
+ 2022/04/06 08:01:11 Terraform show |               containerSecurityContext:
+ 2022/04/06 08:01:11 Terraform show |                 enabled: true
+ 2022/04/06 08:01:11 Terraform show |                 runAsUser: 1001
+ 2022/04/06 08:01:11 Terraform show |               customLivenessProbe: {}
+ 2022/04/06 08:01:11 Terraform show |               customReadinessProbe: {}
+ 2022/04/06 08:01:11 Terraform show |               customStartupProbe: {}
+ 2022/04/06 08:01:11 Terraform show |               existingConfigmap: ""
+ 2022/04/06 08:01:11 Terraform show |               extraEnvVars: []
+ 2022/04/06 08:01:11 Terraform show |               extraEnvVarsCM: ""
+ 2022/04/06 08:01:11 Terraform show |               extraEnvVarsSecret: ""
+ 2022/04/06 08:01:11 Terraform show |               extraFlags: ""
+ 2022/04/06 08:01:11 Terraform show |               extraVolumeMounts: []
+ 2022/04/06 08:01:11 Terraform show |               extraVolumes: []
+ 2022/04/06 08:01:11 Terraform show |               hostAliases: []
+ 2022/04/06 08:01:11 Terraform show |               initContainers: []
+ 2022/04/06 08:01:11 Terraform show |               livenessProbe:
+ 2022/04/06 08:01:11 Terraform show |                 enabled: true
+ 2022/04/06 08:01:11 Terraform show |                 failureThreshold: 3
+ 2022/04/06 08:01:11 Terraform show |                 initialDelaySeconds: 5
+ 2022/04/06 08:01:11 Terraform show |                 periodSeconds: 10
+ 2022/04/06 08:01:11 Terraform show |                 successThreshold: 1
+ 2022/04/06 08:01:11 Terraform show |                 timeoutSeconds: 1
+ 2022/04/06 08:01:11 Terraform show |               nodeAffinityPreset:
+ 2022/04/06 08:01:11 Terraform show |                 key: ""
+ 2022/04/06 08:01:11 Terraform show |                 type: ""
+ 2022/04/06 08:01:11 Terraform show |                 values: []
+ 2022/04/06 08:01:11 Terraform show |               nodeSelector: {}
+ 2022/04/06 08:01:11 Terraform show |               pdb:
+ 2022/04/06 08:01:11 Terraform show |                 enabled: false
+ 2022/04/06 08:01:11 Terraform show |                 maxUnavailable: ""
+ 2022/04/06 08:01:11 Terraform show |                 minAvailable: 1
+ 2022/04/06 08:01:11 Terraform show |               persistence:
+ 2022/04/06 08:01:11 Terraform show |                 accessModes:
+ 2022/04/06 08:01:11 Terraform show |                 - ReadWriteOnce
+ 2022/04/06 08:01:11 Terraform show |                 annotations: {}
+ 2022/04/06 08:01:11 Terraform show |                 enabled: true
+ 2022/04/06 08:01:11 Terraform show |                 selector: {}
+ 2022/04/06 08:01:11 Terraform show |                 size: 8Gi
+ 2022/04/06 08:01:11 Terraform show |                 storageClass: ""
+ 2022/04/06 08:01:11 Terraform show |               podAffinityPreset: ""
+ 2022/04/06 08:01:11 Terraform show |               podAnnotations: {}
+ 2022/04/06 08:01:11 Terraform show |               podAntiAffinityPreset: soft
+ 2022/04/06 08:01:11 Terraform show |               podLabels: {}
+ 2022/04/06 08:01:11 Terraform show |               podSecurityContext:
+ 2022/04/06 08:01:11 Terraform show |                 enabled: true
+ 2022/04/06 08:01:11 Terraform show |                 fsGroup: 1001
+ 2022/04/06 08:01:11 Terraform show |               readinessProbe:
+ 2022/04/06 08:01:11 Terraform show |                 enabled: true
+ 2022/04/06 08:01:11 Terraform show |                 failureThreshold: 3
+ 2022/04/06 08:01:11 Terraform show |                 initialDelaySeconds: 5
+ 2022/04/06 08:01:11 Terraform show |                 periodSeconds: 10
+ 2022/04/06 08:01:11 Terraform show |                 successThreshold: 1
+ 2022/04/06 08:01:11 Terraform show |                 timeoutSeconds: 1
+ 2022/04/06 08:01:11 Terraform show |               replicaCount: 1
+ 2022/04/06 08:01:11 Terraform show |               resources:
+ 2022/04/06 08:01:11 Terraform show |                 limits: {}
+ 2022/04/06 08:01:11 Terraform show |                 requests: {}
+ 2022/04/06 08:01:11 Terraform show |               rollingUpdatePartition: ""
+ 2022/04/06 08:01:11 Terraform show |               service:
+ 2022/04/06 08:01:11 Terraform show |                 annotations: {}
+ 2022/04/06 08:01:11 Terraform show |                 clusterIP: ""
+ 2022/04/06 08:01:11 Terraform show |                 externalTrafficPolicy: Cluster
+ 2022/04/06 08:01:11 Terraform show |                 loadBalancerIP: ""
+ 2022/04/06 08:01:11 Terraform show |                 loadBalancerSourceRanges: []
+ 2022/04/06 08:01:11 Terraform show |                 nodePort: ""
+ 2022/04/06 08:01:11 Terraform show |                 port: 3306
+ 2022/04/06 08:01:11 Terraform show |                 type: ClusterIP
+ 2022/04/06 08:01:11 Terraform show |               sidecars: []
+ 2022/04/06 08:01:11 Terraform show |               startupProbe:
+ 2022/04/06 08:01:11 Terraform show |                 enabled: true
+ 2022/04/06 08:01:11 Terraform show |                 failureThreshold: 15
+ 2022/04/06 08:01:11 Terraform show |                 initialDelaySeconds: 15
+ 2022/04/06 08:01:11 Terraform show |                 periodSeconds: 10
+ 2022/04/06 08:01:11 Terraform show |                 successThreshold: 1
+ 2022/04/06 08:01:11 Terraform show |                 timeoutSeconds: 1
+ 2022/04/06 08:01:11 Terraform show |               tolerations: []
+ 2022/04/06 08:01:11 Terraform show |               updateStrategy: RollingUpdate
+ 2022/04/06 08:01:11 Terraform show |             serviceAccount:
+ 2022/04/06 08:01:11 Terraform show |               annotations: {}
+ 2022/04/06 08:01:11 Terraform show |               create: true
+ 2022/04/06 08:01:11 Terraform show |               name: ""
+ 2022/04/06 08:01:11 Terraform show |             volumePermissions:
+ 2022/04/06 08:01:11 Terraform show |               enabled: false
+ 2022/04/06 08:01:11 Terraform show |               image:
+ 2022/04/06 08:01:11 Terraform show |                 pullPolicy: IfNotPresent
+ 2022/04/06 08:01:11 Terraform show |                 pullSecrets: []
+ 2022/04/06 08:01:11 Terraform show |                 registry: docker.io
+ 2022/04/06 08:01:11 Terraform show |                 repository: bitnami/bitnami-shell
+ 2022/04/06 08:01:11 Terraform show |                 tag: 10-debian-10-r382
+ 2022/04/06 08:01:11 Terraform show |               resources: {}
+ 2022/04/06 08:01:11 Terraform show |         EOT,
+ 2022/04/06 08:01:11 Terraform show |     ]
+ 2022/04/06 08:01:11 Terraform show |     verify                     = false
+ 2022/04/06 08:01:11 Terraform show |     version                    = "8.8.31"
+ 2022/04/06 08:01:11 Terraform show |     wait                       = false
+ 2022/04/06 08:01:11 Terraform show | 
+ 2022/04/06 08:01:11 Terraform show |     set {
+ 2022/04/06 08:01:11 Terraform show |         name  = "offering_version"
+ 2022/04/06 08:01:11 Terraform show |         value = "8.0.2204021404"
+ 2022/04/06 08:01:11 Terraform show |     }
+ 2022/04/06 08:01:11 Terraform show | }
+ 2022/04/06 08:01:11 Terraform show | 
+ 2022/04/06 08:01:11 Terraform show | # null_resource.post_exec:
+ 2022/04/06 08:01:11 Terraform show | resource "null_resource" "post_exec" {
+ 2022/04/06 08:01:11 Terraform show |     id       = "4598272968340778659"
+ 2022/04/06 08:01:11 Terraform show |     triggers = {
+ 2022/04/06 08:01:11 Terraform show |         "offering_version" = "8.0.2204021404"
+ 2022/04/06 08:01:11 Terraform show |     }
+ 2022/04/06 08:01:11 Terraform show | }
+ 2022/04/06 08:01:11 Terraform show | 
+ 2022/04/06 08:01:11 Terraform show | # null_resource.pre_exec:
+ 2022/04/06 08:01:11 Terraform show | resource "null_resource" "pre_exec" {
+ 2022/04/06 08:01:11 Terraform show |     id = "7834158490107225900"
+ 2022/04/06 08:01:11 Terraform show | }
+ 2022/04/06 08:01:11 Command finished successfully.
+ 2022/04/06 08:01:13 [1m[32mDone with the workspace action[39m[0m
