@@ -39,6 +39,77 @@ sdf = spark.createDataFrame(cars2)
 
 # Let us look at the schema of the loaded spark dataframe
 sdf.printSchema()
-
-
 sdf.take(5).show()
+
+#Converting data frame columns into feature vectors
+assembler = VectorAssembler(
+    inputCols=["hp", "weight"],
+    outputCol="features")
+
+output = assembler.transform(sdf).select('features','mpg')
+
+#We now create a test-train split of 75%-25%
+train, test = output.randomSplit([0.75, 0.25])
+
+#Find Pearson correlation
+r1 = Correlation.corr(train, "features").head()
+print("Pearson correlation matrix:\n" + str(r1[0]))
+
+#Find Spearman correlation
+r2 = Correlation.corr(train, "features", "spearman").head()
+print("Spearman correlation matrix:\n" + str(r2[0]))
+
+#Visualize the feature vectors to see that they are indeed correlated
+plt.figure()
+plt.scatter(cars2["hp"], cars2["weight"])
+plt.xlabel("horsepower")
+plt.ylabel("weight")
+plt.title("Correlation between Horsepower and Weight")
+plt.show()
+
+#Normalization
+normalizer = Normalizer(inputCol="features", outputCol="features_normalized", p=1.0)
+train_norm = normalizer.transform(train)
+print("Normalized using L^1 norm")
+train_norm.show(5, truncate=False)
+
+#Standard Scaling
+standard_scaler = StandardScaler(inputCol="features", outputCol="features_scaled")
+train_model = standard_scaler.fit(train)
+train_scaled = train_model.transform(train)
+train_scaled.show(5, truncate=False)
+
+test_scaled = train_model.transform(test)
+test_scaled.show(5, truncate=False)
+
+# Create and Train model
+# Create a LR model
+lr = LinearRegression(featuresCol='features_scaled', labelCol='mpg', maxIter=100)
+
+# Fit the model
+lrModel = lr.fit(train_scaled)
+
+# Print the coefficients and intercept for linear regression
+print("Coefficients: %s" % str(lrModel.coefficients))
+print("Intercept: %s" % str(lrModel.intercept))
+
+# Summarize the model over the training set and print out some metrics
+trainingSummary = lrModel.summary
+#trainingSummary.residuals.show()
+print("RMSE: %f" % trainingSummary.rootMeanSquaredError)
+print("R-squared: %f" % trainingSummary.r2)
+
+#Predict on new data
+lrModel.transform(test_scaled).show(5)
+
+#Print the correlation matrix for the test dataset split we created above.
+r1 = Correlation.corr(test, "features").head()
+print("Pearson correlation matrix:\n" + str(r1[0]))
+
+
+#Normalize the training features by using the L2 norm of the feature vector.
+normalizer_l2 = Normalizer(inputCol="features", outputCol="features_normalized", p=2.0)
+train_norm_l2 = normalizer_l2.transform(train)
+print("Normalized using L^1 norm\n"+str(train_norm_l2))
+train_norm_l2.show(5, truncate=False)
+
