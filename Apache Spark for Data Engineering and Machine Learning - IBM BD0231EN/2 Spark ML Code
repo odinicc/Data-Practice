@@ -1,0 +1,44 @@
+# Pandas is a popular data science package for Python. In this lab, we use Pandas to load a CSV file from disc to a pandas dataframe in memory.
+import pandas as pd
+import matplotlib.pyplot as plt
+# pyspark is the Spark API for Python. In this lab, we use pyspark to initialize the spark context. 
+from pyspark import SparkContext, SparkConf
+from pyspark.sql import SparkSession
+
+# Creating a spark context class
+sc = SparkContext()
+
+# Creating a spark session
+spark = SparkSession \
+    .builder \
+    .appName("Python Spark DataFrames basic example") \
+    .config("spark.some.config.option", "some-value") \
+    .getOrCreate()
+
+#  Initialize Spark session
+spark
+
+#Importing Spark ML libraries
+from pyspark.ml.feature import VectorAssembler, Normalizer, StandardScaler
+from pyspark.ml.stat import Correlation
+from pyspark.ml.regression import LinearRegression
+
+# Read the file cars.csv using `read_csv` function in pandas
+cars = pd.read_csv('https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-BD0225EN-SkillsNetwork/labs/data/cars.csv')
+
+# Preview a few records
+cars.head()
+
+# Read the file cars2.csv using `read_csv` function in pandas
+cars2 = pd.read_csv('https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-BD0225EN-SkillsNetwork/labs/data/cars2.csv', header=None, names=["mpg", "hp", "weight"])
+cars2.head()
+
+#Loading data into a Spark DataFrame
+# We use the `createDataFrame` function to load the data into a spark dataframe
+sdf = spark.createDataFrame(cars2)
+
+# Let us look at the schema of the loaded spark dataframe
+sdf.printSchema()
+
+
+sdf.take(5).show()
