@@ -1,0 +1,12 @@
+# Print the prompt message on screen
+echo -n "Enter your first name :"        
+read fname   
+
+echo -n "Enter your second name :"   
+read sname 
+# Print the welcome message followed by the name    
+echo "Welcome $fname $sname"
+
+# The following message should print on a single line. Hence the usage of '-n'
+echo -n "Congratulations! You just created and ran your first shell script "
+echo "using Bash on IBM Skills Network"

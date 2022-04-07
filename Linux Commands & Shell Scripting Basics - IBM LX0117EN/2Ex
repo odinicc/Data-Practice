@@ -1,0 +1,37 @@
+
+Step 3 of 5
+
+cognitiveclass.ai logo
+
+Exercise 1 - Create and execute a basic Shell Script
+
+In this exercise, we will create a simple script which will do the following.
+
+    Accept a user name
+    Print a welcome message to the user
+
+We will also add comments to the script. All the lines starting with # are comments. They are not executed by the shell. Comments make a shell script more readable, and help in debugging the script.
+
+1.1 Create a new script file
+
+Step 1: On the menu on the lab screen, use File->New File to create a new file.
+
+Step 2: Give the name as 'greet.sh' and click 'OK'
+
+Step 3: Copy and paste the following lines into the newly created file.
+
+# This script accepts the user's name and prints 
+# a message greeting the user
+
+# Print the prompt message on screen
+echo -n "Enter your name :"        
+
+# Wait for user to enter a name, and save the entered name into the variable 'name'
+read name                
+
+# Print the welcome message followed by the name    
+echo "Welcome $name"
+
+# The following message should print on a single line. Hence the usage of '-n'
+echo -n "Congratulations! You just created and ran your first shell script "
+echo "using Bash on IBM Skills Network"
