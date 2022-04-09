@@ -1,0 +1,43 @@
+
+
+#The command below extracts user names (the first field) from /etc/passwd.
+cut -d":" -f1 /etc/passwd 
+
+#The command below extracts multiple fields 1st, 3rd, and 6th (username, userid, and home directory) from /etc/passwd.
+cut -d":" -f1,3,6 /etc/passwd 
+
+#The command below extracts a range of fields 3rd to 6th (userid, groupid, user description and home directory) from /etc/passwd.
+cut -d":" -f3-6 /etc/passwd 
+
+#The command below translates all lower case alphabets to upper case.
+echo "Shell Scripting" | tr "[a-z]" "[A-Z]" 
+
+#You could also use the pre-defined character sets also for this purpose:
+echo "Shell Scripting" | tr "[:lower:]" "[:upper:]" 
+
+#The command below translates all upper case alphabets to lower case.
+echo "Shell Scripting" | tr  "[A-Z]" "[a-z]" 
+
+#Delete specified characters using the -d option
+echo "My login pin is 5634" | tr -d "[:digit:]"
+
+#Start the PostgreSQL server
+start_postgres
+
+#Start the PostgreSQL database.
+psql --username=postgres --host=localhost
+
+#Connect to database with template 
+\c template1
+
+#Create table
+create table users(username varchar(50),userid int,homedirectory varchar(100));
+
+#quit
+\q
+
+#run the script
+bash csv2db.sh
+
+
+echo '\c template1; \\SELECT * from users;' | psql --username=postgres --host=localhost

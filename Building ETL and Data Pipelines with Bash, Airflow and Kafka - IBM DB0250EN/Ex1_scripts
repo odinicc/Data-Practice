@@ -1,0 +1,23 @@
+#Start the PostgreSQL server
+start_postgres
+
+#Start the PostgreSQL database.
+psql --username=postgres --host=localhost
+
+#Connect to database with template 
+\c template1
+
+#Create table access_log
+create table access_log(timestamp TIMESTAMP,latitude float,longitude float,visitorid char(37));
+
+\q
+
+#Download file
+wget https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-DB0250EN-SkillsNetwork/labs/Bash%20Scripting/ETL%20using%20shell%20scripting/web-server-access-log.txt.gz
+
+#Unzip file
+gunzip web-server-access-log.txt.gz
+
+./TransferData.sh
+
+echo '\c template1; \\SELECT * from access_log;' | psql --username=postgres --host=localhost
