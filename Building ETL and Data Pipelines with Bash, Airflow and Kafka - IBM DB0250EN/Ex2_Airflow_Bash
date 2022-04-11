@@ -1,0 +1,23 @@
+Your airflow server is now ready to use and available with 
+username: airflow 
+password: NzYzMy1vZGluaWNj
+
+You can access your Airflow Webserver at: h
+ttps://odinicc-8080.theiadocker-1-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai
+
+airflow dags list
+
+airflow tasks list example_bash_operator
+
+airflow dags unpause tutorial
+airflow dags pause tutorial
+
+airflow tasks list example_branch_labels 
+airflow dags unpause example_branch_labels 
+airflow dags pause example_branch_labels 
+
+cp my_first_dag.py $AIRFLOW_HOME/dags
+
+airflow dags list
+airflow tasks list my-first-dag
+airflow dags list|grep "my-first-dag"
