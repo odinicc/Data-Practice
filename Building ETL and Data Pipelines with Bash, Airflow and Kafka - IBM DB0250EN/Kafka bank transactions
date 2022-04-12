@@ -1,0 +1,26 @@
+# Create Kafka topic
+bin/kafka-topics.sh --bootstrap-server localhost:9092 --create --topic bankbranch  --partitions 2
+
+#Get a list of topics
+bin/kafka-topics.sh --bootstrap-server localhost:9092 --list
+
+#Get a details about topic
+bin/kafka-topics.sh --bootstrap-server localhost:9092 --describe --topic bankbranch
+
+#Create a producer for topic bankbranch
+bin/kafka-console-producer.sh --bootstrap-server localhost:9092 --topic bankbranch 
+
+#Create a new consumer to subscribe topic
+bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic bankbranch --from-beginning
+
+#Create a new producer with message key enabled
+bin/kafka-console-producer.sh --bootstrap-server localhost:9092 --topic bankbranch --property parse.key=true --property key.separator=:
+
+#Get message
+bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic bankbranch --from-beginning --property print.key=true --property key.separator=:
+
+#Create consumer group
+bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic bankbranch --group atm-app
+
+
+	

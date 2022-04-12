@@ -1,0 +1,31 @@
+wget https://archive.apache.org/dist/kafka/2.8.0/kafka_2.12-2.8.0.tgz
+
+tar -xzf kafka_2.12-2.8.0.tgz
+
+#start zookeeper
+cd kafka_2.12-2.8.0
+bin/zookeeper-server-start.sh config/zookeeper.properties
+
+#start kafka
+cd kafka_2.12-2.8.0
+bin/kafka-server-start.sh config/server.properties
+
+#create topic
+cd kafka_2.12-2.8.0
+bin/kafka-topics.sh --create --topic news --bootstrap-server localhost:9092
+
+#send message
+bin/kafka-console-producer.sh --topic news --bootstrap-server localhost:9092
+
+#listen Consumer
+cd kafka_2.12-2.8.0
+bin/kafka-console-consumer.sh --topic news --from-beginning --bootstrap-server localhost:9092
+
+#create weather topic
+bin/kafka-topics.sh --create --topic weather --bootstrap-server localhost:9092
+
+#send message 2
+bin/kafka-console-producer.sh --topic weather --bootstrap-server localhost:9092
+
+#listen message 2
+bin/kafka-console-consumer.sh --topic weather --from-beginning --bootstrap-server localhost:9092
