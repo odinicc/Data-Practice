@@ -1,6 +1,9 @@
 Your airflow server is now ready to use and available with 
 username: airflow 
 password: NzYzMy1vZGluaWNj
+#Run Airflow
+
+start_airflow
 
 You can access your Airflow Webserver at: h
 ttps://odinicc-8080.theiadocker-1-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai
