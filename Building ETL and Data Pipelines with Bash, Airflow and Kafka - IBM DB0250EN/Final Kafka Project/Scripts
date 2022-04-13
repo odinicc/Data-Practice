@@ -1,0 +1,53 @@
+#Download Kafka
+wget https://archive.apache.org/dist/kafka/2.8.0/kafka_2.12-2.8.0.tgz
+
+#Extract Kafka
+tar -xzf kafka_2.12-2.8.0.tgz
+
+#Start MySQL server
+start_mysql
+
+#Connect to the mysql server
+mysql --host=127.0.0.1 --port=3306 --user=root --password=MjMxMzAtb2Rpbmlj
+
+#Create database
+create database tolldata;
+
+#Create table livetolldata 
+use tolldata;
+
+create table livetolldata(timestamp datetime,vehicle_id int,vehicle_type char(15),toll_plaza_id smallint);
+
+#Check table
+DESCRIBE livetolldata;
+
+#Exit SQL
+exit
+
+#instal kafka-python
+pip3 install kafka-python
+
+#Install the python module mysql-connector-python
+pip3 install mysql-connector-python 
+
+#Start Zookeeper
+cd kafka_2.12-2.8.0
+bin/zookeeper-server-start.sh config/zookeeper.properties
+
+#start kafka
+cd kafka_2.12-2.8.0
+bin/kafka-server-start.sh config/server.properties
+
+#create topic toll
+cd kafka_2.12-2.8.0
+bin/kafka-topics.sh --create --topic toll --bootstrap-server localhost:9092
+
+#Download the Toll Traffic Simulator
+wget https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-DB0250EN-SkillsNetwork/labs/Final%20Assignment/toll_traffic_generator.py
+
+#Run Toll Traffic Simulator
+python3 toll_traffic_generator.py
+
+#Download the streaming_data_reader.py 
+wget https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-DB0250EN-SkillsNetwork/labs/Final%20Assignment/streaming_data_reader.py
+
