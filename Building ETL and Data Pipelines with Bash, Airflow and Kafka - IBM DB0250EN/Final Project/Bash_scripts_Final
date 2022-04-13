@@ -1,0 +1,30 @@
+start_airflow
+
+#navigate to airflow dir
+cd /home/project/airflow/dags
+
+#create directory
+mkdir finalassignment
+
+#go to directory
+cd finalassignment
+
+#download file to /home/project/airflow/dags/finalassignment
+wget https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-DB0250EN-SkillsNetwork/labs/Final%20Assignment/tolldata.tgz
+
+#create directory for staging area
+mkdir /home/project/airflow/dags/finalassignment/staging
+
+#copy dag_file
+cp ETL_toll_data.py $AIRFLOW_HOME/dags
+
+#go to directory
+cd /home/project/airflow/dags/finalassignment
+
+#create unzip_data.sh script file
+
+#get permission to script
+chmod +x unzip_data.sh
+
+#run script
+./unzip_data.sh
