@@ -1,4 +1,4 @@
-Main topics
+Main course highlights
 
 - Data Processing Techniques
 - ETL & Data Pipelines: Tools and Techniques
