@@ -48,6 +48,22 @@ wget https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-DB02
 #Run Toll Traffic Simulator
 python3 toll_traffic_generator.py
 
+#Check consumer messages
+bin/kafka-console-consumer.sh --topic toll --from-beginning --bootstrap-server localhost:9092
+
 #Download the streaming_data_reader.py 
 wget https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-DB0250EN-SkillsNetwork/labs/Final%20Assignment/streaming_data_reader.py
+
+#Run python script
+python3 streaming_data_reader.py
+
+#Connect to SQL
+bin/kafka-topics.sh --create --topic toll --bootstrap-server localhost:9092
+
+#Check data in SQL table
+use tolldata;
+
+select * from livetolldata limit 10;
+
+
 
