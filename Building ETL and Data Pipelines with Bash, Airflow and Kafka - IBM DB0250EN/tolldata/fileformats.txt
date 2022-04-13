@@ -42,5 +42,5 @@ It has the below 7 fields
 3 Anonymized Vehicle number - Anonymized registration number of the vehicle 
 4 Tollplaza id - Id of the toll plaza
 5 Tollplaza code - Tollplaza accounting code.
--6 Type of Payment code - Code to indicate the type of payment. Example : Prepaid, Cash.
--7 Vehicle Code -  Category of the vehicle as per the toll plaza.
+-6 PTE Type of Payment code - Code to indicate the type of payment. Example : Prepaid, Cash.
+-7 VC965 Vehicle Code -  Category of the vehicle as per the toll plaza.
