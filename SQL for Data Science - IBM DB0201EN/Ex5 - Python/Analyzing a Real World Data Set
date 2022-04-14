@@ -1,0 +1,51 @@
+import psycopg2
+import IPython
+import pandas as pd
+import pandas.io.sql as sqlio
+import psycopg2
+
+#instal package
+!pip install -U ipython-sql -q 
+!pip install pgspecial
+
+%load_ext sql
+%sql postgresql+psycopg2://postgres:5677@/IBM_SQL
+
+#check connection
+%%sql
+SELECT * FROM information_schema.tables
+
+#importa dataset
+chicago_socioeconomic_data = pd.read_csv('https://data.cityofchicago.org/resource/jcxq-k9xf.csv')
+
+#import lib
+from sqlalchemy import create_engine
+
+engine = create_engine('postgresql://postgres:5677@/IBM_SQL')
+chicago_socioeconomic_data.to_sql('chicago_socioeconomic_data', engine)
+
+#count rows 
+%%sql
+select count(*) from chicago_socioeconomic_data
+
+#count rows with hardship_index > 50
+%%sql
+select count(*) from chicago_socioeconomic_data where hardship_index > 50
+
+#What is the maximum value of hardship index in this dataset?
+%%sql
+select max(hardship_index) from chicago_socioeconomic_data
+
+#Which community area which has the highest hardship index?
+%%sql
+select community_area_name from chicago_socioeconomic_data where
+hardship_index = (select max(hardship_index) from chicago_socioeconomic_data)
+
+#Which Chicago community areas have per-capita incomes greater than $60,000?
+%%sql
+select community_area_name from chicago_socioeconomic_data where per_capita_income_ > 60000
+
+#Create a scatter plot using the variables `per_capita_income_` and `hardship_index`. 
+#Explain the correlation between the two variables.
+import matplotlib.pyplot as plt
+plt.scatter('per_capita_income_', 'hardship_index',data=chicago_socioeconomic_data)
