@@ -17,3 +17,46 @@ cursor.execute("""SELECT table_name FROM information_schema.tables
        WHERE table_schema = 'public'""")
 for table in cursor.fetchall():
     print(table)
+	
+#quiery database table
+sql = '''SELECT * FROM employees;'''
+  
+cursor.execute(sql)
+results = cursor.fetchall()
+print(results)
+
+#import libs
+import pandas as pd
+import pandas.io.sql as sqlio
+
+#import data to dataframe
+sql = "select * from employees;"
+df = sqlio.read_sql_query(sql, conn)
+
+#display df
+display(df)
+
+#instal packages
+!pip install -U ipython-sql -q 
+!pip install pgspecial
+
+
+###########################New notebook###################
+#use sql magic 
+%load_ext sql
+
+#load 
+import psycopg2
+import IPython
+
+#use connect to db
+%sql postgresql+psycopg2://postgres:5677@/postgres
+%sql USE postgres
+
+%%SQL
+CREATE TABLE INTERNATIONAL_STUDENT_TEST_SCORES (
+	country VARCHAR(50),
+	first_name VARCHAR(50),
+	last_name VARCHAR(50),
+	test_score INT
+);   
