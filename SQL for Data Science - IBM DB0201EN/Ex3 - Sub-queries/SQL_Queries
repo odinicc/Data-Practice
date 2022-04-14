@@ -1,0 +1,11 @@
+#1 Execute a failing query (i.e. one which gives an error) 
+#to retrieve all employees records whose salary is lower than the average salary.
+select * from employees
+where salary > (select avg(salary) from employees) 
+
+#2 Execute a Column Expression that retrieves all employees records with 
+# EMP_ID, SALARY and maximum salary as MAX_SALARY in every row.
+select e.*, 
+max(salary) over () as max_salary
+from employees e
+

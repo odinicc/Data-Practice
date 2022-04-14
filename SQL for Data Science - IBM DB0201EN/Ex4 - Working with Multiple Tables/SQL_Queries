@@ -1,0 +1,18 @@
+
+#1 Retrieve only the EMPLOYEES records that correspond to jobs in the JOBS table.
+select e.*,  j.*
+from employees e, jobs j 
+where e.job_id  = j.job_ident 
+
+#2 Retrieve only the list of employees whose JOB_TITLE is Jr. Designer.
+select e.*,  j.*
+from employees e, jobs j 
+where e.job_id  = j.job_ident 
+and j.job_title = 'Jr. Designer' 
+
+#3 Retrieve JOB information and who earn more than $70,000.
+select e.*,  j.*
+from employees e, jobs j 
+where e.job_id  = j.job_ident 
+and e.salary > 70000
+
