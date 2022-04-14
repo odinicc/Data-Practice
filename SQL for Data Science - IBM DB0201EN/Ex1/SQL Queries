@@ -1,0 +1,6 @@
+# 1: Retrieve all employees whose address is in Elgin,IL
+select * from employees where address::text like '%Elgin ,IL'
+union 
+select * from employees where address::text like '%Elgin,IL'
+
+# 2 Retrieve all employees who were born during the 1970's.
