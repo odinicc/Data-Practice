@@ -1,4 +1,4 @@
-**1: Retrieve all employees whose address is in Elgin,IL**
+## 1: Retrieve all employees whose address is in Elgin,IL
 select * from employees where address::text like '%Elgin ,IL'
 union 
 select * from employees where address::text like '%Elgin,IL'
