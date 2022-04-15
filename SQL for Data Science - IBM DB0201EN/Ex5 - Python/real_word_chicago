@@ -23,3 +23,37 @@ import psycopg2
 
 %load_ext sql
 %sql postgresql+psycopg2://postgres:5677@/IBM_SQL
+
+#Check connection with SQL query
+%%sql
+SELECT * FROM information_schema.tables
+
+#####import lib to create engine
+from sqlalchemy import create_engine
+
+#export dataframe to SQL as table
+engine = create_engine('postgresql://postgres:5677@/IBM_SQL')
+
+
+#display max columnis in dataset
+pd.set_option('max_columns', None)
+
+#convert link to string
+df['link_'] = df['link_'].astype('str') 
+
+#describe dataframe
+df.info()
+
+#clean column link_ and sheck values
+df['link_'] = df['link_'].str.replace("{'url': ","")
+df['link_'] = df['link_'].str.replace("}","")
+
+#clean json dump
+for column in df:
+    df[column] = df[column].apply(json.dumps)
+    
+#delete all quotes from dataframe
+df = df.replace('"', '', regex=True) 
+    
+#upload file 
+df.to_sql('chicago', engine)

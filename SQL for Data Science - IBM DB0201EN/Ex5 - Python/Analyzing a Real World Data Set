@@ -18,9 +18,10 @@ SELECT * FROM information_schema.tables
 #importa dataset
 chicago_socioeconomic_data = pd.read_csv('https://data.cityofchicago.org/resource/jcxq-k9xf.csv')
 
-#import lib
+#import lib to create engine
 from sqlalchemy import create_engine
 
+#export dataframe to SQL as table
 engine = create_engine('postgresql://postgres:5677@/IBM_SQL')
 chicago_socioeconomic_data.to_sql('chicago_socioeconomic_data', engine)
 
