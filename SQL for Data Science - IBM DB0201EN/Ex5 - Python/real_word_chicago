@@ -4,12 +4,22 @@ import pandas as pd
 
 df = pd.read_json('https://data.cityofchicago.org/resource/9xs2-f89t.json')
 
+#Get df metadata
 list(df)
-  
+
+#Cut unnecessary columns
 df.drop(columns=[ ':@computed_region_rpca_8um6',
  ':@computed_region_vrxf_vc4k',
  ':@computed_region_6mkv_f3dw',
  ':@computed_region_bdys_3d7i',
  ':@computed_region_43wa_7qmu',
  ':@computed_region_awaf_s7ux'], axis=1, inplace=True)
+ 
+#Connect to SQL 
+import psycopg2
+import IPython
+import pandas.io.sql as sqlio
+import psycopg2
 
+%load_ext sql
+%sql postgresql+psycopg2://postgres:5677@/IBM_SQL
