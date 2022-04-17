@@ -23,6 +23,7 @@ import psycopg2
 
 %load_ext sql
 %sql postgresql+psycopg2://postgres:5677@/IBM_SQL
+%load_ext sql
 
 #Check connection with SQL query
 %%sql
@@ -53,7 +54,110 @@ for column in df:
     df[column] = df[column].apply(json.dumps)
     
 #delete all quotes from dataframe
-df = df.replace('"', '', regex=True) 
+df = df.replace('"', '', regex=True)
+
+#replace NDA values with null
+df = df.replace('NDA', 'NULL', regex=True)  
+
+#Drop table if exist 
+%%sql 
+drop table if exists chicago
+
     
 #upload file 
 df.to_sql('chicago', engine)
+
+#Check table metadata 
+%%sql 
+select column_name, data_type, character_maximum_length, column_default, is_nullable
+from INFORMATION_SCHEMA.COLUMNS where table_name = 'chicago';
+
+##How many Elementary Schools are in the dataset?
+%%sql 
+select count(*) from chicago where elementary_or_high_school = 'ES';
+
+
+##What is the highest Safety Score?
+#Replace 'NaN' value
+%%sql 
+update chicago
+set safety_score = NULL
+WHERE safety_score = 'NaN';
+
+#Convert to integer
+%%sql 
+alter table chicago alter column safety_score TYPE float(8)  USING (safety_score::float(8));
+alter table chicago alter column safety_score type integer  USING (safety_score::integer);
+
+#Select highet safety score 
+%%sql 
+Select max(safety_score) from chicago;
+
+##Which schools have highest Safety Score?
+%%sql
+Select name_of_school, safety_score from chicago
+where safety_score = (Select max(safety_score) from chicago);
+
+
+##What are the top 10 schools with the highest "Average Student Attendance"?
+#Convert to float
+%%sql
+alter table chicago alter column average_student_attendance TYPE float(8)  USING (average_student_attendance::float(8));
+
+#Run select
+%%sql
+Select name_of_school, average_student_attendance from chicago
+order by average_student_attendance DESC
+limit 10;
+
+##Which Schools have Average Student Attendance lower than 70%
+%%sql
+Select name_of_school, average_student_attendance 
+from chicago
+where average_student_attendance < 70;
+
+###Get the total College Enrollment for each Community Area
+
+#Convert NULL
+%%sql
+update chicago
+set college_enrollment_rate = NULL
+WHERE college_enrollment_rate = 'NULL'
+
+#Convert to float 
+%%sql
+alter table chicago alter column college_enrollment_rate TYPE float(8)  USING (college_enrollment_rate::float(8));
+
+#Run select
+%%sql
+select community_area_name, sum(college_enrollment_rate)
+from chicago
+group by community_area_name;
+
+
+##Get the 5 Community Areas with the least total College Enrollment sorted in ascending order
+%%sql
+select community_area_name, sum(college_enrollment_rate) as sum_college_enrollment_rate
+from chicago
+group by community_area_name
+order by sum_college_enrollment_rate
+limit 5
+
+##Get the hardship index for the community area which has the highest value for College Enrollment
+
+#Convert index 
+alter table chicago alter column community_area_number type integer  USING (community_area_number::integer);
+
+#Create view ofcommunity_area
+CREATE VIEW community_hardship AS
+select chicago.community_area_name, sum(chicago.college_enrollment_rate) as sum_college_enrollment_rate, chicago_socioeconomic_data.hardship_index 
+from chicago
+join chicago_socioeconomic_data
+on chicago_socioeconomic_data.index = chicago.community_area_number 
+group by chicago.community_area_name, chicago_socioeconomic_data.hardship_index 
+
+#Run select
+select community_area_name, hardship_index  from community_hardship 
+where sum_college_enrollment_rate = (select max(sum_college_enrollment_rate) from community_hardship)
+
+ 
