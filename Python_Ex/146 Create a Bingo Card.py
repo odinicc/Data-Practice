@@ -21,8 +21,26 @@ def displayCard(card):
             print("%2d   " % card[letter][i], end="")
         print()
 
+def generate_numbers(n):
+    ren = list(range(1,76))
+    l = []
+    for i in range(n):
+        m = random.choice(ren)
+        n = ren.pop(m)
+        l.append(n)
+    return l
+
+def match_numbers(card, l ):
+    for i in range(len(card)):
+        return
+    
+    
+
 
 
 b = create_card()
 displayCard(b)
+l = generate_numbers(5)
 
+print(l)
+print(b)
