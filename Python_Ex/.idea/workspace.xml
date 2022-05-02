@@ -19,7 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="73c13742-226b-4999-bd45-5ba7658e48e4" name="Default Changelist" comment="" />
+    <list default="true" id="73c13742-226b-4999-bd45-5ba7658e48e4" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/147 ex.py" beforeDir="false" afterPath="$PROJECT_DIR$/149 Display the Head of a File.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -50,7 +53,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunManager">
-    <configuration name="147 ex" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="149 Display the Head of a File" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Python_Ex" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -63,8 +66,30 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/147 ex.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/149 Display the Head of a File.py" />
       <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="149 Display the Head of a File" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Python_Ex" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/149 Display the Head of a File.py" />
+      <option name="PARAMETERS" value="tail 5" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -74,7 +99,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.147 ex" />
+        <item itemvalue="Python.149 Display the Head of a File" />
+        <item itemvalue="Python.149 Display the Head of a File" />
       </list>
     </recent_temporary>
   </component>
@@ -89,6 +115,7 @@
       <option name="presentableId" value="Default" />
       <updated>1651488198679</updated>
       <workItem from="1651488199960" duration="183000" />
+      <workItem from="1651506342479" duration="6981000" />
     </task>
     <servers />
   </component>
@@ -105,8 +132,40 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="0" y="0" key="#149_Display_the_Head_of_a_File_(1)" timestamp="1651512960461">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="0" y="0" key="#149_Display_the_Head_of_a_File_(1)/0.0.1280.680@0.0.1280.680" timestamp="1651512960461" />
+    <state x="292" y="95" width="831" height="579" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1651515615804">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="292" y="95" width="831" height="579" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1651515615804" />
+    <state x="488" y="90" key="#com.intellij.ide.macro.MacrosDialog" timestamp="1651514457817">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="488" y="90" key="#com.intellij.ide.macro.MacrosDialog/0.0.1280.680@0.0.1280.680" timestamp="1651514457817" />
+    <state width="755" height="386" key="GridCell.Tab.0.bottom" timestamp="1651515606890">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="755" height="386" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1651515606890" />
+    <state width="755" height="386" key="GridCell.Tab.0.center" timestamp="1651515606890">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="755" height="386" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1651515606890" />
+    <state width="755" height="386" key="GridCell.Tab.0.left" timestamp="1651515606890">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="755" height="386" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1651515606890" />
+    <state width="755" height="386" key="GridCell.Tab.0.right" timestamp="1651515606890">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="755" height="386" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1651515606890" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Python_Ex$147_ex.coverage" NAME="147 ex Coverage Results" MODIFIED="1651488391366" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Python_Ex$149_Display_the_Head_of_a_File__1_.coverage" NAME="149 Display the Head of a File Coverage Results" MODIFIED="1651515657293" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
