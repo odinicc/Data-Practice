@@ -10,10 +10,10 @@ Horatio, friend to Hamlet.
 Laertes, son to Polonius.
 	Voltemand, courtier.
 Cornelius, courtier.
-Rosencrantz, courtier.
-Guildenstern, courtier.
+Rosencrantz, #courtier.
+Guildenstern,# courtier.
 Osric, courtier.
-  A Gentleman, courtier.
+  A Gentleman,- courtier.
 
 science, sufficient
 their, feisty, foreign
