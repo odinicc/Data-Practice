@@ -1,17 +1,29 @@
+import pprint
+
 file_name = "hamlet2.txt"
 inf = open(file_name, 'r')
 
 Lines = inf.readlines()
 k = len(Lines)
 print('Lines',Lines)
-maxword_len = 0
+letter_freq = {}
 for row in range(k):
-    words = Lines[row].split(" ")
-    for word in words:
-        word = word.replace('\n', '').replace('.', '').replace(',', '').replace('"', '')
-        #print(word)
-        if len(word)>maxword_len:
-            maxword_len = len(word)
-            maxword = word
+    words = list(Lines[row])
+    for symbol in words:
+        symbol_code = ord(symbol)
+        if 64 < symbol_code < 90 :
+            if symbol in letter_freq:
+                letter_freq[symbol] +=1
+            else:
+                letter_freq[symbol] = 1
 
-print(' Maxword ',maxword,'with max len',maxword_len)
+        elif 96 < symbol_code < 123:
+            Large_sumbol = chr(symbol_code-32)
+            if Large_sumbol in letter_freq:
+                letter_freq[Large_sumbol] +=1
+            else:
+                letter_freq[Large_sumbol] = 1
+
+
+
+pprint.pprint(letter_freq)

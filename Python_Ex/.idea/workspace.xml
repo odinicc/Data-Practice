@@ -20,9 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="73c13742-226b-4999-bd45-5ba7658e48e4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/153 Find the Longest Word in a File.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/154 Letter Frequencies.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/158 Remove Comments.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/154 Letter Frequencies.py" beforeDir="false" afterPath="$PROJECT_DIR$/154 Letter Frequencies.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dd.py" beforeDir="false" afterPath="$PROJECT_DIR$/dd.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +59,7 @@
       <recent name="C:\Users\ivan\Documents\GitHub\Analyzing-Data-with-Python\Python_Ex" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.153 Find the Longest Word in a File">
+  <component name="RunManager" selected="Python.158 Remove Comments">
     <configuration name="149 Display the Head of a File" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Python_Ex" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -147,16 +148,63 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="154 Letter Frequencies" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Python_Ex" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/154 Letter Frequencies.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="158 Remove Comments" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Python_Ex" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/158 Remove Comments.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Python.149 Display the Head of a File" />
       <item itemvalue="Python.152 Number the Lines in a File" />
       <item itemvalue="Python.153 Find the Longest Word in a File" />
+      <item itemvalue="Python.154 Letter Frequencies" />
+      <item itemvalue="Python.158 Remove Comments" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.158 Remove Comments" />
+        <item itemvalue="Python.154 Letter Frequencies" />
         <item itemvalue="Python.153 Find the Longest Word in a File" />
         <item itemvalue="Python.152 Number the Lines in a File" />
-        <item itemvalue="Python.149 Display the Head of a File" />
         <item itemvalue="Python.149 Display the Head of a File" />
       </list>
     </recent_temporary>
@@ -173,7 +221,7 @@
       <updated>1651488198679</updated>
       <workItem from="1651488199960" duration="183000" />
       <workItem from="1651506342479" duration="9018000" />
-      <workItem from="1651643181212" duration="1501000" />
+      <workItem from="1651643181212" duration="3955000" />
     </task>
     <servers />
   </component>
@@ -209,27 +257,29 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="477" y="181" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1651570159200" />
-    <state width="755" height="386" key="GridCell.Tab.0.bottom" timestamp="1651644606933">
+    <state width="755" height="386" key="GridCell.Tab.0.bottom" timestamp="1651646797717">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="755" height="386" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1651644606933" />
-    <state width="755" height="386" key="GridCell.Tab.0.center" timestamp="1651644606933">
+    <state width="755" height="386" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1651646797717" />
+    <state width="755" height="386" key="GridCell.Tab.0.center" timestamp="1651646797717">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="755" height="386" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1651644606933" />
-    <state width="755" height="386" key="GridCell.Tab.0.left" timestamp="1651644606932">
+    <state width="755" height="386" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1651646797717" />
+    <state width="755" height="386" key="GridCell.Tab.0.left" timestamp="1651646797717">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="755" height="386" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1651644606932" />
-    <state width="755" height="386" key="GridCell.Tab.0.right" timestamp="1651644606933">
+    <state width="755" height="386" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1651646797717" />
+    <state width="755" height="386" key="GridCell.Tab.0.right" timestamp="1651646797717">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="755" height="386" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1651644606933" />
+    <state width="755" height="386" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1651646797717" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Python_Ex$152_Number_the_Lines_in_a_File.coverage" NAME="152 Number the Lines in a File Coverage Results" MODIFIED="1651516396694" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Python_Ex$147_ex.coverage" NAME="147 ex Coverage Results" MODIFIED="1651488391366" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Python_Ex$153_Find_the_Longest_Word_in_a_File.coverage" NAME="153 Find the Longest Word in a File Coverage Results" MODIFIED="1651644603567" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Python_Ex$149_Display_the_Head_of_a_File__1_.coverage" NAME="149 Display the Head of a File Coverage Results" MODIFIED="1651515657293" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Python_Ex$154_Letter_Frequencies.coverage" NAME="154 Letter Frequencies Coverage Results" MODIFIED="1651646087904" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Python_Ex$158_Remove_Comments.coverage" NAME="158 Remove Comments Coverage Results" MODIFIED="1651646795969" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
