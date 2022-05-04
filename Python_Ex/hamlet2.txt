@@ -14,3 +14,6 @@ Rosencrantz, courtier.
 Guildenstern, courtier.
 Osric, courtier.
   A Gentleman, courtier.
+
+science, sufficient
+their, feisty, foreign
