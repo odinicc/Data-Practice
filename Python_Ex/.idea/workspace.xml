@@ -20,9 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="73c13742-226b-4999-bd45-5ba7658e48e4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/163 Names that Reached Number One.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/162 A Book with No E.py" beforeDir="false" afterPath="$PROJECT_DIR$/162 A Book with No E.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dd.py" beforeDir="false" afterPath="$PROJECT_DIR$/dd.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,51 +57,7 @@
       <recent name="C:\Users\ivan\Documents\GitHub\Analyzing-Data-with-Python\Python_Ex" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.162 A Book with No E">
-    <configuration name="149 Display the Head of a File" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="Python_Ex" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/149 Display the Head of a File.py" />
-      <option name="PARAMETERS" value="tail 5" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="153 Find the Longest Word in a File" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="Python_Ex" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/153 Find the Longest Word in a File.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python.163 Names that Reached Number One">
     <configuration name="154 Letter Frequencies" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Python_Ex" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -191,20 +146,42 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="163 Names that Reached Number One" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Python_Ex" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/163 Names that Reached Number One.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <list>
-      <item itemvalue="Python.153 Find the Longest Word in a File" />
       <item itemvalue="Python.154 Letter Frequencies" />
       <item itemvalue="Python.158 Remove Comments" />
       <item itemvalue="Python.160 Weird Words" />
       <item itemvalue="Python.162 A Book with No E" />
+      <item itemvalue="Python.163 Names that Reached Number One" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.163 Names that Reached Number One" />
         <item itemvalue="Python.162 A Book with No E" />
         <item itemvalue="Python.160 Weird Words" />
         <item itemvalue="Python.158 Remove Comments" />
         <item itemvalue="Python.154 Letter Frequencies" />
-        <item itemvalue="Python.153 Find the Longest Word in a File" />
       </list>
     </recent_temporary>
   </component>
@@ -221,6 +198,7 @@
       <workItem from="1651488199960" duration="183000" />
       <workItem from="1651506342479" duration="9018000" />
       <workItem from="1651643181212" duration="8670000" />
+      <workItem from="1651725382012" duration="5011000" />
     </task>
     <servers />
   </component>
@@ -244,6 +222,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="0" y="0" key="#149_Display_the_Head_of_a_File_(1)/0.0.1280.680@0.0.1280.680" timestamp="1651512960461" />
+    <state x="581" y="328" key="#Notifications" timestamp="1651731061288">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="581" y="328" key="#Notifications/0.0.1280.680@0.0.1280.680" timestamp="1651731061288" />
     <state x="292" y="95" width="831" height="579" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1651515615804">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -256,25 +238,26 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="477" y="181" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1651679655944" />
-    <state width="755" height="386" key="GridCell.Tab.0.bottom" timestamp="1651679661912">
+    <state width="755" height="386" key="GridCell.Tab.0.bottom" timestamp="1651731100582">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="755" height="386" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1651679661912" />
-    <state width="755" height="386" key="GridCell.Tab.0.center" timestamp="1651679661912">
+    <state width="755" height="386" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1651731100582" />
+    <state width="755" height="386" key="GridCell.Tab.0.center" timestamp="1651731100582">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="755" height="386" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1651679661912" />
-    <state width="755" height="386" key="GridCell.Tab.0.left" timestamp="1651679661912">
+    <state width="755" height="386" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1651731100582" />
+    <state width="755" height="386" key="GridCell.Tab.0.left" timestamp="1651731100582">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="755" height="386" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1651679661912" />
-    <state width="755" height="386" key="GridCell.Tab.0.right" timestamp="1651679661912">
+    <state width="755" height="386" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1651731100582" />
+    <state width="755" height="386" key="GridCell.Tab.0.right" timestamp="1651731100582">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="755" height="386" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1651679661912" />
+    <state width="755" height="386" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1651731100582" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Python_Ex$152_Number_the_Lines_in_a_File.coverage" NAME="152 Number the Lines in a File Coverage Results" MODIFIED="1651516396694" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Python_Ex$163_Names_that_Reached_Number_One.coverage" NAME="163 Names that Reached Number One Coverage Results" MODIFIED="1651731108688" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Python_Ex$147_ex.coverage" NAME="147 ex Coverage Results" MODIFIED="1651488391366" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Python_Ex$153_Find_the_Longest_Word_in_a_File.coverage" NAME="153 Find the Longest Word in a File Coverage Results" MODIFIED="1651644603567" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Python_Ex$162_A_Book_with_No_E.coverage" NAME="162 A Book with No E Coverage Results" MODIFIED="1651651205287" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
