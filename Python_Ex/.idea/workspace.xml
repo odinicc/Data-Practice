@@ -20,7 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="73c13742-226b-4999-bd45-5ba7658e48e4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/167 Spell Checker.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/170  Missing Comments.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -57,29 +57,7 @@
       <recent name="C:\Users\ivan\Documents\GitHub\Analyzing-Data-with-Python\Python_Ex" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.167 Spell Checker">
-    <configuration name="158 Remove Comments" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="Python_Ex" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/158 Remove Comments.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python.170  Missing Comments">
     <configuration name="160 Weird Words" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Python_Ex" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -168,20 +146,42 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="170  Missing Comments" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Python_Ex" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/170  Missing Comments.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <list>
-      <item itemvalue="Python.158 Remove Comments" />
       <item itemvalue="Python.160 Weird Words" />
       <item itemvalue="Python.162 A Book with No E" />
       <item itemvalue="Python.163 Names that Reached Number One" />
       <item itemvalue="Python.167 Spell Checker" />
+      <item itemvalue="Python.170  Missing Comments" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.170  Missing Comments" />
         <item itemvalue="Python.167 Spell Checker" />
         <item itemvalue="Python.163 Names that Reached Number One" />
         <item itemvalue="Python.162 A Book with No E" />
         <item itemvalue="Python.160 Weird Words" />
-        <item itemvalue="Python.158 Remove Comments" />
       </list>
     </recent_temporary>
   </component>
@@ -200,7 +200,7 @@
       <workItem from="1651643181212" duration="8670000" />
       <workItem from="1651725382012" duration="7904000" />
       <workItem from="1651773349796" duration="15000" />
-      <workItem from="1651775386334" duration="2039000" />
+      <workItem from="1651775386334" duration="4702000" />
     </task>
     <servers />
   </component>
@@ -240,26 +240,31 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="477" y="181" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1651679655944" />
-    <state width="755" height="386" key="GridCell.Tab.0.bottom" timestamp="1651777091616">
+    <state width="1024" height="386" key="GridCell.Tab.0.bottom" timestamp="1651779703724">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="755" height="386" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1651777091616" />
-    <state width="755" height="386" key="GridCell.Tab.0.center" timestamp="1651777091615">
+    <state width="1024" height="386" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1651779703724" />
+    <state width="1024" height="386" key="GridCell.Tab.0.center" timestamp="1651779703724">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="755" height="386" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1651777091615" />
-    <state width="755" height="386" key="GridCell.Tab.0.left" timestamp="1651777091615">
+    <state width="1024" height="386" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1651779703724" />
+    <state width="1024" height="386" key="GridCell.Tab.0.left" timestamp="1651779703724">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="755" height="386" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1651777091615" />
-    <state width="755" height="386" key="GridCell.Tab.0.right" timestamp="1651777091615">
+    <state width="1024" height="386" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1651779703724" />
+    <state width="1024" height="386" key="GridCell.Tab.0.right" timestamp="1651779703724">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="755" height="386" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1651777091615" />
+    <state width="1024" height="386" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1651779703724" />
+    <state x="303" y="1" key="search.everywhere.popup" timestamp="1651777682720">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="303" y="1" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1651777682720" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Python_Ex$152_Number_the_Lines_in_a_File.coverage" NAME="152 Number the Lines in a File Coverage Results" MODIFIED="1651516396694" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Python_Ex$163_Names_that_Reached_Number_One.coverage" NAME="163 Names that Reached Number One Coverage Results" MODIFIED="1651733389682" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Python_Ex$170__Missing_Comments.coverage" NAME="170  Missing Comments Coverage Results" MODIFIED="1651779670639" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Python_Ex$147_ex.coverage" NAME="147 ex Coverage Results" MODIFIED="1651488391366" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Python_Ex$153_Find_the_Longest_Word_in_a_File.coverage" NAME="153 Find the Longest Word in a File Coverage Results" MODIFIED="1651644603567" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Python_Ex$162_A_Book_with_No_E.coverage" NAME="162 A Book with No E Coverage Results" MODIFIED="1651651205287" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
