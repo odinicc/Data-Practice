@@ -89,9 +89,11 @@ for i in range(10) :
             if Hender[words[0]] == 'T':
                 year_trans_names[words[0]][words[1]] = words[2]
 
-        for row in year_trans_names:
+        for row in list(year_trans_names):
             if ("M" in year_trans_names[row]) and ("F" in year_trans_names[row]):
                 year_trans_names_2[row] = year_trans_names[row]
+            else:
+                year_trans_names.pop(row)
         pp.pprint(year_trans_names_2)
 
 
