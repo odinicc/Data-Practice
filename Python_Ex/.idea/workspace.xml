@@ -20,8 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="73c13742-226b-4999-bd45-5ba7658e48e4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/176 The NATO Phonetic Alphabet.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/174 Greatest Common Divisor.py" beforeDir="false" afterPath="$PROJECT_DIR$/174 Greatest Common Divisor.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,29 +57,7 @@
       <recent name="C:\Users\ivan\Documents\GitHub\Analyzing-Data-with-Python\Python_Ex" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.174 Greatest Common Divisor">
-    <configuration name="167 Spell Checker" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="Python_Ex" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/167 Spell Checker.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python.176 The NATO Phonetic Alphabet">
     <configuration name="170  Missing Comments" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Python_Ex" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -168,20 +146,42 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="176 The NATO Phonetic Alphabet" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Python_Ex" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/176 The NATO Phonetic Alphabet.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <list>
-      <item itemvalue="Python.167 Spell Checker" />
       <item itemvalue="Python.170  Missing Comments" />
       <item itemvalue="Python.172 Words with Six Vowels in Order" />
       <item itemvalue="Python.173 Total the Values" />
       <item itemvalue="Python.174 Greatest Common Divisor" />
+      <item itemvalue="Python.176 The NATO Phonetic Alphabet" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.176 The NATO Phonetic Alphabet" />
         <item itemvalue="Python.174 Greatest Common Divisor" />
         <item itemvalue="Python.173 Total the Values" />
         <item itemvalue="Python.172 Words with Six Vowels in Order" />
         <item itemvalue="Python.170  Missing Comments" />
-        <item itemvalue="Python.167 Spell Checker" />
       </list>
     </recent_temporary>
   </component>
@@ -200,7 +200,7 @@
       <workItem from="1651643181212" duration="8670000" />
       <workItem from="1651725382012" duration="7904000" />
       <workItem from="1651773349796" duration="15000" />
-      <workItem from="1651775386334" duration="8987000" />
+      <workItem from="1651775386334" duration="14333000" />
     </task>
     <servers />
   </component>
@@ -240,38 +240,38 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="477" y="181" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1651679655944" />
-    <state width="1024" height="386" key="GridCell.Tab.0.bottom" timestamp="1651813317547">
+    <state width="1024" height="386" key="GridCell.Tab.0.bottom" timestamp="1651820000109">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1024" height="386" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1651813317547" />
-    <state width="1024" height="386" key="GridCell.Tab.0.center" timestamp="1651813317547">
+    <state width="1024" height="386" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1651820000109" />
+    <state width="1024" height="386" key="GridCell.Tab.0.center" timestamp="1651820000108">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1024" height="386" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1651813317547" />
-    <state width="1024" height="386" key="GridCell.Tab.0.left" timestamp="1651813317547">
+    <state width="1024" height="386" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1651820000108" />
+    <state width="1024" height="386" key="GridCell.Tab.0.left" timestamp="1651820000108">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1024" height="386" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1651813317547" />
-    <state width="1024" height="386" key="GridCell.Tab.0.right" timestamp="1651813317547">
+    <state width="1024" height="386" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1651820000108" />
+    <state width="1024" height="386" key="GridCell.Tab.0.right" timestamp="1651820000109">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1024" height="386" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1651813317547" />
-    <state width="1237" height="204" key="GridCell.Tab.1.bottom" timestamp="1651812568353">
+    <state width="1024" height="386" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1651820000109" />
+    <state width="1237" height="100" key="GridCell.Tab.1.bottom" timestamp="1651815914613">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="204" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1651812568353" />
-    <state width="1237" height="204" key="GridCell.Tab.1.center" timestamp="1651812568353">
+    <state width="1237" height="100" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1651815914613" />
+    <state width="1237" height="100" key="GridCell.Tab.1.center" timestamp="1651815914613">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="204" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1651812568353" />
-    <state width="1237" height="204" key="GridCell.Tab.1.left" timestamp="1651812568352">
+    <state width="1237" height="100" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1651815914613" />
+    <state width="1237" height="100" key="GridCell.Tab.1.left" timestamp="1651815914613">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="204" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1651812568352" />
-    <state width="1237" height="204" key="GridCell.Tab.1.right" timestamp="1651812568353">
+    <state width="1237" height="100" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1651815914613" />
+    <state width="1237" height="100" key="GridCell.Tab.1.right" timestamp="1651815914613">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="204" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1651812568353" />
+    <state width="1237" height="100" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1651815914613" />
     <state x="303" y="1" key="search.everywhere.popup" timestamp="1651777682720">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -286,6 +286,7 @@
     <SUITE FILE_PATH="coverage/Python_Ex$167_Spell_Checker.coverage" NAME="167 Spell Checker Coverage Results" MODIFIED="1651777087445" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Python_Ex$172_Words_with_Six_Vowels_in_Order.coverage" NAME="172 Words with Six Vowels in Order Coverage Results" MODIFIED="1651780874836" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Python_Ex$152_Number_the_Lines_in_a_File.coverage" NAME="152 Number the Lines in a File Coverage Results" MODIFIED="1651516396694" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Python_Ex$176_The_NATO_Phonetic_Alphabet.coverage" NAME="176 The NATO Phonetic Alphabet Coverage Results" MODIFIED="1651820008224" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Python_Ex$174_Greatest_Common_Divisor.coverage" NAME="174 Greatest Common Divisor Coverage Results" MODIFIED="1651813315344" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Python_Ex$153_Find_the_Longest_Word_in_a_File.coverage" NAME="153 Find the Longest Word in a File Coverage Results" MODIFIED="1651644603567" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Python_Ex$160_Weird_Words.coverage" NAME="160 Weird Words Coverage Results" MODIFIED="1651648629226" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
