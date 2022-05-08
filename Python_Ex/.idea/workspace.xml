@@ -20,8 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="73c13742-226b-4999-bd45-5ba7658e48e4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/181 Possible Change.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/183 Boris.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/184 Flatten a List.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/181 Possible Change.py" beforeDir="false" afterPath="$PROJECT_DIR$/181 Possible Change.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,58 +52,14 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Stepik - Алгоритмы Теория и Практика" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\ivan\Documents\GitHub\Analyzing-Data-with-Python\Python_Ex" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.181 Possible Change">
-    <configuration name="174 Greatest Common Divisor" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="Python_Ex" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/174 Greatest Common Divisor.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="176 The NATO Phonetic Alphabet" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="Python_Ex" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/176 The NATO Phonetic Alphabet.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python.184 Flatten a List">
     <configuration name="178  Recursive Palindrome" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Python_Ex" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -168,20 +126,64 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="183 Boris" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Python_Ex" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\ivan\Documents\GitHub\Analyzing-Data-with-Python\Python_Ex\183 Boris.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="184 Flatten a List" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Python_Ex" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/184 Flatten a List.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <list>
-      <item itemvalue="Python.174 Greatest Common Divisor" />
-      <item itemvalue="Python.176 The NATO Phonetic Alphabet" />
       <item itemvalue="Python.178  Recursive Palindrome" />
       <item itemvalue="Python.179 Recursive Square Root" />
       <item itemvalue="Python.181 Possible Change" />
+      <item itemvalue="Python.183 Boris" />
+      <item itemvalue="Python.184 Flatten a List" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.184 Flatten a List" />
+        <item itemvalue="Python.183 Boris" />
         <item itemvalue="Python.181 Possible Change" />
         <item itemvalue="Python.179 Recursive Square Root" />
         <item itemvalue="Python.178  Recursive Palindrome" />
-        <item itemvalue="Python.176 The NATO Phonetic Alphabet" />
-        <item itemvalue="Python.174 Greatest Common Divisor" />
       </list>
     </recent_temporary>
   </component>
@@ -201,7 +203,7 @@
       <workItem from="1651725382012" duration="7904000" />
       <workItem from="1651773349796" duration="15000" />
       <workItem from="1651775386334" duration="14965000" />
-      <workItem from="1651915423551" duration="9554000" />
+      <workItem from="1651915423551" duration="13800000" />
     </task>
     <servers />
   </component>
@@ -237,42 +239,42 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="488" y="90" key="#com.intellij.ide.macro.MacrosDialog/0.0.1280.680@0.0.1280.680" timestamp="1651514457817" />
-    <state x="477" y="181" key="FileChooserDialogImpl" timestamp="1651679655944">
+    <state x="477" y="181" key="FileChooserDialogImpl" timestamp="1652036635276">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="477" y="181" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1651679655944" />
-    <state width="1024" height="386" key="GridCell.Tab.0.bottom" timestamp="1651935425152">
+    <state x="477" y="181" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1652036635276" />
+    <state width="1237" height="162" key="GridCell.Tab.0.bottom" timestamp="1652036636785">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1024" height="386" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1651935425152" />
-    <state width="1024" height="386" key="GridCell.Tab.0.center" timestamp="1651935425152">
+    <state width="1237" height="162" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1652036636785" />
+    <state width="1237" height="162" key="GridCell.Tab.0.center" timestamp="1652036636784">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1024" height="386" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1651935425152" />
-    <state width="1024" height="386" key="GridCell.Tab.0.left" timestamp="1651935425152">
+    <state width="1237" height="162" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1652036636784" />
+    <state width="1237" height="162" key="GridCell.Tab.0.left" timestamp="1652036636784">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1024" height="386" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1651935425152" />
-    <state width="1024" height="386" key="GridCell.Tab.0.right" timestamp="1651935425152">
+    <state width="1237" height="162" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1652036636784" />
+    <state width="1237" height="162" key="GridCell.Tab.0.right" timestamp="1652036636785">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1024" height="386" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1651935425152" />
-    <state width="1237" height="162" key="GridCell.Tab.1.bottom" timestamp="1651933519236">
+    <state width="1237" height="162" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1652036636785" />
+    <state width="1237" height="162" key="GridCell.Tab.1.bottom" timestamp="1652036636785">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="162" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1651933519236" />
-    <state width="1237" height="162" key="GridCell.Tab.1.center" timestamp="1651933519236">
+    <state width="1237" height="162" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1652036636785" />
+    <state width="1237" height="162" key="GridCell.Tab.1.center" timestamp="1652036636785">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="162" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1651933519236" />
-    <state width="1237" height="162" key="GridCell.Tab.1.left" timestamp="1651933519235">
+    <state width="1237" height="162" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1652036636785" />
+    <state width="1237" height="162" key="GridCell.Tab.1.left" timestamp="1652036636785">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="162" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1651933519235" />
-    <state width="1237" height="162" key="GridCell.Tab.1.right" timestamp="1651933519236">
+    <state width="1237" height="162" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1652036636785" />
+    <state width="1237" height="162" key="GridCell.Tab.1.right" timestamp="1652036636785">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="162" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1651933519236" />
+    <state width="1237" height="162" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1652036636785" />
     <state x="484" y="113" key="refactoring.ChangeSignatureDialog" timestamp="1651933632330">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -287,15 +289,17 @@
     <SUITE FILE_PATH="coverage/Python_Ex$170__Missing_Comments.coverage" NAME="170  Missing Comments Coverage Results" MODIFIED="1651779670639" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Python_Ex$147_ex.coverage" NAME="147 ex Coverage Results" MODIFIED="1651488391366" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Python_Ex$173_Total_the_Values.coverage" NAME="173 Total the Values Coverage Results" MODIFIED="1651811511499" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Python_Ex$Boris.coverage" NAME="Boris Coverage Results" MODIFIED="1652031589009" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Python_Ex$162_A_Book_with_No_E.coverage" NAME="162 A Book with No E Coverage Results" MODIFIED="1651651205287" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Python_Ex$179_Recursive_Square_Root.coverage" NAME="179 Recursive Square Root Coverage Results" MODIFIED="1651930815361" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Python_Ex$167_Spell_Checker.coverage" NAME="167 Spell Checker Coverage Results" MODIFIED="1651777087445" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Python_Ex$172_Words_with_Six_Vowels_in_Order.coverage" NAME="172 Words with Six Vowels in Order Coverage Results" MODIFIED="1651780874836" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Python_Ex$181_Possible_Change.coverage" NAME="181 Possible Change Coverage Results" MODIFIED="1651935407607" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Python_Ex$181_Possible_Change.coverage" NAME="181 Possible Change Coverage Results" MODIFIED="1652031473402" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Python_Ex$152_Number_the_Lines_in_a_File.coverage" NAME="152 Number the Lines in a File Coverage Results" MODIFIED="1651516396694" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Python_Ex$176_The_NATO_Phonetic_Alphabet.coverage" NAME="176 The NATO Phonetic Alphabet Coverage Results" MODIFIED="1651820008224" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Python_Ex$178__Recursive_Palindrome.coverage" NAME="178  Recursive Palindrome Coverage Results" MODIFIED="1651924523532" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Python_Ex$174_Greatest_Common_Divisor.coverage" NAME="174 Greatest Common Divisor Coverage Results" MODIFIED="1651813315344" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Python_Ex$184_Flatten_a_List.coverage" NAME="184 Flatten a List Coverage Results" MODIFIED="1652033735490" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Python_Ex$153_Find_the_Longest_Word_in_a_File.coverage" NAME="153 Find the Longest Word in a File Coverage Results" MODIFIED="1651644603567" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Python_Ex$160_Weird_Words.coverage" NAME="160 Weird Words Coverage Results" MODIFIED="1651648629226" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Python_Ex$149_Display_the_Head_of_a_File__1_.coverage" NAME="149 Display the Head of a File Coverage Results" MODIFIED="1651515657293" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />

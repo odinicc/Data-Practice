@@ -36,7 +36,7 @@ def finder(work_list,n,summ):
     return work_list
 
 
-n = 10
-summ = 260
+n = 7
+summ = 265
 final_list = finder(work_list, n, summ)
 print("final_list ",final_list)
