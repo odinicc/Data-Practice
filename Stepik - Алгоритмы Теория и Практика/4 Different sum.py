@@ -1,5 +1,3 @@
-
-
 def difsum(num):
     s = 0
     app = []
