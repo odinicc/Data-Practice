@@ -19,10 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="73c13742-226b-4999-bd45-5ba7658e48e4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../Stepik - Алгоритмы Теория и Практика/11 Merge  Sort.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="73c13742-226b-4999-bd45-5ba7658e48e4" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -203,6 +200,7 @@
       <workItem from="1651775386334" duration="14965000" />
       <workItem from="1651915423551" duration="13800000" />
       <workItem from="1652100270073" duration="2311000" />
+      <workItem from="1652289351756" duration="15000" />
     </task>
     <servers />
   </component>
