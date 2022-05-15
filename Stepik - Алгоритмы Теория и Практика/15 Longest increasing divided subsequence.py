@@ -26,7 +26,7 @@ def create_seq(A):
             Ai = A[i]
             Dj = D[j]
             Di = D[i]
-            if A[j] < A[i] and D[j] + 1 > D[i]:
+            if A[i]%A[j] == 0  and D[j] + 1 > D[i]:
                 D[i] = D[j] + 1
     return D
 
@@ -40,7 +40,7 @@ def create_elements(A,D):
         Ai = A[i]
         Di = D[i]
         Dprev = D[prev]
-        if (A[i] < prev and D[i] == D[prev] - 1):
+        if (A[prev] % A[i] == 0 and D[i] == D[prev] - 1):
             Overal.insert(0, A[i])
             prev = i
         i -= 1
@@ -50,10 +50,10 @@ A = read_data()
 D = create_seq(A)
 Overal = create_elements(A,D)
 
-print(*D)
-print(*A)
+#print(*D)
+#print(*A)
 
-print("Overal",Overal)
+print(len(Overal))
 
 
 
