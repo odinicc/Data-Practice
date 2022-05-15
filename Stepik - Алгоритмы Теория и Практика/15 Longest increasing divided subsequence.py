@@ -3,7 +3,7 @@ import sys
 
 def read_data():
     #read from file
-    inf = open("14.txt","r")
+    inf = open("15.txt","r")
 
     #read from system input
     #inf = sys.stdin
