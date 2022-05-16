@@ -23,7 +23,12 @@ def read_data():
 
 
 def crate_matrix(goods, n ,back_pack):
-    D = [[0 for x in range(back_pack + 1)] for y in range(n + 1)]
+    D = []
+    for x in range(n + 1):
+        M = []
+        for y in range(back_pack + 1):
+            M = M + [0]
+        D = D +[M]
     # D[y][x] | D[i][w]
 
     for i in range(1, n + 1):
@@ -62,6 +67,7 @@ goods, n ,back_pack = read_data()
 #print("back_pack", back_pack)
 D = crate_matrix(goods, n ,back_pack)
 print(D[n][back_pack])
+print(DataFrame(D))
 #overal = determine_goods(goods,n,back_pack,D)
 
 #print(overal)

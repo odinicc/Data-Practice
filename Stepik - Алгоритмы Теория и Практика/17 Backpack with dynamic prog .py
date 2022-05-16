@@ -30,6 +30,7 @@ def read_data():
 def crate_matrix(goods, n ,back_pack):
     D = [[0 for x in range(back_pack + 1)] for y in range(n + 1)]
     # D[y][x] | D[i][w]
+    print(DataFrame(D))
 
     for i in range(1, n + 1):
         for w in range(1, back_pack + 1):
