@@ -3,29 +3,24 @@ import sys
 from pandas import *
 
 def read_data():
-    #for local solution
-    inf = open('17.txt', 'r')
+    # for local solution
+    inf = open('18.txt', 'r')
 
-    #for system solution
+    # for system solution
     # inf = sys.stdin
 
-    Lines = inf.readlines()
-
-    First_Line = Lines[0]
-    words = First_Line.split(" ")
-    back_pack = int(words[1].replace('\n', ''))
-    n = int(words[0])
-    Lines.pop(0)
-
+    Lines = inf.readline().replace('\n', '')
+    A = list(Lines.split(" "))
+    back_pack = int(A[0])
+    n = int(A[1])
+    Lines2 = inf.readline().replace('\n', '')
+    B = list(Lines2.split(" "))
     goods = []
+    for i in range(len(B)):
+        elem = [int(B[i]),int(B[i])]
+        goods.append(elem)
+    return goods, n ,back_pack
 
-    for Line in Lines:
-        words = Line.split(" ")
-        price = int(words[0])
-        weight = int(words[1].replace('\n', ''))
-        goods.append([price,weight])
-
-    return (goods, n ,back_pack)
 
 def crate_matrix(goods, n ,back_pack):
     D = [[0 for x in range(back_pack + 1)] for y in range(n + 1)]
@@ -61,12 +56,12 @@ def determine_goods(goods,n,back_pack,D):
     return overal
 
 goods, n ,back_pack = read_data()
-print("goods", goods)
-print(DataFrame(goods))
-print("n", n)
-print("back_pack", back_pack)
+#print("goods", goods)
+#print(DataFrame(goods))
+#print("n", n)
+#print("back_pack", back_pack)
 D = crate_matrix(goods, n ,back_pack)
-print(DataFrame(D))
-overal = determine_goods(goods,n,back_pack,D)
+print(D[n][back_pack])
+#overal = determine_goods(goods,n,back_pack,D)
 
-print(overal)
+#print(overal)
