@@ -15,29 +15,47 @@ def read_data():
     mod = int(A[1])
     return N , mod
 
-def calculate_fib(N,mod):
-    Fib_arr = []
-    Mod_arr = []
-    Mod_arr2 = []
-    if N > 0:
-        Fib_arr.append(1)
-        Mod_arr2.append(1)
-    if N > 1:
-        Fib_arr.append(1)
-        Mod_arr2.append(1)
-        prev = 1
-    if N > 2:
-        for i in range(2, N):
-            K = Fib_arr[i - 1] + Fib_arr[i - 2]
-            Fib_arr.append(K)
-            M = (Fib_arr[i - 1] + Fib_arr[i - 2])%mod
-            Mod_arr2.append(M)
-            Mod_arr.append([i,K,M])
-             
 
-    pprint.pprint(Mod_arr)
-    return Fib_arr[-1]
+def calculate_pisano_period3(mod,N):
+    N = max(N,mod*6)
+    if mod == 1:
+        return 1, [0]
+    else:
+        M_prev = 1
+        M_curr = 1
+        Mod_arr = [0, 1, 1]
+        for i in range(2,N):
+            M_curr , M_prev = (M_curr + M_prev)%mod , M_curr
+            Mod_arr.append(M_curr)
+            if M_curr == 1 and M_prev == 0:
+                break
+
+    Mod_arr.pop()
+    Mod_arr.pop()
+    return i ,Mod_arr
+
+
+
+def calculate_feb(N):
+    prev = 1
+    curr = 1
+    if N<3:
+        return 1
+    else:
+        for i in range(2,N):
+            prev ,curr = curr, prev + curr
+
+    return curr
+
+
 
 N ,mod = read_data()
-print(mod)
-Fib = calculate_fib(N,mod)
+N = 60282445765134413
+mod = 2263
+#print(N,mod)
+period , Mod_arr = calculate_pisano_period3(mod,N)
+#print("period ",period)
+#print("Mod_arr ",*Mod_arr)
+N_min = N%period
+X = Mod_arr[N_min]
+print(X)
