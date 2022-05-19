@@ -37,7 +37,7 @@ def levenshtein_matrix(A,B):
     for i in range(1, h):
         for j in range(1, w):
             c = diff(A[j - 1], B[i - 1])
-            # print(A[j-1],B[i-1],c,"|D[i-1][j]", D[i-1][j],"|D[i][j-1]", D[i][j-1])
+            # print(A_code[j-1],B[i-1],c,"|D[i-1][j]", D[i-1][j],"|D[i][j-1]", D[i][j-1])
             one = D[i - 1][j] + 1
             two = D[i][j - 1] + 1
             three = D[i - 1][j - 1] + c
@@ -46,7 +46,7 @@ def levenshtein_matrix(A,B):
     return D , h, w
 
 A, B = read_data()
-#print(A)
+#print(A_code)
 #print(B)
 D , h, w = levenshtein_matrix(A,B)
 print(DataFrame(D))

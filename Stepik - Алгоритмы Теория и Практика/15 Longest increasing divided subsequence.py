@@ -51,7 +51,7 @@ D = create_seq(A)
 Overal = create_elements(A,D)
 
 #print(*D)
-#print(*A)
+#print(*A_code)
 
 print(len(Overal))
 
