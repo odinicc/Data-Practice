@@ -11,24 +11,25 @@ def read_data():
     Lines2 = inf.readline().replace('\n', '')
     A = list((Lines2.split(" ")))
     A = list(map(int, A))
+    A = [0] + A
     return A
 
 
 def max_sum_stair(A):
-    #print(A)
-    if len(A) == 1:
-        return A[0]
-    elif len(A) == 2:
-        return max(A[1],A[0]+A[1])
-    elif len(A) == 3:
-        return max(A[0]+A[1]+A[2] ,A[0] +A[2] , A[1] +A[2])
-    else:
-        max_stair = max(A[0] + max_sum_stair(A[1:]), A[1] + max_sum_stair(A[2:]) )
+    N = len(A)
+    cum = 0
+    B = [None]*N
+    B[0] = 0
+    B[1] = A[1]
+    for i in range(2,N):
+        B[i] = max(B[i-1],B[i-2])+A[i]
 
-    return max_stair
+    return B[-1]
+
+
 
 A = read_data()
-#print(A[2:])
+#print("A[:7]" , A[:7])
 #print("--------")
 B = max_sum_stair(A)
 print(B)
