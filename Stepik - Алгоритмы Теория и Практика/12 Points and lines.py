@@ -1,5 +1,6 @@
 import math
 import sys
+from bisect import bisect_left
 
 def read_data():
     #read from file
@@ -89,32 +90,30 @@ def binary_search(arr,arr_start, arr_end, element):
 
 segments, points = read_data()
 
-first_elem = []
-last_elem = []
+left_elem = []
+right_elem = []
 for segment in segments:
     x = int(segment[0])
     y = int(segment[1])
-    first_elem.append(x)
-    last_elem.append(y)
+    left_elem.append(x)
+    right_elem.append(y)
 
-first_elem.sort()
-last_elem.sort()
+left_elem.sort()
+right_elem.sort()
 
-print(first_elem)
-print(last_elem)
+print(left_elem)
+print(right_elem)
+print(points)
 
-pos = bin_search_pos(last_elem, 3, "first")
-print("pos = ",pos)
-
-cross = []
-'''
+res = []
 for point in points:
-    N1 = bin_search_pos(first_elem, point, "last")
-    N2 = bin_search_pos(last_elem, point, "first")
-    print("point =", point, "N1 = ",N1,"|N2 = ",N2,"|type(N1) = ",type(N1),"|type(N2) = ",type(N2))
-    N = N1 - N2
-    cross.append(N)
-'''
-print(*cross)
+    left_side_lefter = bisect_left(left_elem, point)
+    right_side_lefter = bisect_left(right_elem, point)
+    res.append(left_side_lefter - right_side_lefter)
+
+print(*res)
+
+
+
 
 
