@@ -43,32 +43,6 @@ def bin_search_pos(arr, element, type):
             p += 1
             return p
 
-'''
-def bin_search_pos(arr, element, type):
-    pos = binary_search(arr, 0, len(arr), element)
-
-    if pos < 0:
-        return 0
-
-    if type == "first":
-        if pos > 0:
-            while pos>0 and arr[pos-1] == element:
-                pos -= 1
-                return pos
-        elif pos == 1:
-            return pos
-
-    if type == "last":
-        l = len(arr)
-        if pos < l-1:
-            for p in range(pos,l-1):
-                if arr[p] != element or p == l-1:
-                    return p
-        elif pos == l-1:
-            return pos+1
-
-'''
-
 def binary_search(arr,arr_start, arr_end, element):
     if arr_start < arr_end:
         arr_medium = math.floor((arr_start+arr_end)/2)
@@ -101,15 +75,21 @@ for segment in segments:
 left_elem.sort()
 right_elem.sort()
 
+'''
+print("left_elem")
 print(left_elem)
+print("right_elem")
 print(right_elem)
+print("points")
 print(points)
+'''
 
 res = []
 for point in points:
-    left_side_lefter = bisect_left(left_elem, point)
+    left_side_lefter = bisect_left(left_elem, point+1)
     right_side_lefter = bisect_left(right_elem, point)
     res.append(left_side_lefter - right_side_lefter)
+    #print("point = ",point , "lsl = ", left_side_lefter,"rsl = ", right_side_lefter)
 
 print(*res)
 
