@@ -79,3 +79,6 @@
 2022-May-25-09:09:31,Transform phase Ended
 2022-May-25-09:09:31,Load phase Started
 2022-May-25-09:09:31,Load phase Ended
+2022-May-28-22:58:31,Extract Cars Job Started
+2022-May-28-22:58:31,Extract Cars Job phase Ended
+2022-May-28-22:58:31,Transform phase Started
