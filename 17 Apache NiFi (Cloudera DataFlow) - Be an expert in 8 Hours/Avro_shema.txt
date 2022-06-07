@@ -1,0 +1,32 @@
+{
+  "type" : "record",
+  "namespace" : "com.erp",
+  "name" : "empDetail",
+  "fields" : [
+     { "name" : "EMPLOYEE_ID" , "type" : "int" },
+     { "name" : "FIRST_NAME" , "type" : "string" },
+	 { "name" : "LAST_NAME" , "type" : "string" },
+	 { "name" : "EMAIL" , "type" : "string" },
+	 { "name" : "PHONE_NUMBER" , "type" : "string" },
+	 { "name" : "HIRE_DATE" , "type": "string"},
+	 { "name" : "JOB_ID" , "type" : "string" },
+	 { "name" : "SALARY" , "type" : "double" },
+	 { "name" : "COMMISSION_PCT" , "type" : "string" },
+	 { "name" : "MANAGER_ID" , "type" : "int" },
+	 { "name" : "DEPARTMENT_ID" , "type" : "int" }
+  ]
+}
+
+
+{
+  "type" : "record",
+  "namespace" : "com.erp",
+  "name" : "empDetail",
+  "fields" : [
+     { "name" : "EMPLOYEE_ID" , "type" : "int" },
+     { "name" : "FIRST_NAME" , "type" : "string" }
+  ]
+}
+
+
+${field.value:toUpper()}
