@@ -1,0 +1,11 @@
+time,latitude,longitude,depth,mag,magType,nst,gap,dmin,rms,net,id,updated,place,type,horizontalError,depthError,magError,magNst,status,locationSource,magSource
+2022-06-06T08:14:21.379Z,32.40692139,-101.5833413,7.654337565,4,ml,11,72,0.2111882978,0.1,tx,tx2022kzqw,2022-06-07T08:18:31.900Z,"18 km SE of Ackerly, Texas",earthquake,0.9646207883,3.293803835,0.2,7,reviewed,tx,tx
+2022-06-06T07:12:54.306Z,31.72270915,-104.5391435,4.100634766,4.3,ml,11,126,0.03692232571,0.2,tx,tx2022kzot,2022-06-07T07:17:55.464Z,"52 km SSW of Whites City, New Mexico",earthquake,2.869280421,0.9791176184,0.2,10,reviewed,tx,tx
+2022-06-04T01:39:00.335Z,25.1608,-109.8153,10,4.6,mb,,131,1.473,0.8,us,us7000hetv,2022-06-04T01:55:09.312Z,"83 km SW of Campo Pesquero el Colorado, Mexico",earthquake,6.9,1.9,0.038,211,reviewed,us,us
+2022-06-04T01:04:30.562Z,25.0744,-109.6891,10,4.2,mb,,128,1.401,1.33,us,us7000heth,2022-06-04T01:25:27.040Z,"84 km SSW of Campo Pesquero el Colorado, Mexico",earthquake,6.9,1.9,0.064,69,reviewed,us,us
+2022-06-03T10:40:29.910Z,33.2338333,-116.6641667,10.94,3.68,ml,154,15,0.03738,0.2,ci,ci40032983,2022-06-06T06:40:41.697Z,"6km SSW of Warner Springs, CA",earthquake,0.1,0.38,0.189,182,reviewed,ci,ci
+2022-06-02T12:07:22.230Z,38.0765,-122.0076667,18.43,4.14,mw,202,24,0.04994,0.25,nc,nc73740051,2022-06-08T04:33:19.628Z,"7km NW of Bay Point, CA",earthquake,0.17,0.24,,4,reviewed,nc,nc
+2022-06-01T15:46:10.839Z,31.71526584,-104.5509138,6.157275391,4.6,ml,45,90,0.0489270088,0.3,tx,tx2022krce,2022-06-07T05:16:29.465Z,"53 km SSW of Whites City, New Mexico",earthquake,1.554475743,0.9872530857,0.1,25,reviewed,tx,tx
+2022-06-01T15:01:49.756Z,31.59957436,-103.9819379,9.627856445,4.3,ml,28,52,0.0856513397,0.2,tx,tx2022kras,2022-06-07T04:40:07.288Z,"western Texas",earthquake,1.071647318,0.9354724775,0.2,15,reviewed,tx,tx
+2022-06-01T13:56:26.914Z,25.823,-110.5406,10,4.2,mb,,149,2.131,0.48,us,us7000he30,2022-06-03T12:13:58.040Z,"Gulf of California",earthquake,9.4,1.9,0.066,64,reviewed,us,us
+2022-06-01T07:36:33.145Z,25.9698,-110.1661,10,4.2,mb,,193,2.292,1.34,us,us7000he0s,2022-06-01T08:05:55.040Z,"83 km W of Las Grullas Margen Derecha, Mexico",earthquake,4.2,2,0.063,70,reviewed,us,us
