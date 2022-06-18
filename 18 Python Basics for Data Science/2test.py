@@ -1,0 +1,1 @@
+print("hello Mike".find("Mike"))
