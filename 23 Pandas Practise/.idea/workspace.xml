@@ -534,7 +534,8 @@
       <change beforePath="$PROJECT_DIR$/21_30.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/21_30.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/31_40.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/31_40.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/41_50.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/41_50.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/52_60.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/52_60.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/51_60.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/51_60.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/61_70.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/61_70.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Data Engineering Capstone Project - IBM DB321EN/dd.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Data Engineering Capstone Project - IBM DB321EN/dd.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Data Engineering Capstone Project - IBM DB321EN/oltpdata.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../Data Engineering Capstone Project - IBM DB321EN/oltpdata.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Data Engineering Capstone Project - IBM DB321EN/БД.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Data Engineering Capstone Project - IBM DB321EN/БД.txt" afterDir="false" />
@@ -556,12 +557,12 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
 </project>
