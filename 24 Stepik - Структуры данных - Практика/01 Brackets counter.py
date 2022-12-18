@@ -10,7 +10,7 @@ import sys
 
 def read_data():
     # for local solution
-    inf = '()[]}'
+    inf = '((({[]})'
 
     # for system solution
     # inf = sys.stdin.read()
