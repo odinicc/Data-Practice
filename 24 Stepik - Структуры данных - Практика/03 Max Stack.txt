@@ -1,0 +1,6 @@
+5
+push 1
+pop
+max
+pop
+max

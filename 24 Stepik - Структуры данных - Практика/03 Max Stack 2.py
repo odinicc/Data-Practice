@@ -17,12 +17,19 @@ def read_data():
 
     return l
 
+def cust_append(stack,element):
+    x = stack.append(int(element))
+    return x
+
+
 def max_result(s):
     stack = []
     max_stack = []
+    max_value = 0
     for i in range(len(s)):
         if s[i][0] == 'push':
-            stack.append(int(s[i][1]))
+            stack = cust_append(stack,s[i][1])
+
         elif s[i][0] == 'pop':
             if len(stack)>0:
                 stack.pop()
