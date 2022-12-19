@@ -2,62 +2,55 @@
 
 import math
 import sys
+from collections import deque
 
 def read_data():
     #read from file
-    inf = open("03 Max Stack.txt","r")
+    inf = open("04 Max in floating window.txt","r")
 
     #read from system input
     #inf = sys.stdin
 
-    l = []
-    Lines  = inf.readlines()[1:]
-    for line in Lines:
-        l.append(list(line.rstrip('\n').split(" ")))
+    lines = inf.readlines()
 
-    return l
+    lis = lines[1].rstrip('\n')
+    k  =  lines[2].rstrip('\n')
 
-def cust_append(stack,track_stack,element):
-    stack.append(int(element))
-    if len(track_stack) == 0:
-        track_stack.append(int(element))
-    else:
-        if int(element) > track_stack[-1]:
-            track_stack.append(int(element))
+    inf.close()
+    lis = lis.split()
+    list(map(int, lis))
+    k = int(k)
+    print( 'type(lis[2])', type(lis[2]))
+    return lis, k
+
+
+def max_elems(lis,k):
+    Dq = deque()
+    n = len(lis)
+    #create initial deque
+    for i in range(k):
+        print('lis[i] ',  lis[i])
+        print('Dq ', Dq)
+        if len(Dq) == 0:
+            Dq.append(i)
+            print('Dq 2 - ', Dq)
         else:
-            track_stack.append(track_stack[-1])
-    return stack, track_stack
+            if lis[i] > lis[Dq[-1]]:
+                Dq.pop()
+                Dq.append(lis[i])
 
-def cust_pop(stack,track_stack):
-    stack.pop()
-    track_stack.pop()
-    return stack, track_stack
-
-def cust_max(stack,track_stack):
-    if len(stack)>0:
-        return(track_stack[-1])
-    else:
-        return 0
-
-def max_result(s):
-    stack = []
-    track_stack = []
-    max_stack = []
-    for i in range(len(s)):
-        if s[i][0] == 'push':
-            stack, track_stack  = cust_append(stack,track_stack,s[i][1])
-        elif s[i][0] == 'pop':
-            if len(stack)>0:
-                stack, track_stack = cust_pop(stack,track_stack)
-        elif s[i][0] == 'max':
-            max_stack.append(cust_max(stack,track_stack))
-    print(track_stack)
-    return  max_stack
+    print(Dq)
+    return  0
 
 
-s = read_data()
+lis,k = read_data()
+print('k ',k)
+print('lis ',lis)
+print(max_elems(lis,k))
 
-print(*max_result(s), sep="\n")
+
+
+
 
 
 
