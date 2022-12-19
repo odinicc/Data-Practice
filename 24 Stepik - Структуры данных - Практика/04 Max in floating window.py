@@ -18,7 +18,7 @@ def read_data():
 
     inf.close()
     lis = lis.split()
-    list(map(int, lis))
+    lis = list(map(int, lis))
     k = int(k)
     print( 'type(lis[2])', type(lis[2]))
     return lis, k
@@ -33,11 +33,15 @@ def max_elems(lis,k):
         print('Dq ', Dq)
         if len(Dq) == 0:
             Dq.append(i)
-            print('Dq 2 - ', Dq)
         else:
             if lis[i] > lis[Dq[-1]]:
                 Dq.pop()
-                Dq.append(lis[i])
+                Dq.append(i)
+            else:
+                Dq.append(i)
+        
+
+
 
     print(Dq)
     return  0
