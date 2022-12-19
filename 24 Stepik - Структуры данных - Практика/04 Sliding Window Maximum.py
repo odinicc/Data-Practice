@@ -6,7 +6,7 @@ from collections import deque
 
 def read_data():
     #read from file
-    inf = open("04 Max in floating window.txt","r")
+    inf = open("04 Sliding Window Maximum.txt","r")
 
     #read from system input
     #inf = sys.stdin
@@ -39,6 +39,9 @@ def max_elems(lis,k):
                 Dq.append(i)
             else:
                 Dq.append(i)
+    for i in range(k,n):
+        print(lis[i])
+
 
 
 
