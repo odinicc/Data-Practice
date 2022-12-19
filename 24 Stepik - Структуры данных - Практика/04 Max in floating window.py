@@ -39,7 +39,7 @@ def max_elems(lis,k):
                 Dq.append(i)
             else:
                 Dq.append(i)
-        
+
 
 
 
