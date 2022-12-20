@@ -1,8 +1,9 @@
 
 
-import math
 import sys
-from collections import deque
+import math
+
+swapper = []
 
 def read_data():
     #read from file
@@ -22,41 +23,107 @@ def read_data():
     return lis
 
 
-def max_elems(lis,k):
-    Dq = deque()
-    n = len(lis)
-    overal =[]
-    #create initial deque
-    for i in range(k):
-        if len(Dq) == 0:
-            Dq.append(i)
-        else:
-            if lis[i] > lis[Dq[-1]]:
-                Dq.pop()
-                Dq.append(i)
-            else:
-                Dq.append(i)
-    for i in range(k,n):
-        overal.append(lis[Dq[0]])
-        # Remove the elements which are
-        # out of this window
-        while Dq and Dq[0] <= i - k:
-            # remove from front of deque
-            Dq.popleft()
-        while Dq and lis[i] >= lis[Dq[-1]]:
-            Dq.pop()
-        Dq.append(i)
-    overal.append(lis[Dq[0]])
 
-    return overal
+def swap(lis,a,b):
+    lis[b], lis[a]= lis[a], lis[b]
+    swapper.append([a,b])
+    return lis
+
+def right_son(lis,n):
+    val = 2*n+2
+    if val >= len(lis):
+        return False
+    else:
+        return val
+
+def left_son(lis,n):
+    val = 2*n+1
+    if val >= len(lis):
+        return False
+    else:
+        return val
+
+def is_leaf(lis,n):
+    if (left_son(lis,n) == False) and (left_son(lis,n) == False):
+        return True
+    else:
+        return False
+
+
+def parent(n):
+    if n == 0:
+        return 0
+    else:
+        x = math.floor((n - 1) / 2 )
+        return x
+
+# - 1 , -1 - proper order
+# return elements to swap
+def is_proper(lis,n):
+
+    if is_leaf(lis,n):
+        return -1,-1
+    else:
+        father = n
+        l_son = left_son(lis,n)
+        r_son = right_son(lis,n)
+
+        if l_son == False:
+            if lis[father] <= lis[r_son]:
+
+                return -1,-1
+            if lis[father] > lis[r_son]:
+                return father, r_son
+        elif r_son == False:
+            if lis[father] <= lis[l_son]:
+
+                return -1,-1
+            if lis[father] > lis[l_son]:
+                return father, l_son
+        else:
+
+            if min(lis[father],lis[r_son],lis[l_son]) <  lis[father]:
+                if lis[r_son] <=lis[l_son]:
+                    return father, r_son
+                else:
+                    return father, l_son
+
+            else:
+                return -1,-1
+
+#функция просеиватель листьев
+def hipisation(lis,n):
+    if is_leaf(lis,n):
+        return lis
+    else:
+        res1 , res2 = is_proper(lis,n)
+        if res1 == -1:
+            return lis
+        else:
+
+            lis = swap(lis,res1,res2)
+
+            lis = hipisation(lis,res2)
+        return lis
+
 
 
 lis = read_data()
-print(lis)
+#print(binarytree.build(lis))
 
+r = len(lis)-1
 
+for i in range(r,-1,-1):
+    # run operation only for internal nodes (not leafs)
+    if is_leaf(lis,i) == False:
+        lis = hipisation(lis,i)
 
+#print(swapper)
 
+print(len(swapper))
+
+for sw in swapper:
+    print(sw[0],sw[1])
 
 
 
