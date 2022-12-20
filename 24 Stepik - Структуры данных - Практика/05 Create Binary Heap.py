@@ -6,7 +6,7 @@ from collections import deque
 
 def read_data():
     #read from file
-    inf = open("04 Sliding Window Maximum.txt","r")
+    inf = open("05 Create Binary Heap.txt","r")
 
     #read from system input
     #inf = sys.stdin
@@ -14,12 +14,12 @@ def read_data():
     lines = inf.readlines()
 
     lis = lines[1].rstrip('\n')
-    k  =  lines[2].rstrip('\n')
+
     inf.close()
     lis = lis.split()
     lis = list(map(int, lis))
-    k = int(k)
-    return lis, k
+
+    return lis
 
 
 def max_elems(lis,k):
@@ -51,9 +51,8 @@ def max_elems(lis,k):
     return overal
 
 
-lis,k = read_data()
-overal = max_elems(lis,k)
-print(*overal, sep = " ")
+lis = read_data()
+print(lis)
 
 
 
