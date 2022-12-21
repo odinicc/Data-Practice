@@ -24,7 +24,6 @@ def read_data():
         equal.append([el[0],el[2]])
 
     non_equal = []
-    print('--------------------------')
     for line in lines[equal_num+1:]:
         el = line.rstrip('\n')
         non_equal.append([el[0],el[2]])
@@ -32,22 +31,31 @@ def read_data():
     inf.close()
     return equal , non_equal
 
+def algo_checker(equal,non_equal):
+    main_set = set()
+
+    for eq in equal:
+        main_set.add(eq[0])
+        main_set.add(eq[1])
+
+    for neq in non_equal:
+        if (neq[0] in main_set) and (neq[1] in main_set):
+            return 0
+        #this will check situations when variable compared with itself
+        #for example 5 != 5
+        if (neq[0] == neq[1]):
+            return 0
+
+    return 1
+
+
+
 
 equal , non_equal  = read_data()
-print(equal)
-print(non_equal)
+#print(equal)
+#print(non_equal)
 
-main_set = set()
-
-for eq in equal:
-    main_set.add(eq[0])
-    main_set.add(eq[1])
-
-print(main_set)
-
-for neq in non_equal:
-    if (neq[0] in main_set) and (neq[1] in main_set):
-        return
+print(algo_checker(equal,non_equal))
 
 
 
