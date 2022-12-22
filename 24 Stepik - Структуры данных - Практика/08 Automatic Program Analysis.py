@@ -15,8 +15,10 @@ def read_data():
     lines = inf.readlines()
 
     lis = lines[0].rstrip('\n')
-    first_row = lis.split()
+    first_row = lis.split(' ')
     equal_num = int(first_row[1])
+    #print(equal_num,' - equal_num')
+    #print('first_row',first_row)
 
     equal = []
     for line in lines[1:equal_num+1]:
