@@ -1,4 +1,5 @@
 
+import queue
 
 import sys
 import math
@@ -39,23 +40,23 @@ def find_min_proc(proc):
 num_proc, lis = read_data()
 
 #print('num_proc',num_proc)
-proc = []
+proc = queue.PriorityQueue()
 for i in range(num_proc):
-    proc.append(0)
+    proc.put((0,i))
 
 work = []
 
+
 for i in range(len(lis)):
-    #print('proc',proc)
-    processor = find_min_proc(proc)
-    #print('processor',processor)
-    proc_time = proc[processor]
-    print(processor, proc_time)
-    proc[processor] = proc_time+ lis[i]
+    #print(proc.queue)
+    #find element(time,processor) with min minimum time
+    elem = proc.get()
+    print(elem[1],elem[0])
+    new_time = elem[0] + lis[i]
 
+    new_proc = elem[1]
+    proc.put((new_time,new_proc))
 
-
-    #work.append([processor,])
 
 
 
