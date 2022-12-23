@@ -21,7 +21,7 @@ def read_data():
 
 
 def hash_f(stri):
-    result = hashlib.sha1(str(stri).encode())
+    result = hashlib.md5(str(stri).encode())
     return result
 
 
