@@ -1,2 +1,2 @@
-aaba
-abacaaba
+aba
+abacaba

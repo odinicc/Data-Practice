@@ -1,5 +1,5 @@
 
-
+import hashlib
 import sys
 import math
 
@@ -20,11 +20,9 @@ def read_data():
     return list(substr) , list(stri)
 
 
-def hash_f(stri,n):
-    hash = 0
-    for i in range(len(stri)):
-        hash = hash*126 + ord(stri[i])
-    return hash%n
+def hash_f(stri):
+    result = hashlib.md5(str(stri).encode())
+    return result
 
 # Use Fermat algoithm
 def is_prime(num):
@@ -48,13 +46,14 @@ substr , stri = read_data()
 
 substr_len = len(substr)
 target_prime = find_max_prime(substr_len)
-hash_substr = hash_f(substr,target_prime)
+hash_substr = hash_f(substr)
 
+print(hash_f(substr).hexdigest())
 
 for i in range(len(stri) -substr_len+1):
     #print(stri[i:i+substr_len])
-    hash_cur_string = hash_f(stri[i:i+substr_len],target_prime)
-    if hash_cur_string == hash_substr:
+    hash_cur_string = hash_f(stri[i:i+substr_len])
+    if hash_cur_string.hexdigest() == hash_substr.hexdigest():
         if stri[i:i+substr_len] == substr:
             print(i, end =" ")
 
