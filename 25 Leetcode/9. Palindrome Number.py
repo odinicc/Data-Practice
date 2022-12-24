@@ -1,11 +1,17 @@
 import math
 
-def isPowerOfThree(n):
-    poww = math.log(n,3)
-    if poww.is_integer():
-        return True
-    else:
-        return False
+#def isPalindrome(self, x)
+def isPalindrome(x):
+    str_x = list(str(x))
 
-print(isPowerOfThree(9))
+    l = len(str_x)
+    if l == 0:
+        return False
+    for i in range(l//2):
+        if str_x[i] != str_x[l-i-1]:
+            return False
+    return True
+
+
+print(isPalindrome(''))
 
