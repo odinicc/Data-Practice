@@ -80,4 +80,4 @@ substr , stri = read_data()
 
 
 z_search(substr, stri)
-
+print(' ',end = '')
