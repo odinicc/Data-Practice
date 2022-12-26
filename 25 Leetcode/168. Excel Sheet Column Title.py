@@ -1,22 +1,26 @@
 import math
 
-#def maxProfit(self, prices):
-def maxProfit(prices):
-    min_price = float('inf')
-    max_profit = 0
-    for i in range(len(prices)):
-        if prices[i] < min_price:
-            min_price = prices[i]
-        elif prices[i] - min_price > max_profit:
-            max_profit = prices[i] - min_price
+#def convertToTitle(self, columnNumber):
+def convertToTitle(columnNumber):
+    linked = []
+    ost = columnNumber
+    while  ost > 26:
+        new_ost = ost % 26
+        if new_ost == 0:
+            new_ost = 26
+        linked.append(new_ost)
+        ost = (ost - new_ost)/26
 
-    return max_profit
+    linked.append(ost)
 
-    while
+    result = []
+    for i in range(len(linked)):
+        m = linked[i]
+        result.append(chr(64+int(m)))
+    result.reverse()
+    s = ''.join(result)
+    return s
 
+print(convertToTitle(28))
 
-prices = [7,6,4,3,1]
-
-
-print(maxProfit(prices ))
 
