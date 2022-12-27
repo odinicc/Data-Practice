@@ -1,17 +1,33 @@
 import math
 
-def containsDuplicate(nums):
+def summaryRanges(nums):
+    if len(nums) == 0:
+        return ''
 
-    my_l = []
-    for i in range(len(nums)):
-        if nums[i] in my_l:
-            return True
+
+    my_l = [[nums[0]]]
+    prev = nums[0]
+    for i in range(1,len(nums)):
+        if nums[i]-prev == 1:
+            my_l[-1].append(nums[i])
         else:
-            my_l.append(nums[i])
+            my_l.append([nums[i]])
+        prev = nums[i]
+    res = []
+    for elem in my_l:
+        first = str(elem[0])
+        last = str(elem[-1])
+        if first == last:
+            res.append(first)
+        else:
+            res.append(first + '->' + last)
+    return res
 
-    return False
+
+nums = [0,2,3,4,6,8,9]
 
 
-nums = [1,23,2,5]
-print(containsDuplicate(nums))
+print(summaryRanges(nums))
 
+
+#%%
