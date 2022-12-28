@@ -1,15 +1,18 @@
 import math
 
 
-def missingNumber(nums):
-    l = len(nums)
-    nums = set(nums)
-    for i in range(l):
-        if i not in nums:
-            return int(i)
+def minimumSum(num):
+    n = list(str(num))
+    n = [int(x) for x in n]
 
-nums = [0,2]
+    n.sort()
+    n1 = str(n[0]) + str(n[2])
+    n2 = str(n[1]) + str(n[3])
+    return int(n1) + int(n2)
 
-print(missingNumber(nums))
+num = 2932
+
+print(minimumSum(num))
+
 
 
