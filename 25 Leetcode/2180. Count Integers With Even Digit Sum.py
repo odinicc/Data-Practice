@@ -1,23 +1,20 @@
 import math
 
 
-def fizzBuzz(n):
-    arr= []
-    for i in range(1,n+1):
-        arr.append(i)
-    arr = [trans(x) for x in arr]
-    return arr
+def countEven(num):
+    checker = 0
+    for i in range(1,num+1):
+        if digit_sum_is_even(i) == True:
+            checker += 1
+    return checker
 
-def trans(x):
-    x = int(x)
-    if x % 3 == 0 and  x % 5 == 0:
-        return 'FizzBuzz'
-    elif x % 3 == 0:
-        return 'Fizz'
-    elif x % 5 == 0:
-        return 'Buzz'
+def digit_sum_is_even(num):
+    n = list(str(num))
+    n = [int(x) for x in n]
+    m = sum(n)
+    if m % 2 ==0:
+        return True
     else:
-        return str(x)
+        return False
 
-n = 0
-print(fizzBuzz(n))
+print(countEven(4))
