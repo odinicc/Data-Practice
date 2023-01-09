@@ -1,0 +1,5 @@
+;;;;
+EmpId;FullName;ManagerId;DateOfJoining;City
+121;John Snow;321;01.01.2019;Toronto
+321;Walter White;986;30.01.2020;California
+421;Kuldeep Rana;876;27.11.2021;New Delhi
