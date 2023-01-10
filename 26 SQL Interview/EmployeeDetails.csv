@@ -1,4 +1,3 @@
-;;;;
 EmpId;FullName;ManagerId;DateOfJoining;City
 121;John Snow;321;01.01.2019;Toronto
 321;Walter White;986;30.01.2020;California
