@@ -114,3 +114,107 @@ set fullname = trim(fullname);
 SELECT EmpId 
 FROM EmployeeSalary 
 WHERE Project IS NULL;
+
+-- 24. Write an SQL query to fetch employee names having a salary greater 
+-- than or equal to 5000 and less than or equal to 10000.
+select  
+s.salary as e_sal, 
+d.fullname as e_name 
+from EmployeeSalary s
+left join employeedetails d  
+on s.empid = d.empid 
+where s.salary <= 10000 and s.salary >= 5000
+
+-- 25. Write an SQL query to find the current date-time.
+select now()
+
+-- 26. Write an SQL query to fetch all the Employee details from 
+-- the EmployeeDetails table who joined in the Year 2020.
+select * 
+from employeedetails e 
+where 
+dateofjoining >= '2020-01-01'
+and 
+dateofjoining < '2021-01-01'
+
+-- 27 Write an SQL query to fetch all employee records from the 
+-- EmployeeDetails table who have a salary record in the EmployeeSalary table.
+SELECT * FROM EmployeeDetails E
+WHERE EXISTS
+(SELECT * FROM EmployeeSalary S 
+WHERE  E.EmpId = S.EmpId);
+
+-- 28 Write an SQL query to fetch the project-wise count 
+-- of employees sorted by project’s count in descending order.
+select project, count(empid)  
+from employeesalary 
+group by project
+order by count(empid) desc 
+
+-- 29 Write a query to fetch employee names and salary records. 
+-- Display the employee details even if the salary record is not present for the employee.
+select employeedetails.* , employeesalary.*
+from employeedetails 
+left join employeesalary 
+on employeedetails.empid = employeesalary.empid
+
+-- 30. Write an SQL query to join 3 tables.
+SELECT column1, column2
+FROM TableA
+JOIN TableB ON TableA.Column3 = TableB.Column3
+JOIN TableC ON TableA.Column4 = TableC.Column4;
+
+--31. Write an SQL query to fetch all the Employees who are 
+--also managers from the EmployeeDetails table.
+select *
+from employeedetails 
+where empid in
+(select managerid 
+from employeedetails)
+
+--32. Write an SQL query to fetch duplicate 
+--records from EmployeeDetails (without considering the primary key – EmpId).
+SELECT FullName, ManagerId, DateOfJoining, City, COUNT(*)
+FROM EmployeeDetails
+GROUP BY FullName, ManagerId, DateOfJoining, City
+HAVING COUNT(*) > 1;
+
+-- 33. Write an SQL query to remove duplicates from a table without using a temporary table.
+DELETE E1 FROM EmployeeDetails E1
+INNER JOIN EmployeeDetails E2 
+WHERE E1.EmpId > E2.EmpId 
+AND E1.FullName = E2.FullName 
+AND E1.ManagerId = E2.ManagerId
+AND E1.DateOfJoining = E2.DateOfJoining
+AND E1.City = E2.City;
+
+-- 34. Write an SQL query to fetch only odd rows from the table.
+SELECT * FROM EmployeeDetails 
+WHERE MOD (EmpId, 2) <> 0;
+
+-- 35. Write an SQL query to fetch only even rows from the table.
+SELECT * FROM EmployeeDetails 
+WHERE MOD (EmpId, 2) = 0;
+
+--36. Write an SQL query to create a new table with data and structure copied from another table.
+CREATE TABLE NewTable 
+SELECT * FROM EmployeeSalary;
+
+--37. Write an SQL query to create an empty table with the same structure as some other table.
+CREATE TABLE NewTable 
+SELECT * FROM EmployeeSalary where 1=0;
+
+
+--38. Write an SQL query to create an empty table with the same structure as some other table.
+SELECT *
+FROM EmployeeSalary
+ORDER BY Salary DESC 
+LIMIT 4;
+
+
+--39. Write an SQL query to find the nth highest salary from a table.
+select *
+from employeesalary 
+order by salary 
+limit 1 offset 1;
+	
