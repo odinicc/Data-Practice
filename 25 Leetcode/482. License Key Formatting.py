@@ -1,27 +1,23 @@
 import math
 
 #def romanToInt(self, s):
-def findTheDifference(s, t):
+def licenseKeyFormatting(s, k):
+    if len(s)<k:
+        return s
 
-    if len(s) == 0:
-        return t[0]
+    s = s.replace('-','')
+    s = s.upper()
+    res = ''
+    n = len(s)
+    print(s)
+    for i in range(n,k-1,-k):
+        res = s[i-k:i] + '-' + res
+    res = res[:-1]
+    if n%k != 0:
+        print('--',s[0:n%k])
+        res = s[0:n%k] + '-' + res
+    return res
 
-    s = list(s)
-    t = list(t)
-    s_i = 0
-    t_i = 0
-    diff = []
-    while s_i <  len(s):
-        if s[s_i] == t[t_i]:
-            s_i += 1
-            t_i += 1
-        else:
-            diff.append(t[t_i])
-            t_i += 1
-        if s_i == len(s) and t_i != len(t):
-            diff = diff+t[t_i:]
-    return diff[0]
-
-s = ""
-t = "ax"
-print(findTheDifference(s, t))
+s = "2-5g-3-J"
+k = 2
+print(licenseKeyFormatting(s, k))
