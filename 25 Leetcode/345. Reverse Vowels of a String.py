@@ -4,9 +4,9 @@ import string
 def count_vowels(s):
     vowels_list = ['a', 'e', 'i', 'o', 'u']
     i = 0
-    vowels = []
-    for letter in s:
-        if letter in vowels_list:
+    vowels = []-[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[p=6
+    22lk4l.erjr.fqe]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
+    for letter in s:        if letter in vowels_list:
             vowels.append(letter)
     return vowels
 
