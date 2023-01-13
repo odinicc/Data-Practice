@@ -1,26 +1,31 @@
 import math
 import string
 
-def isSubsequence(s, t):
-    if len(s) > len(t):
-        return False
-    elif len(s) == 0:
-        return True
+def count_vowels(s):
+    vowels_list = ['a', 'e', 'i', 'o', 'u']
+    i = 0
+    vowels = []
+    for letter in s:
+        if letter in vowels_list:
+            vowels.append(letter)
+    return vowels
 
+def reverseVowels(s):
+    vowels = count_vowels(s)
+    s = list(s)
+    if len(vowels) < 2:
+        return s
     else:
-        iter = 0
-        iter_max = len(s)
-        for i in range(len(t)):
-            if s[iter] == t[i]:
-                if iter == iter_max - 1:
-                    return True
-                else:
-                    iter += 1
 
-    return False
+        for i in range(len(s)):
+            if s[i] in ['a', 'e', 'i', 'o', 'u']:
+                s[i] = vowels[-1]
+                vowels.pop()
+    result_string = ''.join(s)
+    return result_string
 
-s = "abc"
-t = "ababd"
-print(isSubsequence(s,t))
+s = "leetcode   "
+print(reverseVowels(s))
+
 
 
