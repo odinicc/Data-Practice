@@ -1,36 +1,28 @@
-import math
-import re
+import string
 
-#def romanToInt(self, s):
+def numberOfLines(widths, s):
+    alphabet = list(string.ascii_lowercase)
+    al_d = {}
+    for i in range(len(alphabet)):
+        al_d[alphabet[i]] = widths[i]
+    print(al_d)
 
-def mostCommonWord( paragraph, banned):
-    #paragraph = paragraph.replace('!','').replace('?','').replace("'",'').replace(',','').replace(';','').replace('.','')
-    paragraph = re.split("[!?',;. ]",paragraph)
-    paragraph = list(filter(lambda x: (len(x) > 0), paragraph))
-    paragraph = [w.lower() for w in paragraph]
-    print(paragraph)
-    word_dic = {}
-    for word in paragraph:
-        if word in word_dic:
-            word_dic[word] += 1
-        else:
-            word_dic[word] = 1
-    for ban in banned:
-        if ban in word_dic:
-            word_dic[ban] = 0
+    line_iter = 0
+    row_iter = 1
+    for symb in s:
+        if line_iter + al_d[symb] > 100:
+            line_iter = 0
+            row_iter += 1
 
-
-    max_count = 0
-    for word in word_dic:
-        if word_dic[word] > max_count:
-            max_count = word_dic[word]
-            max_word = word
-    return max_word
+        line_iter += al_d[symb]
+    print(row_iter,line_iter)
 
 
 
 
 
-paragraph = 'a, a, a, a, b,b,b,c, c'
-banned = ["a"]
-print(mostCommonWord( paragraph, banned))
+
+
+widths = [10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10]
+s = "abcdefghijklmnopqrstuvwxyz"
+print(numberOfLines(widths, s))
