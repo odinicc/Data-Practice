@@ -3,22 +3,46 @@ import re
 
 #def romanToInt(self, s):
 
-def reverseOnlyLetters(s):
-    s = list(s)
-    first_iter = 0
-    last_iter = len(s)-1
-    while first_iter<last_iter:
-        print(first_iter,last_iter)
-        if s[first_iter].isalpha() and s[last_iter].isalpha():
-            s[first_iter] , s[last_iter] = s[last_iter] , s[first_iter]
-            first_iter += 1
-            last_iter -= 1
-        if s[first_iter].isalpha() == False:
-            first_iter += 1
-        if s[last_iter].isalpha() == False:
-            last_iter -= 1
-    return s
+def double_letters(arr):
+    iter = 0
+    for i in range(len(arr)-1):
+        for j in range(i+1,len(arr)):
+            print('---',arr[i:j])
+            if arr[i] == arr[j]:
+                iter += 1
+                break
+    return iter
+
+def buddyStrings(s, goal):
+    if len(s) != len(goal):
+        return False
+    if len(s) < 2 or len(goal) < 2:
+        return False
+    not_eual = []
+    s_na = []
+    goal_na = []
+    for i in range(len(s)):
+        if s[i] != goal[i]:
+            not_eual.append(i)
+            s_na.append(s[i])
+            goal_na.append(goal[i])
+    s_na.sort()
+    goal_na.sort()
+    if s_na != goal_na:
+        return False
+
+    print('--',not_eual,double_letters(goal))
+    if len(not_eual) == 2:
+        return True
+    else:
+        if len(not_eual) == 0 and double_letters(goal) >= 1:
+            return True
+        else:
+            return False
 
 
-s = "a-"
-print(reverseOnlyLetters(s))
+
+s = "abab"
+goal = "abab"
+#print(buddyStrings(s,goal))
+print(double_letters(goal))
