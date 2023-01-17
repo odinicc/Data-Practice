@@ -1,24 +1,30 @@
 import math
 
-def findContentChildren(g, s):
-    g.sort()
-    s.sort()
-    count = 0
-    ck = len(s)-1
-    for i in range(len(g)-1,-1,-1):
-        if ck < 0:
+def findErrorNums(nums):
+    nums.sort()
+    for i in range(len(nums)):
+        if i+1 not in nums:
+            missing_val = i+1
+    #nums.append(missing_val)
+    #nums.sort()
+    for i in range(len(nums)):
+        if nums[i]> missing_val:
+            nums.insert(i,missing_val)
             break
-        if g[i] <= s[ck]:
-            count += 1
-            ck -= 1
+    print(nums)
+    for i in range(len(nums)):
+        if i+1 != nums[i]:
+            additional_val = nums[i]
+            break
+    m = [additional_val,missing_val]
 
-    return count
+    return m
 
 
 
-g = [2,2,3]
-s = [1]
-print(findContentChildren(g,s))
+
+nums = [2,2]
+print(findErrorNums(nums))
 
 
 

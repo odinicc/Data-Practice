@@ -1,18 +1,18 @@
-import math
+from statistics import mode
 
 #def twoSum(self, nums, target):
 def twoSum(nums, target):
-    nums = [int(x) for x in nums]
-    target = int(target)
-    for i in range(len(nums)):
-        for j in range(i+1,len(nums)):
-            if nums[i] + nums[j] == target:
-                print(nums[i] , nums[j])
-                return [i,j]
+    n = len(nums)
+    a = sum(nums)
+    b = sum(set(nums))
+
+    s = n*(n+1)//2
+    print(b)
+    print(a-b)
+    print(s-b)
 
 
-
-nums = [3,3]
+nums = [1,2,2,4]
 target = 6
 print(twoSum(nums,target))
 
