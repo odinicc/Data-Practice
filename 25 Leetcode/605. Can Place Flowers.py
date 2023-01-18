@@ -1,23 +1,27 @@
 import math
 
 #def longestCommonPrefix(self, strs):
-def nextGreaterElement(nums1, nums2):
-    res = []
-    nums2
-    for n in nums1:
-        i = nums2.index(n)
-        if i == len(nums2)-1:
-            res.append(-1)
-        else:
-            res.append(nums2[i+1])
-    return res
+def canPlaceFlowers(flowerbed, n):
+    if flowerbed[0] == 0:
+        flowerbed.insert(0,0)
+    if flowerbed[-1] == 0:
+        flowerbed.append(0)
+    for i in range(len(flowerbed)-2):
+        if flowerbed[i] == 0 and flowerbed[i+1] == 0 and flowerbed[i+2] == 0:
+            flowerbed[i+1] = 1
+            n -= 1
+        if n == 0:
+            break
+    if n == 0:
+        return True
+    else:
+        return False
 
 
 
 
-nums1 = [4,1,2]
-nums2 = [1,3,4,2]
-
-print(nextGreaterElement(nums1, nums2))
+flowerbed = [0,0,1,0,1]
+n = 1
+print(canPlaceFlowers(flowerbed, n))
 
 
