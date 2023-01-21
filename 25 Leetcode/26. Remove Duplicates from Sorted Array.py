@@ -2,34 +2,37 @@ import math
 
 
 #def plusOne(self, digits):
-def searchInsert(nums, target):
-    start = 0
-    finish = len(nums)-1
-    while start < finish:
-
-        mid = (start + finish)//2
-        print(start, ' ',mid, ' ',finish)
-        print(nums[start], ' ',nums[mid], ' ',nums[finish])
-        if mid == start or mid == finish:
-            if nums[start] < target:
-                mid += 1
-            if nums[finish] < target:
-                mid += 1
-            break
-
-        if nums[mid] < target:
-            start = mid
-        elif nums[mid] > target:
-            finish = mid
+def removeDuplicates(nums):
+    prev = -101
+    for i in range(len(nums)):
+        if nums[i] == prev:
+            nums[i] = 101
         else:
-            break
-        print('    ')
+            prev = nums[i]
 
-    print('mid ',mid)
-    return mid
+    nums.sort()
+    print(nums)
+    if 101 in nums:
+        return nums.index(101)
+    else:
+        return len(nums)
 
 
-nums = [1,3,5,6]
-target = 7
-print(searchInsert(nums, target))
+def removeDuplicates2(A):
+    if not A:
+        return 0
+
+    newTail = 0
+
+    for i in range(1, len(A)):
+        if A[i] != A[newTail]:
+            newTail += 1
+            A[newTail] = A[i]
+
+    print(  nums)
+    return newTail + 1
+
+
+nums = [0,0,1,1,1,2,2,3,3,4]
+print(removeDuplicates2(nums))
 
