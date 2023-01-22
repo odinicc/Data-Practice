@@ -16,6 +16,6 @@ def majorityElement(nums):
     return max_elem
 
 
-nums = [2,2,1,1,1,2,2]
+nums = [1,1,1,1,3,3,2,2]
 print(majorityElement(nums))
 
