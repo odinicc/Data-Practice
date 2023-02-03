@@ -1,14 +1,8 @@
-import math
+import itertools
 
-#def mySqrt(self, x):
-def foo(a:dict):
-    a['z'] = 99
-    return a
+#print(itertools.groupby('haalllooo'))
 
-a = {1:'a'}
-print(a)
-b = foo(a)
-
-print(a,b)
-
+k = itertools.groupby('haalllooo')
+for key in k:
+    print(key[0])
 
