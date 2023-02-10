@@ -2,6 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="41e09c7f-02f1-4dbc-875a-1c410d7f7d19" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/Data-Engineering-Practice.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/Data-Engineering-Practice.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../01 Datalearn (DE-101)/Module2/Data models/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/../01 Datalearn (DE-101)/Module2/Data models/readme.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../01 Datalearn (DE-101)/Module2/File" beforeDir="false" afterPath="$PROJECT_DIR$/../01 Datalearn (DE-101)/Module2/File" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../01 Datalearn (DE-101)/Module2/Transform scripts/Transform.sql.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../01 Datalearn (DE-101)/Module2/Transform scripts/Transform.sql.txt" afterDir="false" />
@@ -540,6 +545,129 @@
       <change beforePath="$PROJECT_DIR$/Dimonds_1.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Dimonds_1.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Dimonds_2.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Dimonds_2.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Group_by.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Group_by.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Multi_index/dataset.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Multi_index/dataset.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Multi_index/multiindex-selection.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Multi_index/multiindex-selection.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Multi_index/my-multiindex-selection.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Multi_index/my-multiindex-selection.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../24 Stepik - Структуры данных - Практика/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../24 Stepik - Структуры данных - Практика/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../24 Stepik - Структуры данных - Практика/.idea/24 Stepik - Структуры данных - Практика.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../24 Stepik - Структуры данных - Практика/.idea/24 Stepik - Структуры данных - Практика.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../24 Stepik - Структуры данных - Практика/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../24 Stepik - Структуры данных - Практика/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../24 Stepik - Структуры данных - Практика/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../24 Stepik - Структуры данных - Практика/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../24 Stepik - Структуры данных - Практика/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../24 Stepik - Структуры данных - Практика/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../24 Stepik - Структуры данных - Практика/01 Brackets counter.py" beforeDir="false" afterPath="$PROJECT_DIR$/../24 Stepik - Структуры данных - Практика/01 Brackets counter.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../24 Stepik - Структуры данных - Практика/01 Largest common denominator.py" beforeDir="false" afterPath="$PROJECT_DIR$/../24 Stepik - Структуры данных - Практика/01 Largest common denominator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../24 Stepik - Структуры данных - Практика/02 Tree Height.py" beforeDir="false" afterPath="$PROJECT_DIR$/../24 Stepik - Структуры данных - Практика/02 Tree Height.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../24 Stepik - Структуры данных - Практика/03 Max Stack 2.py" beforeDir="false" afterPath="$PROJECT_DIR$/../24 Stepik - Структуры данных - Практика/03 Max Stack 2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../24 Stepik - Структуры данных - Практика/03 Max Stack.py" beforeDir="false" afterPath="$PROJECT_DIR$/../24 Stepik - Структуры данных - Практика/03 Max Stack.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../24 Stepik - Структуры данных - Практика/03 Max Stack.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../24 Stepik - Структуры данных - Практика/03 Max Stack.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../24 Stepik - Структуры данных - Практика/04 Sliding Window Maximum.py" beforeDir="false" afterPath="$PROJECT_DIR$/../24 Stepik - Структуры данных - Практика/04 Sliding Window Maximum.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../24 Stepik - Структуры данных - Практика/04 Sliding Window Maximum.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../24 Stepik - Структуры данных - Практика/04 Sliding Window Maximum.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../24 Stepik - Структуры данных - Практика/05 Create Binary Heap.py" beforeDir="false" afterPath="$PROJECT_DIR$/../24 Stepik - Структуры данных - Практика/05 Create Binary Heap.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../24 Stepik - Структуры данных - Практика/05 Create Binary Heap.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../24 Stepik - Структуры данных - Практика/05 Create Binary Heap.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../24 Stepik - Структуры данных - Практика/06 Priority process 2.py" beforeDir="false" afterPath="$PROJECT_DIR$/../24 Stepik - Структуры данных - Практика/06 Priority process 2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../24 Stepik - Структуры данных - Практика/06 Priority process.py" beforeDir="false" afterPath="$PROJECT_DIR$/../24 Stepik - Структуры данных - Практика/06 Priority process.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../24 Stepik - Структуры данных - Практика/06 Priority process.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../24 Stepik - Структуры данных - Практика/06 Priority process.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../24 Stepik - Структуры данных - Практика/06 Priority queue experiment.py" beforeDir="false" afterPath="$PROJECT_DIR$/../24 Stepik - Структуры данных - Практика/06 Priority queue experiment.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../24 Stepik - Структуры данных - Практика/08 Automatic Program Analysis.py" beforeDir="false" afterPath="$PROJECT_DIR$/../24 Stepik - Структуры данных - Практика/08 Automatic Program Analysis.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../24 Stepik - Структуры данных - Практика/08 Automatic Program Analysis.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../24 Stepik - Структуры данных - Практика/08 Automatic Program Analysis.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../24 Stepik - Структуры данных - Практика/09 Phone book.py" beforeDir="false" afterPath="$PROJECT_DIR$/../24 Stepik - Структуры данных - Практика/09 Phone book.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../24 Stepik - Структуры данных - Практика/09 Phone book.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../24 Stepik - Структуры данных - Практика/09 Phone book.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../24 Stepik - Структуры данных - Практика/10 Rabin–Karp algorithm .py" beforeDir="false" afterPath="$PROJECT_DIR$/../24 Stepik - Структуры данных - Практика/10 Rabin–Karp algorithm .py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../24 Stepik - Структуры данных - Практика/10 Rabin–Karp algorithm MD5.py" beforeDir="false" afterPath="$PROJECT_DIR$/../24 Stepik - Структуры данных - Практика/10 Rabin–Karp algorithm MD5.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../24 Stepik - Структуры данных - Практика/10 Rabin–Karp algorithm.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../24 Stepik - Структуры данных - Практика/10 Rabin–Karp algorithm.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../24 Stepik - Структуры данных - Практика/10 Z-Function.py" beforeDir="false" afterPath="$PROJECT_DIR$/../24 Stepik - Структуры данных - Практика/10 Z-Function.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../25 Leetcode/! 136. Single Number.py" beforeDir="false" afterPath="$PROJECT_DIR$/../25 Leetcode/! 136. Single Number.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../25 Leetcode/1. Two Sum.py" beforeDir="false" afterPath="$PROJECT_DIR$/../25 Leetcode/1. Two Sum.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../25 Leetcode/1037. Valid Boomerang.py" beforeDir="false" afterPath="$PROJECT_DIR$/../25 Leetcode/1037. Valid Boomerang.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../25 Leetcode/1089. Duplicate Zeros.py" beforeDir="false" afterPath="$PROJECT_DIR$/../25 Leetcode/1089. Duplicate Zeros.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../25 Leetcode/118. Pascal's Triangle.py" beforeDir="false" afterPath="$PROJECT_DIR$/../25 Leetcode/118. Pascal's Triangle.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../25 Leetcode/1185. Day of the Week.py" beforeDir="false" afterPath="$PROJECT_DIR$/../25 Leetcode/1185. Day of the Week.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../25 Leetcode/121. Best Time to Buy and Sell Stock.py" beforeDir="false" afterPath="$PROJECT_DIR$/../25 Leetcode/121. Best Time to Buy and Sell Stock.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../25 Leetcode/125. Valid Palindrome.py" beforeDir="false" afterPath="$PROJECT_DIR$/../25 Leetcode/125. Valid Palindrome.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../25 Leetcode/1266. Minimum Time Visiting All Points.py" beforeDir="false" afterPath="$PROJECT_DIR$/../25 Leetcode/1266. Minimum Time Visiting All Points.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../25 Leetcode/13. Roman to Integer.py" beforeDir="false" afterPath="$PROJECT_DIR$/../25 Leetcode/13. Roman to Integer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../25 Leetcode/1323. Maximum 69 Number.py" beforeDir="false" afterPath="$PROJECT_DIR$/../25 Leetcode/1323. Maximum 69 Number.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../25 Leetcode/1365. How Many Numbers Are Smaller Than the Current Number.py" beforeDir="false" afterPath="$PROJECT_DIR$/../25 Leetcode/1365. How Many Numbers Are Smaller Than the Current Number.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../25 Leetcode/14. Longest Common Prefix.py" beforeDir="false" afterPath="$PROJECT_DIR$/../25 Leetcode/14. Longest Common Prefix.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../25 Leetcode/1588. Sum of All Odd Length Subarrays.py" beforeDir="false" afterPath="$PROJECT_DIR$/../25 Leetcode/1588. Sum of All Odd Length Subarrays.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../25 Leetcode/168. Excel Sheet Column Title.py" beforeDir="false" afterPath="$PROJECT_DIR$/../25 Leetcode/168. Excel Sheet Column Title.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../25 Leetcode/169. Majority Element.py" beforeDir="false" afterPath="$PROJECT_DIR$/../25 Leetcode/169. Majority Element.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../25 Leetcode/1848. Minimum Distance to the Target Element.py" beforeDir="false" afterPath="$PROJECT_DIR$/../25 Leetcode/1848. Minimum Distance to the Target Element.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../25 Leetcode/1854. Maximum Population Year.py" beforeDir="false" afterPath="$PROJECT_DIR$/../25 Leetcode/1854. Maximum Population Year.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../25 Leetcode/1909. Remove One Element to Make the Array Strictly Increasing.py" beforeDir="false" afterPath="$PROJECT_DIR$/../25 Leetcode/1909. Remove One Element to Make the Array Strictly Increasing.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../25 Leetcode/193. Valid Phone Numbers.py" beforeDir="false" afterPath="$PROJECT_DIR$/../25 Leetcode/193. Valid Phone Numbers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../25 Leetcode/1979. Find Greatest Common Divisor of Array.py" beforeDir="false" afterPath="$PROJECT_DIR$/../25 Leetcode/1979. Find Greatest Common Divisor of Array.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../25 Leetcode/20. Valid Parentheses.py" beforeDir="false" afterPath="$PROJECT_DIR$/../25 Leetcode/20. Valid Parentheses.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../25 Leetcode/202. Happy Number.py" beforeDir="false" afterPath="$PROJECT_DIR$/../25 Leetcode/202. Happy Number.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../25 Leetcode/205. Isomorphic Strings.py" beforeDir="false" afterPath="$PROJECT_DIR$/../25 Leetcode/205. Isomorphic Strings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../25 Leetcode/21. Merge Two Sorted Lists.py" beforeDir="false" afterPath="$PROJECT_DIR$/../25 Leetcode/21. Merge Two Sorted Lists.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../25 Leetcode/2160. Minimum Sum of Four Digit Number After Splitting Digits.py" beforeDir="false" afterPath="$PROJECT_DIR$/../25 Leetcode/2160. Minimum Sum of Four Digit Number After Splitting Digits.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../25 Leetcode/217. Contains Duplicate.py" beforeDir="false" afterPath="$PROJECT_DIR$/../25 Leetcode/217. Contains Duplicate.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../25 Leetcode/2180. Count Integers With Even Digit Sum.py" beforeDir="false" afterPath="$PROJECT_DIR$/../25 Leetcode/2180. Count Integers With Even Digit Sum.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../25 Leetcode/228. Summary Ranges.py" beforeDir="false" afterPath="$PROJECT_DIR$/../25 Leetcode/228. Summary Ranges.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../25 Leetcode/2299. Strong Password Checker.py" beforeDir="false" afterPath="$PROJECT_DIR$/../25 Leetcode/2299. Strong Password Checker.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../25 Leetcode/2305. Fair Distribution of Cookies.py" beforeDir="false" afterPath="$PROJECT_DIR$/../25 Leetcode/2305. Fair Distribution of Cookies.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../25 Leetcode/2409. Count Days Spent Together.py" beforeDir="false" afterPath="$PROJECT_DIR$/../25 Leetcode/2409. Count Days Spent Together.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../25 Leetcode/242. Valid Anagram.py" beforeDir="false" afterPath="$PROJECT_DIR$/../25 Leetcode/242. Valid Anagram.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../25 Leetcode/2475. Number of Unequal Triplets in Array.py" beforeDir="false" afterPath="$PROJECT_DIR$/../25 Leetcode/2475. Number of Unequal Triplets in Array.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../25 Leetcode/258. Add Digits.py" beforeDir="false" afterPath="$PROJECT_DIR$/../25 Leetcode/258. Add Digits.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../25 Leetcode/26. Remove Duplicates from Sorted Array.py" beforeDir="false" afterPath="$PROJECT_DIR$/../25 Leetcode/26. Remove Duplicates from Sorted Array.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../25 Leetcode/263. Ugly Number.py" beforeDir="false" afterPath="$PROJECT_DIR$/../25 Leetcode/263. Ugly Number.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../25 Leetcode/283. Move Zeroes.py" beforeDir="false" afterPath="$PROJECT_DIR$/../25 Leetcode/283. Move Zeroes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../25 Leetcode/290. Word Pattern.py" beforeDir="false" afterPath="$PROJECT_DIR$/../25 Leetcode/290. Word Pattern.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../25 Leetcode/326. Power of Three.py" beforeDir="false" afterPath="$PROJECT_DIR$/../25 Leetcode/326. Power of Three.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../25 Leetcode/345. Reverse Vowels of a String.py" beforeDir="false" afterPath="$PROJECT_DIR$/../25 Leetcode/345. Reverse Vowels of a String.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../25 Leetcode/35. Search Insert Position.py" beforeDir="false" afterPath="$PROJECT_DIR$/../25 Leetcode/35. Search Insert Position.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../25 Leetcode/383. Ransom Note.py" beforeDir="false" afterPath="$PROJECT_DIR$/../25 Leetcode/383. Ransom Note.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../25 Leetcode/387. First Unique Character in a String.py" beforeDir="false" afterPath="$PROJECT_DIR$/../25 Leetcode/387. First Unique Character in a String.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../25 Leetcode/389. Find the Difference.py" beforeDir="false" afterPath="$PROJECT_DIR$/../25 Leetcode/389. Find the Difference.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../25 Leetcode/392. Is Subsequence.py" beforeDir="false" afterPath="$PROJECT_DIR$/../25 Leetcode/392. Is Subsequence.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../25 Leetcode/412. Fizz Buzz.py" beforeDir="false" afterPath="$PROJECT_DIR$/../25 Leetcode/412. Fizz Buzz.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../25 Leetcode/441. Arranging Coins.py" beforeDir="false" afterPath="$PROJECT_DIR$/../25 Leetcode/441. Arranging Coins.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../25 Leetcode/455. Assign Cookies.py" beforeDir="false" afterPath="$PROJECT_DIR$/../25 Leetcode/455. Assign Cookies.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../25 Leetcode/459. Repeated Substring Pattern.py" beforeDir="false" afterPath="$PROJECT_DIR$/../25 Leetcode/459. Repeated Substring Pattern.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../25 Leetcode/482. License Key Formatting.py" beforeDir="false" afterPath="$PROJECT_DIR$/../25 Leetcode/482. License Key Formatting.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../25 Leetcode/492. Construct the Rectangle.py" beforeDir="false" afterPath="$PROJECT_DIR$/../25 Leetcode/492. Construct the Rectangle.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../25 Leetcode/495. Teemo Attacking.py" beforeDir="false" afterPath="$PROJECT_DIR$/../25 Leetcode/495. Teemo Attacking.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../25 Leetcode/496. Next Greater Element I.py" beforeDir="false" afterPath="$PROJECT_DIR$/../25 Leetcode/496. Next Greater Element I.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../25 Leetcode/500. Keyboard Row.py" beforeDir="false" afterPath="$PROJECT_DIR$/../25 Leetcode/500. Keyboard Row.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../25 Leetcode/506. Relative Ranks.py" beforeDir="false" afterPath="$PROJECT_DIR$/../25 Leetcode/506. Relative Ranks.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../25 Leetcode/507. Perfect Number.py" beforeDir="false" afterPath="$PROJECT_DIR$/../25 Leetcode/507. Perfect Number.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../25 Leetcode/509. Fibonacci Number.py" beforeDir="false" afterPath="$PROJECT_DIR$/../25 Leetcode/509. Fibonacci Number.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../25 Leetcode/520. Detect Capital.py" beforeDir="false" afterPath="$PROJECT_DIR$/../25 Leetcode/520. Detect Capital.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../25 Leetcode/58. Length of Last Word.py" beforeDir="false" afterPath="$PROJECT_DIR$/../25 Leetcode/58. Length of Last Word.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../25 Leetcode/605. Can Place Flowers.py" beforeDir="false" afterPath="$PROJECT_DIR$/../25 Leetcode/605. Can Place Flowers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../25 Leetcode/628. Maximum Product of Three Numbers.py" beforeDir="false" afterPath="$PROJECT_DIR$/../25 Leetcode/628. Maximum Product of Three Numbers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../25 Leetcode/645. Set Mismatch.py" beforeDir="false" afterPath="$PROJECT_DIR$/../25 Leetcode/645. Set Mismatch.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../25 Leetcode/66. Plus One.py" beforeDir="false" afterPath="$PROJECT_DIR$/../25 Leetcode/66. Plus One.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../25 Leetcode/680. Valid Palindrome II.py" beforeDir="false" afterPath="$PROJECT_DIR$/../25 Leetcode/680. Valid Palindrome II.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../25 Leetcode/69. Sqrt(x).py" beforeDir="false" afterPath="$PROJECT_DIR$/../25 Leetcode/69. Sqrt(x).py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../25 Leetcode/697. Degree of an Array.py" beforeDir="false" afterPath="$PROJECT_DIR$/../25 Leetcode/697. Degree of an Array.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../25 Leetcode/7. Reverse Integer.py" beforeDir="false" afterPath="$PROJECT_DIR$/../25 Leetcode/7. Reverse Integer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../25 Leetcode/70. Climbing Stairs.py" beforeDir="false" afterPath="$PROJECT_DIR$/../25 Leetcode/70. Climbing Stairs.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../25 Leetcode/728. Self Dividing Numbers.py" beforeDir="false" afterPath="$PROJECT_DIR$/../25 Leetcode/728. Self Dividing Numbers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../25 Leetcode/744. Find Smallest Letter Greater Than Target.py" beforeDir="false" afterPath="$PROJECT_DIR$/../25 Leetcode/744. Find Smallest Letter Greater Than Target.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../25 Leetcode/746. Min Cost Climbing Stairs.py" beforeDir="false" afterPath="$PROJECT_DIR$/../25 Leetcode/746. Min Cost Climbing Stairs.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../25 Leetcode/747. Largest Number At Least Twice of Others.py" beforeDir="false" afterPath="$PROJECT_DIR$/../25 Leetcode/747. Largest Number At Least Twice of Others.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../25 Leetcode/796. Rotate String.py" beforeDir="false" afterPath="$PROJECT_DIR$/../25 Leetcode/796. Rotate String.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../25 Leetcode/806. Number of Lines To Write String.py" beforeDir="false" afterPath="$PROJECT_DIR$/../25 Leetcode/806. Number of Lines To Write String.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../25 Leetcode/819. Most Common Word.py" beforeDir="false" afterPath="$PROJECT_DIR$/../25 Leetcode/819. Most Common Word.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../25 Leetcode/821. Shortest Distance to a Character - Alternative solution .py" beforeDir="false" afterPath="$PROJECT_DIR$/../25 Leetcode/821. Shortest Distance to a Character - Alternative solution .py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../25 Leetcode/821. Shortest Distance to a Character.py" beforeDir="false" afterPath="$PROJECT_DIR$/../25 Leetcode/821. Shortest Distance to a Character.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../25 Leetcode/844. Backspace String Compare.py" beforeDir="false" afterPath="$PROJECT_DIR$/../25 Leetcode/844. Backspace String Compare.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../25 Leetcode/859. Buddy Strings.py" beforeDir="false" afterPath="$PROJECT_DIR$/../25 Leetcode/859. Buddy Strings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../25 Leetcode/88. Merge Sorted Array.py" beforeDir="false" afterPath="$PROJECT_DIR$/../25 Leetcode/88. Merge Sorted Array.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../25 Leetcode/888. Fair Candy Swap.py" beforeDir="false" afterPath="$PROJECT_DIR$/../25 Leetcode/888. Fair Candy Swap.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../25 Leetcode/9. Palindrome Number.py" beforeDir="false" afterPath="$PROJECT_DIR$/../25 Leetcode/9. Palindrome Number.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../25 Leetcode/917. Reverse Only Letters.py" beforeDir="false" afterPath="$PROJECT_DIR$/../25 Leetcode/917. Reverse Only Letters.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../25 Leetcode/Bubble sort.py" beforeDir="false" afterPath="$PROJECT_DIR$/../25 Leetcode/Bubble sort.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../25 Leetcode/Testt.py" beforeDir="false" afterPath="$PROJECT_DIR$/../25 Leetcode/Testt.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../25 Leetcode/file.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../25 Leetcode/file.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../26 SQL Interview/1 Creaation Script.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../26 SQL Interview/1 Creaation Script.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../26 SQL Interview/2 Creation script.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../26 SQL Interview/2 Creation script.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../26 SQL Interview/3 Simple Questions.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../26 SQL Interview/3 Simple Questions.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../26 SQL Interview/EmployeeDetails.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../26 SQL Interview/EmployeeDetails.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../27 AB-Testing/1 Стат. значимость и Стат. мощность .ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../27 AB-Testing/1 Стат. значимость и Стат. мощность .ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../27 AB-Testing/2 Bootstrap  VS  T-test  VS  U-test .ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../27 AB-Testing/2 Bootstrap  VS  T-test  VS  U-test .ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Data Engineering Capstone Project - IBM DB321EN/dd.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Data Engineering Capstone Project - IBM DB321EN/dd.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Data Engineering Capstone Project - IBM DB321EN/oltpdata.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../Data Engineering Capstone Project - IBM DB321EN/oltpdata.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Data Engineering Capstone Project - IBM DB321EN/БД.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Data Engineering Capstone Project - IBM DB321EN/БД.txt" afterDir="false" />

@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/23 Pandas Practise.iml" filepath="$PROJECT_DIR$/.idea/23 Pandas Practise.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../.idea/Data-Engineering-Practice.iml" filepath="$PROJECT_DIR$/../.idea/Data-Engineering-Practice.iml" />
     </modules>
   </component>
 </project>
