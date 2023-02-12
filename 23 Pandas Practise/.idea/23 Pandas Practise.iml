@@ -5,5 +5,7 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="Data-Engineering-Practice" />
+    <orderEntry type="module" module-name="Apple_30pin_cable" />
+    <orderEntry type="module" module-name="Apple_Adaper_5W" />
   </component>
 </module>
