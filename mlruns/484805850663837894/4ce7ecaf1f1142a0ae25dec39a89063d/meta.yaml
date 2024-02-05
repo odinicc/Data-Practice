@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/user/Documents/GitHub/Data-Practice/mlruns/484805850663837894/4ce7ecaf1f1142a0ae25dec39a89063d/artifacts
+end_time: 1707066792875
+entry_point_name: ''
+experiment_id: '484805850663837894'
+lifecycle_stage: active
+run_id: 4ce7ecaf1f1142a0ae25dec39a89063d
+run_name: SVM - Linear Kernel
+run_uuid: 4ce7ecaf1f1142a0ae25dec39a89063d
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1707066792462
+status: 3
+tags: []
+user_id: user

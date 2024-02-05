@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/user/Documents/GitHub/Data-Practice/mlruns/484805850663837894/1514cfd6136e4165b0db2854423c1d55/artifacts
+end_time: 1707070570044
+entry_point_name: ''
+experiment_id: '484805850663837894'
+lifecycle_stage: active
+run_id: 1514cfd6136e4165b0db2854423c1d55
+run_name: Ada Boost Classifier
+run_uuid: 1514cfd6136e4165b0db2854423c1d55
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1707070569526
+status: 3
+tags: []
+user_id: user

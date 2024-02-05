@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/user/Documents/GitHub/Data-Practice/mlruns/484805850663837894/ca5f2e63cac84165a2b997b7496ff438/artifacts
+end_time: 1707071023350
+entry_point_name: ''
+experiment_id: '484805850663837894'
+lifecycle_stage: active
+run_id: ca5f2e63cac84165a2b997b7496ff438
+run_name: Dummy Classifier
+run_uuid: ca5f2e63cac84165a2b997b7496ff438
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1707071022510
+status: 3
+tags: []
+user_id: user

@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/user/Documents/GitHub/Data-Practice/mlruns/484805850663837894/8d427597e70f49a49a8e4b7433ab361f/artifacts
+end_time: 1707066791228
+entry_point_name: ''
+experiment_id: '484805850663837894'
+lifecycle_stage: active
+run_id: 8d427597e70f49a49a8e4b7433ab361f
+run_name: Naive Bayes
+run_uuid: 8d427597e70f49a49a8e4b7433ab361f
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1707066790844
+status: 3
+tags: []
+user_id: user

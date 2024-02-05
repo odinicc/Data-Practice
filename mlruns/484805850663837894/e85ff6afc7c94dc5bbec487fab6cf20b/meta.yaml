@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/user/Documents/GitHub/Data-Practice/mlruns/484805850663837894/e85ff6afc7c94dc5bbec487fab6cf20b/artifacts
+end_time: 1707069159462
+entry_point_name: ''
+experiment_id: '484805850663837894'
+lifecycle_stage: active
+run_id: e85ff6afc7c94dc5bbec487fab6cf20b
+run_name: Light Gradient Boosting Machine
+run_uuid: e85ff6afc7c94dc5bbec487fab6cf20b
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1707069158112
+status: 3
+tags: []
+user_id: user

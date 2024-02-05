@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/user/Documents/GitHub/Data-Practice/mlruns/484805850663837894/dbf78489d8d14fbeba2d9f586b3abc2d/artifacts
+end_time: 1707071027610
+entry_point_name: ''
+experiment_id: '484805850663837894'
+lifecycle_stage: active
+run_id: dbf78489d8d14fbeba2d9f586b3abc2d
+run_name: Random Forest Classifier
+run_uuid: dbf78489d8d14fbeba2d9f586b3abc2d
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1707071027150
+status: 3
+tags: []
+user_id: user

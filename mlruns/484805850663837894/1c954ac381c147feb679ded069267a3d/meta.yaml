@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/user/Documents/GitHub/Data-Practice/mlruns/484805850663837894/1c954ac381c147feb679ded069267a3d/artifacts
+end_time: 1707071191218
+entry_point_name: ''
+experiment_id: '484805850663837894'
+lifecycle_stage: active
+run_id: 1c954ac381c147feb679ded069267a3d
+run_name: Quadratic Discriminant Analysis
+run_uuid: 1c954ac381c147feb679ded069267a3d
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1707071190762
+status: 3
+tags: []
+user_id: user

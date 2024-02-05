@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/user/Documents/GitHub/Data-Practice/mlruns/484805850663837894/74e105ec2c0846ea951af25c12b4d1c7/artifacts
+end_time: 1707070573369
+entry_point_name: ''
+experiment_id: '484805850663837894'
+lifecycle_stage: active
+run_id: 74e105ec2c0846ea951af25c12b4d1c7
+run_name: Linear Discriminant Analysis
+run_uuid: 74e105ec2c0846ea951af25c12b4d1c7
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1707070572785
+status: 3
+tags: []
+user_id: user

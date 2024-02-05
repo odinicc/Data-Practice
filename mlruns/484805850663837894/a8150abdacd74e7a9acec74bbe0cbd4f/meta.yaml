@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/user/Documents/GitHub/Data-Practice/mlruns/484805850663837894/a8150abdacd74e7a9acec74bbe0cbd4f/artifacts
+end_time: 1707072010400
+entry_point_name: ''
+experiment_id: '484805850663837894'
+lifecycle_stage: active
+run_id: a8150abdacd74e7a9acec74bbe0cbd4f
+run_name: Bagging Classifier
+run_uuid: a8150abdacd74e7a9acec74bbe0cbd4f
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1707072009095
+status: 3
+tags: []
+user_id: user

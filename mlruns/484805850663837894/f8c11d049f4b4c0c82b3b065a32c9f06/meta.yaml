@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/user/Documents/GitHub/Data-Practice/mlruns/484805850663837894/f8c11d049f4b4c0c82b3b065a32c9f06/artifacts
+end_time: 1707066789537
+entry_point_name: ''
+experiment_id: '484805850663837894'
+lifecycle_stage: active
+run_id: f8c11d049f4b4c0c82b3b065a32c9f06
+run_name: Ridge Classifier
+run_uuid: f8c11d049f4b4c0c82b3b065a32c9f06
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1707066789129
+status: 3
+tags: []
+user_id: user

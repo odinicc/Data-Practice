@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/user/Documents/GitHub/Data-Practice/mlruns/484805850663837894/b89755273ca54f7ebe30978c12464e18/artifacts
+end_time: 1707071182949
+entry_point_name: ''
+experiment_id: '484805850663837894'
+lifecycle_stage: active
+run_id: b89755273ca54f7ebe30978c12464e18
+run_name: Extra Trees Classifier
+run_uuid: b89755273ca54f7ebe30978c12464e18
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1707071181313
+status: 3
+tags: []
+user_id: user

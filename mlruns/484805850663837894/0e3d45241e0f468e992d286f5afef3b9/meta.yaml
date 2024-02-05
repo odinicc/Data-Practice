@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/user/Documents/GitHub/Data-Practice/mlruns/484805850663837894/0e3d45241e0f468e992d286f5afef3b9/artifacts
+end_time: 1707068234404
+entry_point_name: ''
+experiment_id: '484805850663837894'
+lifecycle_stage: active
+run_id: 0e3d45241e0f468e992d286f5afef3b9
+run_name: Voting Classifier
+run_uuid: 0e3d45241e0f468e992d286f5afef3b9
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1707068233378
+status: 3
+tags: []
+user_id: user

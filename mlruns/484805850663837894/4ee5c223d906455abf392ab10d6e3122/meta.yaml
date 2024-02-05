@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/user/Documents/GitHub/Data-Practice/mlruns/484805850663837894/4ee5c223d906455abf392ab10d6e3122/artifacts
+end_time: 1707066107343
+entry_point_name: ''
+experiment_id: '484805850663837894'
+lifecycle_stage: active
+run_id: 4ee5c223d906455abf392ab10d6e3122
+run_name: Session Initialized 9b0d
+run_uuid: 4ee5c223d906455abf392ab10d6e3122
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1707065584113
+status: 3
+tags: []
+user_id: user

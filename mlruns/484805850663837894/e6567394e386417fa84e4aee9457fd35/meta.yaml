@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/user/Documents/GitHub/Data-Practice/mlruns/484805850663837894/e6567394e386417fa84e4aee9457fd35/artifacts
+end_time: 1707070575005
+entry_point_name: ''
+experiment_id: '484805850663837894'
+lifecycle_stage: active
+run_id: e6567394e386417fa84e4aee9457fd35
+run_name: Logistic Regression
+run_uuid: e6567394e386417fa84e4aee9457fd35
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1707070574353
+status: 3
+tags: []
+user_id: user

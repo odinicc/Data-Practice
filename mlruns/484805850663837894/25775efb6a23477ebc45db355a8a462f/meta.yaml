@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/user/Documents/GitHub/Data-Practice/mlruns/484805850663837894/25775efb6a23477ebc45db355a8a462f/artifacts
+end_time: 1707071025335
+entry_point_name: ''
+experiment_id: '484805850663837894'
+lifecycle_stage: active
+run_id: 25775efb6a23477ebc45db355a8a462f
+run_name: CatBoost Classifier
+run_uuid: 25775efb6a23477ebc45db355a8a462f
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1707071024967
+status: 3
+tags: []
+user_id: user

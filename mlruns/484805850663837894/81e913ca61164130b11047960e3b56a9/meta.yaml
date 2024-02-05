@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/user/Documents/GitHub/Data-Practice/mlruns/484805850663837894/81e913ca61164130b11047960e3b56a9/artifacts
+end_time: 1707071188044
+entry_point_name: ''
+experiment_id: '484805850663837894'
+lifecycle_stage: active
+run_id: 81e913ca61164130b11047960e3b56a9
+run_name: K Neighbors Classifier
+run_uuid: 81e913ca61164130b11047960e3b56a9
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1707071187060
+status: 3
+tags: []
+user_id: user
