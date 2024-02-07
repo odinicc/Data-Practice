@@ -29217,3 +29217,11 @@ Alternately, you can install this by running `pip install pycaret[models]`
 2024-02-05 12:29:31,305:INFO:Preloading libraries
 2024-02-05 12:29:31,308:INFO:Set up data.
 2024-02-05 12:29:31,316:INFO:Set up index.
+2024-02-07 02:01:27,153:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2024-02-07 02:01:27,153:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2024-02-07 02:01:27,153:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2024-02-07 02:01:27,153:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
