@@ -82,7 +82,7 @@
                                             "restartDailyDayTime": null,
                                             "restartDateTime": null,
                                             "restartInterval": null,
-                                            "restartMode": "DISABLED",
+                                            "restartMode": "EACH_ACTIVATION",
                                             "restartMonthlyDayTimes": null,
                                             "restartWeeklyDayTimes": null
                                         },
@@ -273,7 +273,7 @@
                                             "restartDailyDayTime": null,
                                             "restartDateTime": null,
                                             "restartInterval": null,
-                                            "restartMode": "DISABLED",
+                                            "restartMode": "EACH_ACTIVATION",
                                             "restartMonthlyDayTimes": null,
                                             "restartWeeklyDayTimes": null
                                         },
@@ -475,7 +475,7 @@
                                             "restartDailyDayTime": null,
                                             "restartDateTime": null,
                                             "restartInterval": null,
-                                            "restartMode": "DISABLED",
+                                            "restartMode": "EACH_ACTIVATION",
                                             "restartMonthlyDayTimes": null,
                                             "restartWeeklyDayTimes": null
                                         },
@@ -666,7 +666,7 @@
                                             "restartDailyDayTime": null,
                                             "restartDateTime": null,
                                             "restartInterval": null,
-                                            "restartMode": "DISABLED",
+                                            "restartMode": "EACH_ACTIVATION",
                                             "restartMonthlyDayTimes": null,
                                             "restartWeeklyDayTimes": null
                                         },

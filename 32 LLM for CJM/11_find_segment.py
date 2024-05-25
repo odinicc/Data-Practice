@@ -21,7 +21,7 @@ def find_segment_name_in_promt():
         # Read the entire file content into a single string
         content = file.read()
         content = content.replace('\n', ' ')
-    promt_to_get_segment_name = '"'+ content + '"' + 'верни только название сегмента'
+    promt_to_get_segment_name = '"'+ content + '"' + 'пожалуйста верни только название сегмента'
     chat_completion = client.chat.completions.create(
         model="gpt-4o", messages=[{"role": "system", "content": promt_to_get_segment_name}]
     )

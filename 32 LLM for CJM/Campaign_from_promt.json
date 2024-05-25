@@ -15,7 +15,7 @@
                         "compoundNodeRules": null,
                         "description": null,
                         "id": 144,
-                        "name": "A Бонусные Баллы: СМС A/B Тест для VIP Клиентов",
+                        "name": "A Мужчины 25-44: A/B тест СМС про бонусные баллы",
                         "nodes": {
                             "nodes": [
                                 {
@@ -77,12 +77,12 @@
                                             "restartDailyDayTime": null,
                                             "restartDateTime": null,
                                             "restartInterval": null,
-                                            "restartMode": "DISABLED",
+                                            "restartMode": "EACH_ACTIVATION",
                                             "restartMonthlyDayTimes": null,
                                             "restartWeeklyDayTimes": null
                                         },
                                         "settings": {
-                                            "segmentId": 165
+                                            "segmentId": 4
                                         },
                                         "techSettings": {
                                             "batchSizeMax": 1000,
@@ -180,7 +180,7 @@
                                     "updated": false,
                                     "value": {
                                         "code": "datamart-segment",
-                                        "outSchemeFromSegmentId": 165,
+                                        "outSchemeFromSegmentId": 4,
                                         "testmode": false
                                     },
                                     "valueNoHashed": {}
@@ -254,7 +254,7 @@
                                             "restartDailyDayTime": null,
                                             "restartDateTime": null,
                                             "restartInterval": null,
-                                            "restartMode": "DISABLED",
+                                            "restartMode": "EACH_ACTIVATION",
                                             "restartMonthlyDayTimes": null,
                                             "restartWeeklyDayTimes": null
                                         },
@@ -441,12 +441,12 @@
                                             "restartDailyDayTime": null,
                                             "restartDateTime": null,
                                             "restartInterval": null,
-                                            "restartMode": "DISABLED",
+                                            "restartMode": "EACH_ACTIVATION",
                                             "restartMonthlyDayTimes": null,
                                             "restartWeeklyDayTimes": null
                                         },
                                         "settings": {
-                                            "segmentId": 165
+                                            "segmentId": 4
                                         },
                                         "techSettings": {
                                             "batchSizeMax": 1000,
@@ -544,7 +544,7 @@
                                     "updated": false,
                                     "value": {
                                         "code": "datamart-segment",
-                                        "outSchemeFromSegmentId": 165,
+                                        "outSchemeFromSegmentId": 4,
                                         "testmode": false
                                     },
                                     "valueNoHashed": {}
@@ -618,7 +618,7 @@
                                             "restartDailyDayTime": null,
                                             "restartDateTime": null,
                                             "restartInterval": null,
-                                            "restartMode": "DISABLED",
+                                            "restartMode": "EACH_ACTIVATION",
                                             "restartMonthlyDayTimes": null,
                                             "restartWeeklyDayTimes": null
                                         },
@@ -761,6 +761,6 @@
     "createdDatetime": "2024-05-25T10:03:31Z",
     "description": null,
     "id": 15,
-    "name": "A Бонусные Баллы: СМС A/B Тест для VIP Клиентов",
+    "name": "A Мужчины 25-44: A/B тест СМС про бонусные баллы",
     "updatedDatetime": "2024-05-25T10:03:31Z"
 }

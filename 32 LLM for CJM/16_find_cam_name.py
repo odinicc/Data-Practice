@@ -17,7 +17,7 @@ def find_cam_name_in_promt():
         # Read the entire file content into a single string
         content = file.read()
         content = content.replace('\n', ' ')
-    promt_to_get_cam_name_name = 'дай краткое название маркетинг кампании до 50 символов по следующему описанию '+'"'+ content + '"'  
+    promt_to_get_cam_name_name = 'пожалуйста дай краткое название маркетинг кампании до 50 символов по следующему описанию '+'"'+ content + '"'
     chat_completion = client.chat.completions.create(
         model="gpt-4o", messages=[{"role": "system", "content": promt_to_get_cam_name_name}]
     )
