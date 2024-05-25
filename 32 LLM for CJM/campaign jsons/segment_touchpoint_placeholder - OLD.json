@@ -16,7 +16,7 @@
                         "compoundNodeRules": null,
                         "description": null,
                         "id": 144,
-                        "name": "cam_name_placeholder",
+                        "name": "segment_touchpoint_fill",
                         "nodes": {
                             "nodes": [
                                 {
@@ -820,6 +820,6 @@
     "createdDatetime": "2024-05-25T10:03:31Z",
     "description": null,
     "id": 15,
-    "name": "cam_name_placeholder",
+    "name": "segment_touchpoint_fill",
     "updatedDatetime": "2024-05-25T10:03:31Z"
 }
