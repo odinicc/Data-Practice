@@ -1,0 +1,1569 @@
+{
+    "appliedDatetime": null,
+    "content": {
+        "items": [
+            {
+                "itemData": {
+                    "143": {
+                        "accessMode": {
+                            "roles": [
+                            ]
+                        },
+                        "active": false,
+                        "atomicity": "NODE",
+                        "category": null,
+                        "compoundNode": false,
+                        "compoundNodeRules": null,
+                        "description": null,
+                        "id": 143,
+                        "name": "segment_ab_touchpoint_fill",
+                        "nodes": {
+                            "nodes": [
+                                {
+                                    "category": "Датамарт",
+                                    "color": "WARNING",
+                                    "confirmationOnDelete": null,
+                                    "connections": [
+                                        {
+                                            "details": {
+                                                "data": {
+                                                },
+                                                "editable": false,
+                                                "formWidget": null,
+                                                "ico": "ri-add-line",
+                                                "idx": 0,
+                                                "line": "REGULAR",
+                                                "quantity": null,
+                                                "removable": true,
+                                                "title": null,
+                                                "value": {
+                                                }
+                                            },
+                                            "nodeId": "node-2227520150",
+                                            "nodeSpecificInput": null
+                                        }
+                                    ],
+                                    "customActions": [
+                                        {
+                                            "color": null,
+                                            "event": null,
+                                            "hint": null,
+                                            "ico": "ri-file-copy-line",
+                                            "postUrl": "/flowbase/api/triggerNodeCopying",
+                                            "text": "Дублировать узел"
+                                        }
+                                    ],
+                                    "customContent": null,
+                                    "customFormWidget": true,
+                                    "data": {
+                                        "commonSettings": {
+                                            "code": null,
+                                            "description": null,
+                                            "title": "Существующий сегмент"
+                                        },
+                                        "inScheme": {
+                                        },
+                                        "outScheme": {
+                                            "fields": [
+                                                {
+                                                    "dataType": "INTEGER",
+                                                    "meta": {
+                                                    },
+                                                    "name": "Клиенты.Идентификатор",
+                                                    "options": null,
+                                                    "subSchemeId": null
+                                                }
+                                            ],
+                                            "loggingKey": null,
+                                            "metrics": null,
+                                            "storeCompacted": true
+                                        },
+                                        "schedule": {
+                                            "restartDailyDayTime": null,
+                                            "restartDateTime": null,
+                                            "restartInterval": null,
+                                            "restartMode": "DISABLED",
+                                            "restartMonthlyDayTimes": null,
+                                            "restartWeeklyDayTimes": null
+                                        },
+                                        "settings": {
+                                            "segmentId": "4"
+                                        },
+                                        "techSettings": {
+                                            "batchSizeMax": 1000,
+                                            "batchSizeMin": 1,
+                                            "batchThreads": 4,
+                                            "countersBroadcastRate": 30,
+                                            "metricsBroadcast": true,
+                                            "metricsPersist": true
+                                        }
+                                    },
+                                    "formWidget": null,
+                                    "formWidgetLocked": true,
+                                    "hashSum": 0,
+                                    "ico": null,
+                                    "id": "node-5839662795",
+                                    "inConnectionsPolicy": {
+                                        "breakdown": null,
+                                        "commonRule": null,
+                                        "slots": {
+                                            "mode": "STATIC",
+                                            "options": [
+                                                {
+                                                    "data": {
+                                                    },
+                                                    "editable": false,
+                                                    "formWidget": null,
+                                                    "ico": "ri-add-line",
+                                                    "idx": null,
+                                                    "line": "REGULAR",
+                                                    "quantity": null,
+                                                    "removable": false,
+                                                    "title": "Передать",
+                                                    "value": {
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "outConnectionsPolicy": {
+                                        "breakdown": null,
+                                        "commonRule": {
+                                            "data": {
+                                            },
+                                            "editable": false,
+                                            "formWidget": null,
+                                            "ico": null,
+                                            "idx": null,
+                                            "line": "REGULAR",
+                                            "quantity": null,
+                                            "removable": true,
+                                            "title": null,
+                                            "value": {
+                                            }
+                                        },
+                                        "slots": {
+                                            "mode": "STATIC",
+                                            "options": [
+                                                {
+                                                    "data": {
+                                                    },
+                                                    "editable": false,
+                                                    "formWidget": null,
+                                                    "ico": "ri-add-line",
+                                                    "idx": null,
+                                                    "line": "REGULAR",
+                                                    "quantity": null,
+                                                    "removable": true,
+                                                    "title": "Передать",
+                                                    "value": {
+                                                    }
+                                                },
+                                                {
+                                                    "data": {
+                                                    },
+                                                    "editable": false,
+                                                    "formWidget": null,
+                                                    "ico": "ri-subtract-line",
+                                                    "idx": null,
+                                                    "line": "REGULAR",
+                                                    "quantity": null,
+                                                    "removable": true,
+                                                    "title": "Удалить",
+                                                    "value": {
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "position": {
+                                        "locked": false,
+                                        "x": 320,
+                                        "y": 80
+                                    },
+                                    "shape": "SQUARE",
+                                    "size": {
+                                        "h": 180,
+                                        "w": 320
+                                    },
+                                    "state": null,
+                                    "subtitle": null,
+                                    "title": "Существующий сегмент",
+                                    "type": null,
+                                    "updated": false,
+                                    "value": {
+                                        "code": "datamart-segment",
+                                        "outSchemeFromSegmentId": 4,
+                                        "testmode": false
+                                    },
+                                    "valueNoHashed": {
+                                    }
+                                },
+                                {
+                                    "category": "Абстрактные",
+                                    "color": "PRIMARY",
+                                    "confirmationOnDelete": null,
+                                    "connections": [
+                                        {
+                                            "details": {
+                                                "data": {
+                                                },
+                                                "editable": false,
+                                                "formWidget": null,
+                                                "ico": "ri-arrow-right-circle-line",
+                                                "idx": 0,
+                                                "line": "REGULAR",
+                                                "quantity": null,
+                                                "removable": true,
+                                                "title": null,
+                                                "value": {
+                                                    "title": "5%"
+                                                }
+                                            },
+                                            "nodeId": "node-59674210",
+                                            "nodeSpecificInput": null
+                                        },
+                                        {
+                                            "details": {
+                                                "data": {
+                                                },
+                                                "editable": false,
+                                                "formWidget": null,
+                                                "ico": "ri-arrow-right-circle-line",
+                                                "idx": 1,
+                                                "line": "REGULAR",
+                                                "quantity": null,
+                                                "removable": true,
+                                                "title": null,
+                                                "value": {
+                                                    "title": "95%"
+                                                }
+                                            },
+                                            "nodeId": "node-5707304288",
+                                            "nodeSpecificInput": null
+                                        }
+                                    ],
+                                    "customActions": [
+                                        {
+                                            "color": null,
+                                            "event": null,
+                                            "hint": null,
+                                            "ico": "ri-file-copy-line",
+                                            "postUrl": "/flowbase/api/triggerNodeCopying",
+                                            "text": "Дублировать узел"
+                                        }
+                                    ],
+                                    "customContent": null,
+                                    "customFormWidget": true,
+                                    "data": {
+                                        "commonSettings": {
+                                            "code": null,
+                                            "description": null,
+                                            "title": "Сплитер потока"
+                                        },
+                                        "inScheme": {
+                                            "fields": [
+                                                {
+                                                    "dataType": "INTEGER",
+                                                    "meta": {
+                                                    },
+                                                    "name": "Клиенты.Идентификатор",
+                                                    "options": null,
+                                                    "subSchemeId": null
+                                                }
+                                            ],
+                                            "loggingKey": null,
+                                            "metrics": null,
+                                            "storeCompacted": true
+                                        },
+                                        "outScheme": {
+                                            "fields": [
+                                                {
+                                                    "dataType": "INTEGER",
+                                                    "meta": {
+                                                    },
+                                                    "name": "Клиенты.Идентификатор",
+                                                    "options": null,
+                                                    "subSchemeId": null
+                                                }
+                                            ],
+                                            "loggingKey": null,
+                                            "metrics": null,
+                                            "storeCompacted": true
+                                        },
+                                        "schedule": {
+                                            "restartDailyDayTime": null,
+                                            "restartDateTime": null,
+                                            "restartInterval": null,
+                                            "restartMode": "DISABLED",
+                                            "restartMonthlyDayTimes": null,
+                                            "restartWeeklyDayTimes": null
+                                        },
+                                        "settings": {
+                                            "groupPercents": [
+                                                "5",
+                                                "95"
+                                            ]
+                                        },
+                                        "techSettings": {
+                                            "batchSizeMax": 1000,
+                                            "batchSizeMin": 1,
+                                            "batchThreads": 4,
+                                            "countersBroadcastRate": 30,
+                                            "metricsBroadcast": true,
+                                            "metricsPersist": true
+                                        }
+                                    },
+                                    "formWidget": null,
+                                    "formWidgetLocked": true,
+                                    "hashSum": 0,
+                                    "ico": null,
+                                    "id": "node-2227520150",
+                                    "inConnectionsPolicy": {
+                                        "breakdown": null,
+                                        "commonRule": null,
+                                        "slots": {
+                                            "mode": "STATIC",
+                                            "options": [
+                                                {
+                                                    "data": {
+                                                    },
+                                                    "editable": false,
+                                                    "formWidget": null,
+                                                    "ico": "ri-add-line",
+                                                    "idx": null,
+                                                    "line": "REGULAR",
+                                                    "quantity": null,
+                                                    "removable": false,
+                                                    "title": "Передать",
+                                                    "value": {
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "outConnectionsPolicy": {
+                                        "breakdown": null,
+                                        "commonRule": null,
+                                        "slots": {
+                                            "mode": "STATIC",
+                                            "options": [
+                                                {
+                                                    "data": {
+                                                    },
+                                                    "editable": false,
+                                                    "formWidget": null,
+                                                    "ico": "ri-arrow-right-circle-line",
+                                                    "idx": null,
+                                                    "line": "REGULAR",
+                                                    "quantity": null,
+                                                    "removable": true,
+                                                    "title": "5%",
+                                                    "value": {
+                                                        "title": "5%"
+                                                    }
+                                                },
+                                                {
+                                                    "data": {
+                                                    },
+                                                    "editable": false,
+                                                    "formWidget": null,
+                                                    "ico": "ri-arrow-right-circle-line",
+                                                    "idx": null,
+                                                    "line": "REGULAR",
+                                                    "quantity": null,
+                                                    "removable": true,
+                                                    "title": "95%",
+                                                    "value": {
+                                                        "title": "95%"
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "position": {
+                                        "locked": false,
+                                        "x": 800,
+                                        "y": 60
+                                    },
+                                    "shape": "SQUARE",
+                                    "size": {
+                                        "h": 166,
+                                        "w": 320
+                                    },
+                                    "state": null,
+                                    "subtitle": null,
+                                    "title": "Сплитер потока",
+                                    "type": null,
+                                    "updated": false,
+                                    "value": {
+                                        "code": "splitter",
+                                        "testmode": false
+                                    },
+                                    "valueNoHashed": {
+                                    }
+                                },
+                                {
+                                    "category": "Абстрактные",
+                                    "color": "PRIMARY",
+                                    "confirmationOnDelete": null,
+                                    "connections": [
+                                    ],
+                                    "customActions": [
+                                        {
+                                            "color": null,
+                                            "event": null,
+                                            "hint": null,
+                                            "ico": "ri-file-copy-line",
+                                            "postUrl": "/flowbase/api/triggerNodeCopying",
+                                            "text": "Дублировать узел"
+                                        }
+                                    ],
+                                    "customContent": null,
+                                    "customFormWidget": true,
+                                    "data": {
+                                        "commonSettings": {
+                                            "code": null,
+                                            "description": null,
+                                            "title": "Буффер"
+                                        },
+                                        "inScheme": {
+                                            "fields": [
+                                                {
+                                                    "dataType": "INTEGER",
+                                                    "meta": {
+                                                    },
+                                                    "name": "Клиенты.Идентификатор",
+                                                    "options": null,
+                                                    "subSchemeId": null
+                                                }
+                                            ],
+                                            "loggingKey": null,
+                                            "metrics": null,
+                                            "storeCompacted": true
+                                        },
+                                        "outScheme": {
+                                            "fields": [
+                                                {
+                                                    "dataType": "INTEGER",
+                                                    "meta": {
+                                                    },
+                                                    "name": "Клиенты.Идентификатор",
+                                                    "options": null,
+                                                    "subSchemeId": null
+                                                }
+                                            ],
+                                            "loggingKey": null,
+                                            "metrics": null,
+                                            "storeCompacted": true
+                                        },
+                                        "schedule": {
+                                            "restartDailyDayTime": null,
+                                            "restartDateTime": null,
+                                            "restartInterval": null,
+                                            "restartMode": "DISABLED",
+                                            "restartMonthlyDayTimes": null,
+                                            "restartWeeklyDayTimes": null
+                                        },
+                                        "settings": {
+                                        },
+                                        "techSettings": {
+                                            "batchSizeMax": 1000,
+                                            "batchSizeMin": 1,
+                                            "batchThreads": 4,
+                                            "countersBroadcastRate": 30,
+                                            "metricsBroadcast": true,
+                                            "metricsPersist": true
+                                        }
+                                    },
+                                    "formWidget": null,
+                                    "formWidgetLocked": true,
+                                    "hashSum": 0,
+                                    "ico": null,
+                                    "id": "node-59674210",
+                                    "inConnectionsPolicy": {
+                                        "breakdown": null,
+                                        "commonRule": null,
+                                        "slots": {
+                                            "mode": "STATIC",
+                                            "options": [
+                                                {
+                                                    "data": {
+                                                    },
+                                                    "editable": false,
+                                                    "formWidget": null,
+                                                    "ico": "ri-add-line",
+                                                    "idx": null,
+                                                    "line": "REGULAR",
+                                                    "quantity": null,
+                                                    "removable": false,
+                                                    "title": "Передать",
+                                                    "value": {
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "outConnectionsPolicy": {
+                                        "breakdown": null,
+                                        "commonRule": {
+                                            "data": {
+                                            },
+                                            "editable": false,
+                                            "formWidget": null,
+                                            "ico": null,
+                                            "idx": null,
+                                            "line": "REGULAR",
+                                            "quantity": null,
+                                            "removable": true,
+                                            "title": null,
+                                            "value": {
+                                            }
+                                        },
+                                        "slots": {
+                                            "mode": "STATIC",
+                                            "options": [
+                                                {
+                                                    "data": {
+                                                    },
+                                                    "editable": false,
+                                                    "formWidget": null,
+                                                    "ico": "ri-add-line",
+                                                    "idx": null,
+                                                    "line": "REGULAR",
+                                                    "quantity": null,
+                                                    "removable": true,
+                                                    "title": "Передать",
+                                                    "value": {
+                                                    }
+                                                },
+                                                {
+                                                    "data": {
+                                                    },
+                                                    "editable": false,
+                                                    "formWidget": null,
+                                                    "ico": "ri-subtract-line",
+                                                    "idx": null,
+                                                    "line": "REGULAR",
+                                                    "quantity": null,
+                                                    "removable": true,
+                                                    "title": "Удалить",
+                                                    "value": {
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "position": {
+                                        "locked": false,
+                                        "x": 1240,
+                                        "y": 0
+                                    },
+                                    "shape": "SQUARE",
+                                    "size": null,
+                                    "state": null,
+                                    "subtitle": null,
+                                    "title": "Буффер",
+                                    "type": null,
+                                    "updated": false,
+                                    "value": {
+                                        "code": "buffer",
+                                        "testmode": false
+                                    },
+                                    "valueNoHashed": {
+                                    }
+                                },
+                                {
+                                    "category": "Кампейн",
+                                    "color": "SUCCESS",
+                                    "confirmationOnDelete": null,
+                                    "connections": [
+                                    ],
+                                    "customActions": [
+                                        {
+                                            "color": null,
+                                            "event": null,
+                                            "hint": null,
+                                            "ico": "ri-file-copy-line",
+                                            "postUrl": "/flowbase/api/triggerNodeCopying",
+                                            "text": "Дублировать узел"
+                                        }
+                                    ],
+                                    "customContent": null,
+                                    "customFormWidget": true,
+                                    "data": {
+                                        "commonSettings": {
+                                            "code": null,
+                                            "description": null,
+                                            "title": "Точка касания"
+                                        },
+                                        "inScheme": {
+                                            "fields": [
+                                                {
+                                                    "dataType": "INTEGER",
+                                                    "meta": {
+                                                    },
+                                                    "name": "Клиенты.Идентификатор",
+                                                    "options": null,
+                                                    "subSchemeId": null
+                                                }
+                                            ],
+                                            "loggingKey": null,
+                                            "metrics": null,
+                                            "storeCompacted": true
+                                        },
+                                        "outScheme": {
+                                            "fields": [
+                                                {
+                                                    "dataType": "INTEGER",
+                                                    "meta": {
+                                                    },
+                                                    "name": "Клиенты.Идентификатор",
+                                                    "options": null,
+                                                    "subSchemeId": null
+                                                },
+                                                {
+                                                    "dataType": "STRING",
+                                                    "meta": {
+                                                    },
+                                                    "name": "Результат отправки",
+                                                    "options": null,
+                                                    "subSchemeId": null
+                                                },
+                                                {
+                                                    "dataType": "DATETIME",
+                                                    "meta": {
+                                                    },
+                                                    "name": "Следующая попытка отправки",
+                                                    "options": null,
+                                                    "subSchemeId": null
+                                                }
+                                            ],
+                                            "loggingKey": null,
+                                            "metrics": null,
+                                            "storeCompacted": true
+                                        },
+                                        "schedule": {
+                                            "restartDailyDayTime": null,
+                                            "restartDateTime": null,
+                                            "restartInterval": null,
+                                            "restartMode": "DISABLED",
+                                            "restartMonthlyDayTimes": null,
+                                            "restartWeeklyDayTimes": null
+                                        },
+                                        "settings": {
+                                            "channelName": "SMS",
+                                            "contactAttribute": "Клиенты.Идентификатор",
+                                            "contentSource": "CONTENT_UNIT",
+                                            "contentUnit": 3,
+                                            "receiverIdAttribute": "Клиенты.Идентификатор",
+                                            "variant": 4
+                                        },
+                                        "techSettings": {
+                                            "batchSizeMax": 1000,
+                                            "batchSizeMin": 1,
+                                            "batchThreads": 4,
+                                            "countersBroadcastRate": 30,
+                                            "metricsBroadcast": true,
+                                            "metricsPersist": true
+                                        }
+                                    },
+                                    "formWidget": null,
+                                    "formWidgetLocked": true,
+                                    "hashSum": 0,
+                                    "ico": null,
+                                    "id": "node-5707304288",
+                                    "inConnectionsPolicy": {
+                                        "breakdown": null,
+                                        "commonRule": null,
+                                        "slots": {
+                                            "mode": "STATIC",
+                                            "options": [
+                                                {
+                                                    "data": {
+                                                    },
+                                                    "editable": false,
+                                                    "formWidget": null,
+                                                    "ico": "ri-add-line",
+                                                    "idx": null,
+                                                    "line": "REGULAR",
+                                                    "quantity": null,
+                                                    "removable": false,
+                                                    "title": "Передать",
+                                                    "value": {
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "outConnectionsPolicy": {
+                                        "breakdown": null,
+                                        "commonRule": {
+                                            "data": {
+                                            },
+                                            "editable": false,
+                                            "formWidget": null,
+                                            "ico": null,
+                                            "idx": null,
+                                            "line": "REGULAR",
+                                            "quantity": null,
+                                            "removable": true,
+                                            "title": null,
+                                            "value": {
+                                            }
+                                        },
+                                        "slots": {
+                                            "mode": "STATIC",
+                                            "options": [
+                                                {
+                                                    "data": {
+                                                    },
+                                                    "editable": false,
+                                                    "formWidget": null,
+                                                    "ico": "ri-check-line",
+                                                    "idx": null,
+                                                    "line": "REGULAR",
+                                                    "quantity": null,
+                                                    "removable": true,
+                                                    "title": "Отправлено",
+                                                    "value": {
+                                                    }
+                                                },
+                                                {
+                                                    "data": {
+                                                    },
+                                                    "editable": false,
+                                                    "formWidget": null,
+                                                    "ico": "ri-close-line",
+                                                    "idx": null,
+                                                    "line": "REGULAR",
+                                                    "quantity": null,
+                                                    "removable": true,
+                                                    "title": "Истек TTL",
+                                                    "value": {
+                                                    }
+                                                },
+                                                {
+                                                    "data": {
+                                                    },
+                                                    "editable": false,
+                                                    "formWidget": null,
+                                                    "ico": "ri-timer-line",
+                                                    "idx": null,
+                                                    "line": "REGULAR",
+                                                    "quantity": null,
+                                                    "removable": true,
+                                                    "title": "Повторить позже",
+                                                    "value": {
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "position": {
+                                        "locked": false,
+                                        "x": 1280,
+                                        "y": 240
+                                    },
+                                    "shape": "SQUARE",
+                                    "size": {
+                                        "h": 205,
+                                        "w": 320
+                                    },
+                                    "state": null,
+                                    "subtitle": null,
+                                    "title": "Точка касания",
+                                    "type": null,
+                                    "updated": false,
+                                    "value": {
+                                        "code": "touch-point",
+                                        "testmode": false
+                                    },
+                                    "valueNoHashed": {
+                                    }
+                                }
+                            ]
+                        },
+                        "nodesTmp": {
+                            "nodes": [
+                                {
+                                    "category": "Датамарт",
+                                    "color": "WARNING",
+                                    "confirmationOnDelete": null,
+                                    "connections": [
+                                        {
+                                            "details": {
+                                                "data": {
+                                                },
+                                                "editable": false,
+                                                "formWidget": null,
+                                                "ico": "ri-add-line",
+                                                "idx": 0,
+                                                "line": "REGULAR",
+                                                "quantity": null,
+                                                "removable": true,
+                                                "title": null,
+                                                "value": {
+                                                }
+                                            },
+                                            "nodeId": "node-2227520150",
+                                            "nodeSpecificInput": null
+                                        }
+                                    ],
+                                    "customActions": [
+                                        {
+                                            "color": null,
+                                            "event": null,
+                                            "hint": null,
+                                            "ico": "ri-file-copy-line",
+                                            "postUrl": "/flowbase/api/triggerNodeCopying",
+                                            "text": "Дублировать узел"
+                                        }
+                                    ],
+                                    "customContent": null,
+                                    "customFormWidget": true,
+                                    "data": {
+                                        "commonSettings": {
+                                            "code": null,
+                                            "description": null,
+                                            "title": "Существующий сегмент"
+                                        },
+                                        "inScheme": {
+                                        },
+                                        "outScheme": {
+                                            "fields": [
+                                                {
+                                                    "dataType": "INTEGER",
+                                                    "meta": {
+                                                    },
+                                                    "name": "Клиенты.Идентификатор",
+                                                    "options": null,
+                                                    "subSchemeId": null
+                                                }
+                                            ],
+                                            "loggingKey": null,
+                                            "metrics": null,
+                                            "storeCompacted": true
+                                        },
+                                        "schedule": {
+                                            "restartDailyDayTime": null,
+                                            "restartDateTime": null,
+                                            "restartInterval": null,
+                                            "restartMode": "DISABLED",
+                                            "restartMonthlyDayTimes": null,
+                                            "restartWeeklyDayTimes": null
+                                        },
+                                        "settings": {
+                                            "segmentId": "4"
+                                        },
+                                        "techSettings": {
+                                            "batchSizeMax": 1000,
+                                            "batchSizeMin": 1,
+                                            "batchThreads": 4,
+                                            "countersBroadcastRate": 30,
+                                            "metricsBroadcast": true,
+                                            "metricsPersist": true
+                                        }
+                                    },
+                                    "formWidget": null,
+                                    "formWidgetLocked": true,
+                                    "hashSum": 0,
+                                    "ico": null,
+                                    "id": "node-5839662795",
+                                    "inConnectionsPolicy": {
+                                        "breakdown": null,
+                                        "commonRule": null,
+                                        "slots": {
+                                            "mode": "STATIC",
+                                            "options": [
+                                                {
+                                                    "data": {
+                                                    },
+                                                    "editable": false,
+                                                    "formWidget": null,
+                                                    "ico": "ri-add-line",
+                                                    "idx": null,
+                                                    "line": "REGULAR",
+                                                    "quantity": null,
+                                                    "removable": false,
+                                                    "title": "Передать",
+                                                    "value": {
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "outConnectionsPolicy": {
+                                        "breakdown": null,
+                                        "commonRule": {
+                                            "data": {
+                                            },
+                                            "editable": false,
+                                            "formWidget": null,
+                                            "ico": null,
+                                            "idx": null,
+                                            "line": "REGULAR",
+                                            "quantity": null,
+                                            "removable": true,
+                                            "title": null,
+                                            "value": {
+                                            }
+                                        },
+                                        "slots": {
+                                            "mode": "STATIC",
+                                            "options": [
+                                                {
+                                                    "data": {
+                                                    },
+                                                    "editable": false,
+                                                    "formWidget": null,
+                                                    "ico": "ri-add-line",
+                                                    "idx": null,
+                                                    "line": "REGULAR",
+                                                    "quantity": null,
+                                                    "removable": true,
+                                                    "title": "Передать",
+                                                    "value": {
+                                                    }
+                                                },
+                                                {
+                                                    "data": {
+                                                    },
+                                                    "editable": false,
+                                                    "formWidget": null,
+                                                    "ico": "ri-subtract-line",
+                                                    "idx": null,
+                                                    "line": "REGULAR",
+                                                    "quantity": null,
+                                                    "removable": true,
+                                                    "title": "Удалить",
+                                                    "value": {
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "position": {
+                                        "locked": false,
+                                        "x": 320,
+                                        "y": 80
+                                    },
+                                    "shape": "SQUARE",
+                                    "size": {
+                                        "h": 180,
+                                        "w": 320
+                                    },
+                                    "state": null,
+                                    "subtitle": null,
+                                    "title": "Существующий сегмент",
+                                    "type": null,
+                                    "updated": false,
+                                    "value": {
+                                        "code": "datamart-segment",
+                                        "outSchemeFromSegmentId": 4
+                                    },
+                                    "valueNoHashed": {
+                                    }
+                                },
+                                {
+                                    "category": "Абстрактные",
+                                    "color": "PRIMARY",
+                                    "confirmationOnDelete": null,
+                                    "connections": [
+                                        {
+                                            "details": {
+                                                "data": {
+                                                },
+                                                "editable": false,
+                                                "formWidget": null,
+                                                "ico": "ri-arrow-right-circle-line",
+                                                "idx": 0,
+                                                "line": "REGULAR",
+                                                "quantity": null,
+                                                "removable": true,
+                                                "title": null,
+                                                "value": {
+                                                    "title": "5%"
+                                                }
+                                            },
+                                            "nodeId": "node-59674210",
+                                            "nodeSpecificInput": null
+                                        },
+                                        {
+                                            "details": {
+                                                "data": {
+                                                },
+                                                "editable": false,
+                                                "formWidget": null,
+                                                "ico": "ri-arrow-right-circle-line",
+                                                "idx": 1,
+                                                "line": "REGULAR",
+                                                "quantity": null,
+                                                "removable": true,
+                                                "title": null,
+                                                "value": {
+                                                    "title": "95%"
+                                                }
+                                            },
+                                            "nodeId": "node-5707304288",
+                                            "nodeSpecificInput": null
+                                        }
+                                    ],
+                                    "customActions": [
+                                        {
+                                            "color": null,
+                                            "event": null,
+                                            "hint": null,
+                                            "ico": "ri-file-copy-line",
+                                            "postUrl": "/flowbase/api/triggerNodeCopying",
+                                            "text": "Дублировать узел"
+                                        }
+                                    ],
+                                    "customContent": null,
+                                    "customFormWidget": true,
+                                    "data": {
+                                        "commonSettings": {
+                                            "code": null,
+                                            "description": null,
+                                            "title": "Сплитер потока"
+                                        },
+                                        "inScheme": {
+                                            "fields": [
+                                                {
+                                                    "dataType": "INTEGER",
+                                                    "meta": {
+                                                    },
+                                                    "name": "Клиенты.Идентификатор",
+                                                    "options": null,
+                                                    "subSchemeId": null
+                                                }
+                                            ],
+                                            "loggingKey": null,
+                                            "metrics": null,
+                                            "storeCompacted": true
+                                        },
+                                        "outScheme": {
+                                            "fields": [
+                                                {
+                                                    "dataType": "INTEGER",
+                                                    "meta": {
+                                                    },
+                                                    "name": "Клиенты.Идентификатор",
+                                                    "options": null,
+                                                    "subSchemeId": null
+                                                }
+                                            ],
+                                            "loggingKey": null,
+                                            "metrics": null,
+                                            "storeCompacted": true
+                                        },
+                                        "schedule": {
+                                            "restartDailyDayTime": null,
+                                            "restartDateTime": null,
+                                            "restartInterval": null,
+                                            "restartMode": "DISABLED",
+                                            "restartMonthlyDayTimes": null,
+                                            "restartWeeklyDayTimes": null
+                                        },
+                                        "settings": {
+                                            "groupPercents": [
+                                                "5",
+                                                "95"
+                                            ]
+                                        },
+                                        "techSettings": {
+                                            "batchSizeMax": 1000,
+                                            "batchSizeMin": 1,
+                                            "batchThreads": 4,
+                                            "countersBroadcastRate": 30,
+                                            "metricsBroadcast": true,
+                                            "metricsPersist": true
+                                        }
+                                    },
+                                    "formWidget": null,
+                                    "formWidgetLocked": true,
+                                    "hashSum": 0,
+                                    "ico": null,
+                                    "id": "node-2227520150",
+                                    "inConnectionsPolicy": {
+                                        "breakdown": null,
+                                        "commonRule": null,
+                                        "slots": {
+                                            "mode": "STATIC",
+                                            "options": [
+                                                {
+                                                    "data": {
+                                                    },
+                                                    "editable": false,
+                                                    "formWidget": null,
+                                                    "ico": "ri-add-line",
+                                                    "idx": null,
+                                                    "line": "REGULAR",
+                                                    "quantity": null,
+                                                    "removable": false,
+                                                    "title": "Передать",
+                                                    "value": {
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "outConnectionsPolicy": {
+                                        "breakdown": null,
+                                        "commonRule": null,
+                                        "slots": {
+                                            "mode": "STATIC",
+                                            "options": [
+                                                {
+                                                    "data": {
+                                                    },
+                                                    "editable": false,
+                                                    "formWidget": null,
+                                                    "ico": "ri-arrow-right-circle-line",
+                                                    "idx": null,
+                                                    "line": "REGULAR",
+                                                    "quantity": null,
+                                                    "removable": true,
+                                                    "title": "5%",
+                                                    "value": {
+                                                        "title": "5%"
+                                                    }
+                                                },
+                                                {
+                                                    "data": {
+                                                    },
+                                                    "editable": false,
+                                                    "formWidget": null,
+                                                    "ico": "ri-arrow-right-circle-line",
+                                                    "idx": null,
+                                                    "line": "REGULAR",
+                                                    "quantity": null,
+                                                    "removable": true,
+                                                    "title": "95%",
+                                                    "value": {
+                                                        "title": "95%"
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "position": {
+                                        "locked": false,
+                                        "x": 800,
+                                        "y": 60
+                                    },
+                                    "shape": "SQUARE",
+                                    "size": {
+                                        "h": 166,
+                                        "w": 320
+                                    },
+                                    "state": null,
+                                    "subtitle": null,
+                                    "title": "Сплитер потока",
+                                    "type": null,
+                                    "updated": false,
+                                    "value": {
+                                        "code": "splitter"
+                                    },
+                                    "valueNoHashed": {
+                                    }
+                                },
+                                {
+                                    "category": "Абстрактные",
+                                    "color": "PRIMARY",
+                                    "confirmationOnDelete": null,
+                                    "connections": [
+                                    ],
+                                    "customActions": [
+                                        {
+                                            "color": null,
+                                            "event": null,
+                                            "hint": null,
+                                            "ico": "ri-file-copy-line",
+                                            "postUrl": "/flowbase/api/triggerNodeCopying",
+                                            "text": "Дублировать узел"
+                                        }
+                                    ],
+                                    "customContent": null,
+                                    "customFormWidget": true,
+                                    "data": {
+                                        "commonSettings": {
+                                            "code": null,
+                                            "description": null,
+                                            "title": "Буффер"
+                                        },
+                                        "inScheme": {
+                                            "fields": [
+                                                {
+                                                    "dataType": "INTEGER",
+                                                    "meta": {
+                                                    },
+                                                    "name": "Клиенты.Идентификатор",
+                                                    "options": null,
+                                                    "subSchemeId": null
+                                                }
+                                            ],
+                                            "loggingKey": null,
+                                            "metrics": null,
+                                            "storeCompacted": true
+                                        },
+                                        "outScheme": {
+                                            "fields": [
+                                                {
+                                                    "dataType": "INTEGER",
+                                                    "meta": {
+                                                    },
+                                                    "name": "Клиенты.Идентификатор",
+                                                    "options": null,
+                                                    "subSchemeId": null
+                                                }
+                                            ],
+                                            "loggingKey": null,
+                                            "metrics": null,
+                                            "storeCompacted": true
+                                        },
+                                        "schedule": {
+                                            "restartDailyDayTime": null,
+                                            "restartDateTime": null,
+                                            "restartInterval": null,
+                                            "restartMode": "DISABLED",
+                                            "restartMonthlyDayTimes": null,
+                                            "restartWeeklyDayTimes": null
+                                        },
+                                        "settings": {
+                                        },
+                                        "techSettings": {
+                                            "batchSizeMax": 1000,
+                                            "batchSizeMin": 1,
+                                            "batchThreads": 4,
+                                            "countersBroadcastRate": 30,
+                                            "metricsBroadcast": true,
+                                            "metricsPersist": true
+                                        }
+                                    },
+                                    "formWidget": null,
+                                    "formWidgetLocked": true,
+                                    "hashSum": 0,
+                                    "ico": null,
+                                    "id": "node-59674210",
+                                    "inConnectionsPolicy": {
+                                        "breakdown": null,
+                                        "commonRule": null,
+                                        "slots": {
+                                            "mode": "STATIC",
+                                            "options": [
+                                                {
+                                                    "data": {
+                                                    },
+                                                    "editable": false,
+                                                    "formWidget": null,
+                                                    "ico": "ri-add-line",
+                                                    "idx": null,
+                                                    "line": "REGULAR",
+                                                    "quantity": null,
+                                                    "removable": false,
+                                                    "title": "Передать",
+                                                    "value": {
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "outConnectionsPolicy": {
+                                        "breakdown": null,
+                                        "commonRule": {
+                                            "data": {
+                                            },
+                                            "editable": false,
+                                            "formWidget": null,
+                                            "ico": null,
+                                            "idx": null,
+                                            "line": "REGULAR",
+                                            "quantity": null,
+                                            "removable": true,
+                                            "title": null,
+                                            "value": {
+                                            }
+                                        },
+                                        "slots": {
+                                            "mode": "STATIC",
+                                            "options": [
+                                                {
+                                                    "data": {
+                                                    },
+                                                    "editable": false,
+                                                    "formWidget": null,
+                                                    "ico": "ri-add-line",
+                                                    "idx": null,
+                                                    "line": "REGULAR",
+                                                    "quantity": null,
+                                                    "removable": true,
+                                                    "title": "Передать",
+                                                    "value": {
+                                                    }
+                                                },
+                                                {
+                                                    "data": {
+                                                    },
+                                                    "editable": false,
+                                                    "formWidget": null,
+                                                    "ico": "ri-subtract-line",
+                                                    "idx": null,
+                                                    "line": "REGULAR",
+                                                    "quantity": null,
+                                                    "removable": true,
+                                                    "title": "Удалить",
+                                                    "value": {
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "position": {
+                                        "locked": false,
+                                        "x": 1240,
+                                        "y": 0
+                                    },
+                                    "shape": "SQUARE",
+                                    "size": null,
+                                    "state": null,
+                                    "subtitle": null,
+                                    "title": "Буффер",
+                                    "type": null,
+                                    "updated": false,
+                                    "value": {
+                                        "code": "buffer"
+                                    },
+                                    "valueNoHashed": {
+                                    }
+                                },
+                                {
+                                    "category": "Кампейн",
+                                    "color": "SUCCESS",
+                                    "confirmationOnDelete": null,
+                                    "connections": [
+                                    ],
+                                    "customActions": [
+                                        {
+                                            "color": null,
+                                            "event": null,
+                                            "hint": null,
+                                            "ico": "ri-file-copy-line",
+                                            "postUrl": "/flowbase/api/triggerNodeCopying",
+                                            "text": "Дублировать узел"
+                                        }
+                                    ],
+                                    "customContent": null,
+                                    "customFormWidget": true,
+                                    "data": {
+                                        "commonSettings": {
+                                            "code": null,
+                                            "description": null,
+                                            "title": "Точка касания"
+                                        },
+                                        "inScheme": {
+                                            "fields": [
+                                                {
+                                                    "dataType": "INTEGER",
+                                                    "meta": {
+                                                    },
+                                                    "name": "Клиенты.Идентификатор",
+                                                    "options": null,
+                                                    "subSchemeId": null
+                                                }
+                                            ],
+                                            "loggingKey": null,
+                                            "metrics": null,
+                                            "storeCompacted": true
+                                        },
+                                        "outScheme": {
+                                            "fields": [
+                                                {
+                                                    "dataType": "INTEGER",
+                                                    "meta": {
+                                                    },
+                                                    "name": "Клиенты.Идентификатор",
+                                                    "options": null,
+                                                    "subSchemeId": null
+                                                },
+                                                {
+                                                    "dataType": "STRING",
+                                                    "meta": {
+                                                    },
+                                                    "name": "Результат отправки",
+                                                    "options": null,
+                                                    "subSchemeId": null
+                                                },
+                                                {
+                                                    "dataType": "DATETIME",
+                                                    "meta": {
+                                                    },
+                                                    "name": "Следующая попытка отправки",
+                                                    "options": null,
+                                                    "subSchemeId": null
+                                                }
+                                            ],
+                                            "loggingKey": null,
+                                            "metrics": null,
+                                            "storeCompacted": true
+                                        },
+                                        "schedule": {
+                                            "restartDailyDayTime": null,
+                                            "restartDateTime": null,
+                                            "restartInterval": null,
+                                            "restartMode": "DISABLED",
+                                            "restartMonthlyDayTimes": null,
+                                            "restartWeeklyDayTimes": null
+                                        },
+                                        "settings": {
+                                            "channelName": "SMS",
+                                            "contactAttribute": "Клиенты.Идентификатор",
+                                            "contentSource": "CONTENT_UNIT",
+                                            "contentUnit": 3,
+                                            "receiverIdAttribute": "Клиенты.Идентификатор",
+                                            "variant": 4
+                                        },
+                                        "techSettings": {
+                                            "batchSizeMax": 1000,
+                                            "batchSizeMin": 1,
+                                            "batchThreads": 4,
+                                            "countersBroadcastRate": 30,
+                                            "metricsBroadcast": true,
+                                            "metricsPersist": true
+                                        }
+                                    },
+                                    "formWidget": null,
+                                    "formWidgetLocked": true,
+                                    "hashSum": 0,
+                                    "ico": null,
+                                    "id": "node-5707304288",
+                                    "inConnectionsPolicy": {
+                                        "breakdown": null,
+                                        "commonRule": null,
+                                        "slots": {
+                                            "mode": "STATIC",
+                                            "options": [
+                                                {
+                                                    "data": {
+                                                    },
+                                                    "editable": false,
+                                                    "formWidget": null,
+                                                    "ico": "ri-add-line",
+                                                    "idx": null,
+                                                    "line": "REGULAR",
+                                                    "quantity": null,
+                                                    "removable": false,
+                                                    "title": "Передать",
+                                                    "value": {
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "outConnectionsPolicy": {
+                                        "breakdown": null,
+                                        "commonRule": {
+                                            "data": {
+                                            },
+                                            "editable": false,
+                                            "formWidget": null,
+                                            "ico": null,
+                                            "idx": null,
+                                            "line": "REGULAR",
+                                            "quantity": null,
+                                            "removable": true,
+                                            "title": null,
+                                            "value": {
+                                            }
+                                        },
+                                        "slots": {
+                                            "mode": "STATIC",
+                                            "options": [
+                                                {
+                                                    "data": {
+                                                    },
+                                                    "editable": false,
+                                                    "formWidget": null,
+                                                    "ico": "ri-check-line",
+                                                    "idx": null,
+                                                    "line": "REGULAR",
+                                                    "quantity": null,
+                                                    "removable": true,
+                                                    "title": "Отправлено",
+                                                    "value": {
+                                                    }
+                                                },
+                                                {
+                                                    "data": {
+                                                    },
+                                                    "editable": false,
+                                                    "formWidget": null,
+                                                    "ico": "ri-close-line",
+                                                    "idx": null,
+                                                    "line": "REGULAR",
+                                                    "quantity": null,
+                                                    "removable": true,
+                                                    "title": "Истек TTL",
+                                                    "value": {
+                                                    }
+                                                },
+                                                {
+                                                    "data": {
+                                                    },
+                                                    "editable": false,
+                                                    "formWidget": null,
+                                                    "ico": "ri-timer-line",
+                                                    "idx": null,
+                                                    "line": "REGULAR",
+                                                    "quantity": null,
+                                                    "removable": true,
+                                                    "title": "Повторить позже",
+                                                    "value": {
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "position": {
+                                        "locked": false,
+                                        "x": 1280,
+                                        "y": 240
+                                    },
+                                    "shape": "SQUARE",
+                                    "size": {
+                                        "h": 205,
+                                        "w": 320
+                                    },
+                                    "state": null,
+                                    "subtitle": null,
+                                    "title": "Точка касания",
+                                    "type": null,
+                                    "updated": false,
+                                    "value": {
+                                        "code": "touch-point"
+                                    },
+                                    "valueNoHashed": {
+                                    }
+                                }
+                            ]
+                        },
+                        "originalId": null,
+                        "packageName": null,
+                        "resgroupId": null,
+                        "testmode": false,
+                        "userId": "1"
+                    }
+                },
+                "itemIds": [
+                    143
+                ],
+                "type": "PROCESS"
+            }
+        ]
+    },
+    "createdDatetime": "2024-05-25T09:53:52Z",
+    "description": null,
+    "id": 13,
+    "name": "segment_ab_touchpoint_fill",
+    "updatedDatetime": "2024-05-25T09:53:52Z"
+}

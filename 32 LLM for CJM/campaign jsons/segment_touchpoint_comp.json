@@ -1,0 +1,766 @@
+{
+    "appliedDatetime": null,
+    "content": {
+        "items": [
+            {
+                "itemData": {
+                    "144": {
+                        "accessMode": {
+                            "roles": []
+                        },
+                        "active": false,
+                        "atomicity": "NODE",
+                        "category": null,
+                        "compoundNode": false,
+                        "compoundNodeRules": null,
+                        "description": null,
+                        "id": 144,
+                        "name": "segment_touchpoint_fill",
+                        "nodes": {
+                            "nodes": [
+                                {
+                                    "category": "\u0414\u0430\u0442\u0430\u043c\u0430\u0440\u0442",
+                                    "color": "WARNING",
+                                    "confirmationOnDelete": null,
+                                    "connections": [
+                                        {
+                                            "details": {
+                                                "data": {},
+                                                "editable": false,
+                                                "formWidget": null,
+                                                "ico": "ri-add-line",
+                                                "idx": 0,
+                                                "line": "REGULAR",
+                                                "quantity": null,
+                                                "removable": true,
+                                                "title": null,
+                                                "value": {}
+                                            },
+                                            "nodeId": "node-9605868550",
+                                            "nodeSpecificInput": null
+                                        }
+                                    ],
+                                    "customActions": [
+                                        {
+                                            "color": null,
+                                            "event": null,
+                                            "hint": null,
+                                            "ico": "ri-file-copy-line",
+                                            "postUrl": "/flowbase/api/triggerNodeCopying",
+                                            "text": "\u0414\u0443\u0431\u043b\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0443\u0437\u0435\u043b"
+                                        }
+                                    ],
+                                    "customContent": null,
+                                    "customFormWidget": true,
+                                    "data": {
+                                        "commonSettings": {
+                                            "code": null,
+                                            "description": null,
+                                            "title": "\u0421\u0443\u0449\u0435\u0441\u0442\u0432\u0443\u044e\u0449\u0438\u0439 \u0441\u0435\u0433\u043c\u0435\u043d\u0442"
+                                        },
+                                        "inScheme": {},
+                                        "outScheme": {
+                                            "fields": [
+                                                {
+                                                    "dataType": "INTEGER",
+                                                    "meta": {},
+                                                    "name": "\u041a\u043b\u0438\u0435\u043d\u0442\u044b.\u0418\u0434\u0435\u043d\u0442\u0438\u0444\u0438\u043a\u0430\u0442\u043e\u0440",
+                                                    "options": null,
+                                                    "subSchemeId": null
+                                                }
+                                            ],
+                                            "loggingKey": null,
+                                            "metrics": null,
+                                            "storeCompacted": true
+                                        },
+                                        "schedule": {
+                                            "restartDailyDayTime": null,
+                                            "restartDateTime": null,
+                                            "restartInterval": null,
+                                            "restartMode": "DISABLED",
+                                            "restartMonthlyDayTimes": null,
+                                            "restartWeeklyDayTimes": null
+                                        },
+                                        "settings": {
+                                            "segmentId": 172
+                                        },
+                                        "techSettings": {
+                                            "batchSizeMax": 1000,
+                                            "batchSizeMin": 1,
+                                            "batchThreads": 4,
+                                            "countersBroadcastRate": 30,
+                                            "metricsBroadcast": true,
+                                            "metricsPersist": true
+                                        }
+                                    },
+                                    "formWidget": null,
+                                    "formWidgetLocked": true,
+                                    "hashSum": 0,
+                                    "ico": null,
+                                    "id": "node-4272719260",
+                                    "inConnectionsPolicy": {
+                                        "breakdown": null,
+                                        "commonRule": null,
+                                        "slots": {
+                                            "mode": "STATIC",
+                                            "options": [
+                                                {
+                                                    "data": {},
+                                                    "editable": false,
+                                                    "formWidget": null,
+                                                    "ico": "ri-add-line",
+                                                    "idx": null,
+                                                    "line": "REGULAR",
+                                                    "quantity": null,
+                                                    "removable": false,
+                                                    "title": "\u041f\u0435\u0440\u0435\u0434\u0430\u0442\u044c",
+                                                    "value": {}
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "outConnectionsPolicy": {
+                                        "breakdown": null,
+                                        "commonRule": {
+                                            "data": {},
+                                            "editable": false,
+                                            "formWidget": null,
+                                            "ico": null,
+                                            "idx": null,
+                                            "line": "REGULAR",
+                                            "quantity": null,
+                                            "removable": true,
+                                            "title": null,
+                                            "value": {}
+                                        },
+                                        "slots": {
+                                            "mode": "STATIC",
+                                            "options": [
+                                                {
+                                                    "data": {},
+                                                    "editable": false,
+                                                    "formWidget": null,
+                                                    "ico": "ri-add-line",
+                                                    "idx": null,
+                                                    "line": "REGULAR",
+                                                    "quantity": null,
+                                                    "removable": true,
+                                                    "title": "\u041f\u0435\u0440\u0435\u0434\u0430\u0442\u044c",
+                                                    "value": {}
+                                                },
+                                                {
+                                                    "data": {},
+                                                    "editable": false,
+                                                    "formWidget": null,
+                                                    "ico": "ri-subtract-line",
+                                                    "idx": null,
+                                                    "line": "REGULAR",
+                                                    "quantity": null,
+                                                    "removable": true,
+                                                    "title": "\u0423\u0434\u0430\u043b\u0438\u0442\u044c",
+                                                    "value": {}
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "position": {
+                                        "locked": false,
+                                        "x": 220,
+                                        "y": 100
+                                    },
+                                    "shape": "SQUARE",
+                                    "size": {
+                                        "h": 180,
+                                        "w": 320
+                                    },
+                                    "state": null,
+                                    "subtitle": null,
+                                    "title": "\u0421\u0443\u0449\u0435\u0441\u0442\u0432\u0443\u044e\u0449\u0438\u0439 \u0441\u0435\u0433\u043c\u0435\u043d\u0442",
+                                    "type": null,
+                                    "updated": false,
+                                    "value": {
+                                        "code": "datamart-segment",
+                                        "outSchemeFromSegmentId": 172,
+                                        "testmode": false
+                                    },
+                                    "valueNoHashed": {}
+                                },
+                                {
+                                    "category": "\u041a\u0430\u043c\u043f\u0435\u0439\u043d",
+                                    "color": "SUCCESS",
+                                    "confirmationOnDelete": null,
+                                    "connections": [],
+                                    "customActions": [
+                                        {
+                                            "color": null,
+                                            "event": null,
+                                            "hint": null,
+                                            "ico": "ri-file-copy-line",
+                                            "postUrl": "/flowbase/api/triggerNodeCopying",
+                                            "text": "\u0414\u0443\u0431\u043b\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0443\u0437\u0435\u043b"
+                                        }
+                                    ],
+                                    "customContent": null,
+                                    "customFormWidget": true,
+                                    "data": {
+                                        "commonSettings": {
+                                            "code": null,
+                                            "description": null,
+                                            "title": "\u0422\u043e\u0447\u043a\u0430 \u043a\u0430\u0441\u0430\u043d\u0438\u044f"
+                                        },
+                                        "inScheme": {
+                                            "fields": [
+                                                {
+                                                    "dataType": "INTEGER",
+                                                    "meta": {},
+                                                    "name": "\u041a\u043b\u0438\u0435\u043d\u0442\u044b.\u0418\u0434\u0435\u043d\u0442\u0438\u0444\u0438\u043a\u0430\u0442\u043e\u0440",
+                                                    "options": null,
+                                                    "subSchemeId": null
+                                                }
+                                            ],
+                                            "loggingKey": null,
+                                            "metrics": null,
+                                            "storeCompacted": true
+                                        },
+                                        "outScheme": {
+                                            "fields": [
+                                                {
+                                                    "dataType": "INTEGER",
+                                                    "meta": {},
+                                                    "name": "\u041a\u043b\u0438\u0435\u043d\u0442\u044b.\u0418\u0434\u0435\u043d\u0442\u0438\u0444\u0438\u043a\u0430\u0442\u043e\u0440",
+                                                    "options": null,
+                                                    "subSchemeId": null
+                                                },
+                                                {
+                                                    "dataType": "STRING",
+                                                    "meta": {},
+                                                    "name": "\u0420\u0435\u0437\u0443\u043b\u044c\u0442\u0430\u0442 \u043e\u0442\u043f\u0440\u0430\u0432\u043a\u0438",
+                                                    "options": null,
+                                                    "subSchemeId": null
+                                                },
+                                                {
+                                                    "dataType": "DATETIME",
+                                                    "meta": {},
+                                                    "name": "\u0421\u043b\u0435\u0434\u0443\u044e\u0449\u0430\u044f \u043f\u043e\u043f\u044b\u0442\u043a\u0430 \u043e\u0442\u043f\u0440\u0430\u0432\u043a\u0438",
+                                                    "options": null,
+                                                    "subSchemeId": null
+                                                }
+                                            ],
+                                            "loggingKey": null,
+                                            "metrics": null,
+                                            "storeCompacted": true
+                                        },
+                                        "schedule": {
+                                            "restartDailyDayTime": null,
+                                            "restartDateTime": null,
+                                            "restartInterval": null,
+                                            "restartMode": "DISABLED",
+                                            "restartMonthlyDayTimes": null,
+                                            "restartWeeklyDayTimes": null
+                                        },
+                                        "settings": {
+                                            "channelName": "SMS",
+                                            "contactAttribute": "\u041a\u043b\u0438\u0435\u043d\u0442\u044b.\u0418\u0434\u0435\u043d\u0442\u0438\u0444\u0438\u043a\u0430\u0442\u043e\u0440",
+                                            "contentSource": "CONTENT_UNIT",
+                                            "contentUnit": 3,
+                                            "receiverIdAttribute": "\u041a\u043b\u0438\u0435\u043d\u0442\u044b.\u0418\u0434\u0435\u043d\u0442\u0438\u0444\u0438\u043a\u0430\u0442\u043e\u0440",
+                                            "variant": 4
+                                        },
+                                        "techSettings": {
+                                            "batchSizeMax": 1000,
+                                            "batchSizeMin": 1,
+                                            "batchThreads": 4,
+                                            "countersBroadcastRate": 30,
+                                            "metricsBroadcast": true,
+                                            "metricsPersist": true
+                                        }
+                                    },
+                                    "formWidget": null,
+                                    "formWidgetLocked": true,
+                                    "hashSum": 0,
+                                    "ico": null,
+                                    "id": "node-9605868550",
+                                    "inConnectionsPolicy": {
+                                        "breakdown": null,
+                                        "commonRule": null,
+                                        "slots": {
+                                            "mode": "STATIC",
+                                            "options": [
+                                                {
+                                                    "data": {},
+                                                    "editable": false,
+                                                    "formWidget": null,
+                                                    "ico": "ri-add-line",
+                                                    "idx": null,
+                                                    "line": "REGULAR",
+                                                    "quantity": null,
+                                                    "removable": false,
+                                                    "title": "\u041f\u0435\u0440\u0435\u0434\u0430\u0442\u044c",
+                                                    "value": {}
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "outConnectionsPolicy": {
+                                        "breakdown": null,
+                                        "commonRule": {
+                                            "data": {},
+                                            "editable": false,
+                                            "formWidget": null,
+                                            "ico": null,
+                                            "idx": null,
+                                            "line": "REGULAR",
+                                            "quantity": null,
+                                            "removable": true,
+                                            "title": null,
+                                            "value": {}
+                                        },
+                                        "slots": {
+                                            "mode": "STATIC",
+                                            "options": [
+                                                {
+                                                    "data": {},
+                                                    "editable": false,
+                                                    "formWidget": null,
+                                                    "ico": "ri-check-line",
+                                                    "idx": null,
+                                                    "line": "REGULAR",
+                                                    "quantity": null,
+                                                    "removable": true,
+                                                    "title": "\u041e\u0442\u043f\u0440\u0430\u0432\u043b\u0435\u043d\u043e",
+                                                    "value": {}
+                                                },
+                                                {
+                                                    "data": {},
+                                                    "editable": false,
+                                                    "formWidget": null,
+                                                    "ico": "ri-close-line",
+                                                    "idx": null,
+                                                    "line": "REGULAR",
+                                                    "quantity": null,
+                                                    "removable": true,
+                                                    "title": "\u0418\u0441\u0442\u0435\u043a TTL",
+                                                    "value": {}
+                                                },
+                                                {
+                                                    "data": {},
+                                                    "editable": false,
+                                                    "formWidget": null,
+                                                    "ico": "ri-timer-line",
+                                                    "idx": null,
+                                                    "line": "REGULAR",
+                                                    "quantity": null,
+                                                    "removable": true,
+                                                    "title": "\u041f\u043e\u0432\u0442\u043e\u0440\u0438\u0442\u044c \u043f\u043e\u0437\u0436\u0435",
+                                                    "value": {}
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "position": {
+                                        "locked": false,
+                                        "x": 700,
+                                        "y": 100
+                                    },
+                                    "shape": "SQUARE",
+                                    "size": {
+                                        "h": 205,
+                                        "w": 320
+                                    },
+                                    "state": null,
+                                    "subtitle": null,
+                                    "title": "\u0422\u043e\u0447\u043a\u0430 \u043a\u0430\u0441\u0430\u043d\u0438\u044f",
+                                    "type": null,
+                                    "updated": false,
+                                    "value": {
+                                        "code": "touch-point",
+                                        "testmode": false
+                                    },
+                                    "valueNoHashed": {}
+                                }
+                            ]
+                        },
+                        "nodesTmp": {
+                            "nodes": [
+                                {
+                                    "category": "\u0414\u0430\u0442\u0430\u043c\u0430\u0440\u0442",
+                                    "color": "WARNING",
+                                    "confirmationOnDelete": null,
+                                    "connections": [
+                                        {
+                                            "details": {
+                                                "data": {},
+                                                "editable": false,
+                                                "formWidget": null,
+                                                "ico": "ri-add-line",
+                                                "idx": 0,
+                                                "line": "REGULAR",
+                                                "quantity": null,
+                                                "removable": true,
+                                                "title": null,
+                                                "value": {}
+                                            },
+                                            "nodeId": "node-9605868550",
+                                            "nodeSpecificInput": null
+                                        }
+                                    ],
+                                    "customActions": [
+                                        {
+                                            "color": null,
+                                            "event": null,
+                                            "hint": null,
+                                            "ico": "ri-file-copy-line",
+                                            "postUrl": "/flowbase/api/triggerNodeCopying",
+                                            "text": "\u0414\u0443\u0431\u043b\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0443\u0437\u0435\u043b"
+                                        }
+                                    ],
+                                    "customContent": null,
+                                    "customFormWidget": true,
+                                    "data": {
+                                        "commonSettings": {
+                                            "code": null,
+                                            "description": null,
+                                            "title": "\u0421\u0443\u0449\u0435\u0441\u0442\u0432\u0443\u044e\u0449\u0438\u0439 \u0441\u0435\u0433\u043c\u0435\u043d\u0442"
+                                        },
+                                        "inScheme": {},
+                                        "outScheme": {
+                                            "fields": [
+                                                {
+                                                    "dataType": "INTEGER",
+                                                    "meta": {},
+                                                    "name": "\u041a\u043b\u0438\u0435\u043d\u0442\u044b.\u0418\u0434\u0435\u043d\u0442\u0438\u0444\u0438\u043a\u0430\u0442\u043e\u0440",
+                                                    "options": null,
+                                                    "subSchemeId": null
+                                                }
+                                            ],
+                                            "loggingKey": null,
+                                            "metrics": null,
+                                            "storeCompacted": true
+                                        },
+                                        "schedule": {
+                                            "restartDailyDayTime": null,
+                                            "restartDateTime": null,
+                                            "restartInterval": null,
+                                            "restartMode": "DISABLED",
+                                            "restartMonthlyDayTimes": null,
+                                            "restartWeeklyDayTimes": null
+                                        },
+                                        "settings": {
+                                            "segmentId": 172
+                                        },
+                                        "techSettings": {
+                                            "batchSizeMax": 1000,
+                                            "batchSizeMin": 1,
+                                            "batchThreads": 4,
+                                            "countersBroadcastRate": 30,
+                                            "metricsBroadcast": true,
+                                            "metricsPersist": true
+                                        }
+                                    },
+                                    "formWidget": null,
+                                    "formWidgetLocked": true,
+                                    "hashSum": 0,
+                                    "ico": null,
+                                    "id": "node-4272719260",
+                                    "inConnectionsPolicy": {
+                                        "breakdown": null,
+                                        "commonRule": null,
+                                        "slots": {
+                                            "mode": "STATIC",
+                                            "options": [
+                                                {
+                                                    "data": {},
+                                                    "editable": false,
+                                                    "formWidget": null,
+                                                    "ico": "ri-add-line",
+                                                    "idx": null,
+                                                    "line": "REGULAR",
+                                                    "quantity": null,
+                                                    "removable": false,
+                                                    "title": "\u041f\u0435\u0440\u0435\u0434\u0430\u0442\u044c",
+                                                    "value": {}
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "outConnectionsPolicy": {
+                                        "breakdown": null,
+                                        "commonRule": {
+                                            "data": {},
+                                            "editable": false,
+                                            "formWidget": null,
+                                            "ico": null,
+                                            "idx": null,
+                                            "line": "REGULAR",
+                                            "quantity": null,
+                                            "removable": true,
+                                            "title": null,
+                                            "value": {}
+                                        },
+                                        "slots": {
+                                            "mode": "STATIC",
+                                            "options": [
+                                                {
+                                                    "data": {},
+                                                    "editable": false,
+                                                    "formWidget": null,
+                                                    "ico": "ri-add-line",
+                                                    "idx": null,
+                                                    "line": "REGULAR",
+                                                    "quantity": null,
+                                                    "removable": true,
+                                                    "title": "\u041f\u0435\u0440\u0435\u0434\u0430\u0442\u044c",
+                                                    "value": {}
+                                                },
+                                                {
+                                                    "data": {},
+                                                    "editable": false,
+                                                    "formWidget": null,
+                                                    "ico": "ri-subtract-line",
+                                                    "idx": null,
+                                                    "line": "REGULAR",
+                                                    "quantity": null,
+                                                    "removable": true,
+                                                    "title": "\u0423\u0434\u0430\u043b\u0438\u0442\u044c",
+                                                    "value": {}
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "position": {
+                                        "locked": false,
+                                        "x": 220,
+                                        "y": 100
+                                    },
+                                    "shape": "SQUARE",
+                                    "size": {
+                                        "h": 180,
+                                        "w": 320
+                                    },
+                                    "state": null,
+                                    "subtitle": null,
+                                    "title": "\u0421\u0443\u0449\u0435\u0441\u0442\u0432\u0443\u044e\u0449\u0438\u0439 \u0441\u0435\u0433\u043c\u0435\u043d\u0442",
+                                    "type": null,
+                                    "updated": false,
+                                    "value": {
+                                        "code": "datamart-segment",
+                                        "outSchemeFromSegmentId": 172,
+                                        "testmode": false
+                                    },
+                                    "valueNoHashed": {}
+                                },
+                                {
+                                    "category": "\u041a\u0430\u043c\u043f\u0435\u0439\u043d",
+                                    "color": "SUCCESS",
+                                    "confirmationOnDelete": null,
+                                    "connections": [],
+                                    "customActions": [
+                                        {
+                                            "color": null,
+                                            "event": null,
+                                            "hint": null,
+                                            "ico": "ri-file-copy-line",
+                                            "postUrl": "/flowbase/api/triggerNodeCopying",
+                                            "text": "\u0414\u0443\u0431\u043b\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0443\u0437\u0435\u043b"
+                                        }
+                                    ],
+                                    "customContent": null,
+                                    "customFormWidget": true,
+                                    "data": {
+                                        "commonSettings": {
+                                            "code": null,
+                                            "description": null,
+                                            "title": "\u0422\u043e\u0447\u043a\u0430 \u043a\u0430\u0441\u0430\u043d\u0438\u044f"
+                                        },
+                                        "inScheme": {
+                                            "fields": [
+                                                {
+                                                    "dataType": "INTEGER",
+                                                    "meta": {},
+                                                    "name": "\u041a\u043b\u0438\u0435\u043d\u0442\u044b.\u0418\u0434\u0435\u043d\u0442\u0438\u0444\u0438\u043a\u0430\u0442\u043e\u0440",
+                                                    "options": null,
+                                                    "subSchemeId": null
+                                                }
+                                            ],
+                                            "loggingKey": null,
+                                            "metrics": null,
+                                            "storeCompacted": true
+                                        },
+                                        "outScheme": {
+                                            "fields": [
+                                                {
+                                                    "dataType": "INTEGER",
+                                                    "meta": {},
+                                                    "name": "\u041a\u043b\u0438\u0435\u043d\u0442\u044b.\u0418\u0434\u0435\u043d\u0442\u0438\u0444\u0438\u043a\u0430\u0442\u043e\u0440",
+                                                    "options": null,
+                                                    "subSchemeId": null
+                                                },
+                                                {
+                                                    "dataType": "STRING",
+                                                    "meta": {},
+                                                    "name": "\u0420\u0435\u0437\u0443\u043b\u044c\u0442\u0430\u0442 \u043e\u0442\u043f\u0440\u0430\u0432\u043a\u0438",
+                                                    "options": null,
+                                                    "subSchemeId": null
+                                                },
+                                                {
+                                                    "dataType": "DATETIME",
+                                                    "meta": {},
+                                                    "name": "\u0421\u043b\u0435\u0434\u0443\u044e\u0449\u0430\u044f \u043f\u043e\u043f\u044b\u0442\u043a\u0430 \u043e\u0442\u043f\u0440\u0430\u0432\u043a\u0438",
+                                                    "options": null,
+                                                    "subSchemeId": null
+                                                }
+                                            ],
+                                            "loggingKey": null,
+                                            "metrics": null,
+                                            "storeCompacted": true
+                                        },
+                                        "schedule": {
+                                            "restartDailyDayTime": null,
+                                            "restartDateTime": null,
+                                            "restartInterval": null,
+                                            "restartMode": "DISABLED",
+                                            "restartMonthlyDayTimes": null,
+                                            "restartWeeklyDayTimes": null
+                                        },
+                                        "settings": {
+                                            "channelName": "SMS",
+                                            "contactAttribute": "\u041a\u043b\u0438\u0435\u043d\u0442\u044b.\u0418\u0434\u0435\u043d\u0442\u0438\u0444\u0438\u043a\u0430\u0442\u043e\u0440",
+                                            "contentSource": "CONTENT_UNIT",
+                                            "contentUnit": 3,
+                                            "receiverIdAttribute": "\u041a\u043b\u0438\u0435\u043d\u0442\u044b.\u0418\u0434\u0435\u043d\u0442\u0438\u0444\u0438\u043a\u0430\u0442\u043e\u0440",
+                                            "variant": 4
+                                        },
+                                        "techSettings": {
+                                            "batchSizeMax": 1000,
+                                            "batchSizeMin": 1,
+                                            "batchThreads": 4,
+                                            "countersBroadcastRate": 30,
+                                            "metricsBroadcast": true,
+                                            "metricsPersist": true
+                                        }
+                                    },
+                                    "formWidget": null,
+                                    "formWidgetLocked": true,
+                                    "hashSum": 0,
+                                    "ico": null,
+                                    "id": "node-9605868550",
+                                    "inConnectionsPolicy": {
+                                        "breakdown": null,
+                                        "commonRule": null,
+                                        "slots": {
+                                            "mode": "STATIC",
+                                            "options": [
+                                                {
+                                                    "data": {},
+                                                    "editable": false,
+                                                    "formWidget": null,
+                                                    "ico": "ri-add-line",
+                                                    "idx": null,
+                                                    "line": "REGULAR",
+                                                    "quantity": null,
+                                                    "removable": false,
+                                                    "title": "\u041f\u0435\u0440\u0435\u0434\u0430\u0442\u044c",
+                                                    "value": {}
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "outConnectionsPolicy": {
+                                        "breakdown": null,
+                                        "commonRule": {
+                                            "data": {},
+                                            "editable": false,
+                                            "formWidget": null,
+                                            "ico": null,
+                                            "idx": null,
+                                            "line": "REGULAR",
+                                            "quantity": null,
+                                            "removable": true,
+                                            "title": null,
+                                            "value": {}
+                                        },
+                                        "slots": {
+                                            "mode": "STATIC",
+                                            "options": [
+                                                {
+                                                    "data": {},
+                                                    "editable": false,
+                                                    "formWidget": null,
+                                                    "ico": "ri-check-line",
+                                                    "idx": null,
+                                                    "line": "REGULAR",
+                                                    "quantity": null,
+                                                    "removable": true,
+                                                    "title": "\u041e\u0442\u043f\u0440\u0430\u0432\u043b\u0435\u043d\u043e",
+                                                    "value": {}
+                                                },
+                                                {
+                                                    "data": {},
+                                                    "editable": false,
+                                                    "formWidget": null,
+                                                    "ico": "ri-close-line",
+                                                    "idx": null,
+                                                    "line": "REGULAR",
+                                                    "quantity": null,
+                                                    "removable": true,
+                                                    "title": "\u0418\u0441\u0442\u0435\u043a TTL",
+                                                    "value": {}
+                                                },
+                                                {
+                                                    "data": {},
+                                                    "editable": false,
+                                                    "formWidget": null,
+                                                    "ico": "ri-timer-line",
+                                                    "idx": null,
+                                                    "line": "REGULAR",
+                                                    "quantity": null,
+                                                    "removable": true,
+                                                    "title": "\u041f\u043e\u0432\u0442\u043e\u0440\u0438\u0442\u044c \u043f\u043e\u0437\u0436\u0435",
+                                                    "value": {}
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "position": {
+                                        "locked": false,
+                                        "x": 700,
+                                        "y": 100
+                                    },
+                                    "shape": "SQUARE",
+                                    "size": {
+                                        "h": 205,
+                                        "w": 320
+                                    },
+                                    "state": null,
+                                    "subtitle": null,
+                                    "title": "\u0422\u043e\u0447\u043a\u0430 \u043a\u0430\u0441\u0430\u043d\u0438\u044f",
+                                    "type": null,
+                                    "updated": false,
+                                    "value": {
+                                        "code": "touch-point",
+                                        "testmode": false
+                                    },
+                                    "valueNoHashed": {}
+                                }
+                            ]
+                        },
+                        "originalId": null,
+                        "packageName": null,
+                        "resgroupId": null,
+                        "testmode": false,
+                        "userId": "1"
+                    }
+                },
+                "itemIds": [
+                    144
+                ],
+                "type": "PROCESS"
+            }
+        ]
+    },
+    "createdDatetime": "2024-05-25T10:03:31Z",
+    "description": null,
+    "id": 15,
+    "name": "segment_touchpoint_fill",
+    "updatedDatetime": "2024-05-25T10:03:31Z"
+}
