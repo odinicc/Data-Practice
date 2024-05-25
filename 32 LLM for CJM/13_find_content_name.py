@@ -8,6 +8,12 @@ client = OpenAI(
     base_url="https://api.proxyapi.ru/openai/v1",
 )
 
+#function to make embeding from text
+def get_embedding(text):
+    model="text-embedding-ada-002"
+    text = text.replace("\n", " ")
+    return client.embeddings.create(input = [text], model=model).data[0].embedding
+
 
 #find content_name text in campaign promt
 def find_content_name_in_promt():
@@ -28,11 +34,22 @@ def find_content_name_in_promt():
     return promt_content_name
 
 promt_content_name = find_content_name_in_promt()
+promt_content_embedding = get_embedding(promt_content_name)
+
+def find_simmilar_content_num(promt_content_embedding):
+    content_embedding_table =  '03 df_content_embedding.json'
+    df_content_embedding = pd.read_json(content_embedding_table)
+    df_content_embedding['sim_score']= df_content_embedding.apply(lambda x: np.dot(x['embedding'],promt_content_embedding), axis=1)
+    target_content = int(df_content_embedding.iloc[[df_content_embedding['sim_score'].idxmax()]]['Content_id'].iloc[0])
+    target_content_sim_score = df_content_embedding.iloc[[df_content_embedding['sim_score'].idxmax()]]['sim_score'].iloc[0]
+    return target_content , target_content_sim_score
+
+target_content , target_content_sim_score = find_simmilar_content_num(promt_content_embedding)
 
 import sys
 
 sys.stdout.reconfigure(encoding='utf-8')
-print(promt_content_name)  # This prints the result which will be captured by script1.py
+print(target_content)  # This prints the result which will be captured by script1.py
 
 
 

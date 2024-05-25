@@ -16,7 +16,7 @@
                         "compoundNodeRules": null,
                         "description": null,
                         "id": 144,
-                        "name": "segment_touchpoint_fill",
+                        "name": "cam_name_placeholder",
                         "nodes": {
                             "nodes": [
                                 {
@@ -82,7 +82,7 @@
                                             "restartDailyDayTime": null,
                                             "restartDateTime": null,
                                             "restartInterval": null,
-                                            "restartMode": "DISABLED",
+                                            "restartMode": "EACH_ACTIVATION",
                                             "restartMonthlyDayTimes": null,
                                             "restartWeeklyDayTimes": null
                                         },
@@ -273,7 +273,7 @@
                                             "restartDailyDayTime": null,
                                             "restartDateTime": null,
                                             "restartInterval": null,
-                                            "restartMode": "DISABLED",
+                                            "restartMode": "EACH_ACTIVATION",
                                             "restartMonthlyDayTimes": null,
                                             "restartWeeklyDayTimes": null
                                         },
@@ -281,7 +281,7 @@
                                             "channelName": "SMS",
                                             "contactAttribute": "Клиенты.Идентификатор",
                                             "contentSource": "CONTENT_UNIT",
-                                            "contentUnit": 3,
+                                            "contentUnit": "contentunit_placeholder",
                                             "receiverIdAttribute": "Клиенты.Идентификатор",
                                             "variant": 4
                                         },
@@ -475,7 +475,7 @@
                                             "restartDailyDayTime": null,
                                             "restartDateTime": null,
                                             "restartInterval": null,
-                                            "restartMode": "DISABLED",
+                                            "restartMode": "EACH_ACTIVATION",
                                             "restartMonthlyDayTimes": null,
                                             "restartWeeklyDayTimes": null
                                         },
@@ -666,7 +666,7 @@
                                             "restartDailyDayTime": null,
                                             "restartDateTime": null,
                                             "restartInterval": null,
-                                            "restartMode": "DISABLED",
+                                            "restartMode": "EACH_ACTIVATION",
                                             "restartMonthlyDayTimes": null,
                                             "restartWeeklyDayTimes": null
                                         },
@@ -674,7 +674,7 @@
                                             "channelName": "SMS",
                                             "contactAttribute": "Клиенты.Идентификатор",
                                             "contentSource": "CONTENT_UNIT",
-                                            "contentUnit": 3,
+                                            "contentUnit": "contentunit_placeholder",
                                             "receiverIdAttribute": "Клиенты.Идентификатор",
                                             "variant": 4
                                         },
@@ -820,6 +820,6 @@
     "createdDatetime": "2024-05-25T10:03:31Z",
     "description": null,
     "id": 15,
-    "name": "segment_touchpoint_fill",
+    "name": "cam_name_placeholder",
     "updatedDatetime": "2024-05-25T10:03:31Z"
 }

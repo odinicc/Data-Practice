@@ -15,7 +15,7 @@
                         "compoundNodeRules": null,
                         "description": null,
                         "id": 144,
-                        "name": "A Мужчины 25-44: A/B тест СМС про бонусные баллы",
+                        "name": "A A/B Тест SMS для Мужчин 25-44",
                         "nodes": {
                             "nodes": [
                                 {
@@ -761,6 +761,6 @@
     "createdDatetime": "2024-05-25T10:03:31Z",
     "description": null,
     "id": 15,
-    "name": "A Мужчины 25-44: A/B тест СМС про бонусные баллы",
+    "name": "A A/B Тест SMS для Мужчин 25-44",
     "updatedDatetime": "2024-05-25T10:03:31Z"
 }
