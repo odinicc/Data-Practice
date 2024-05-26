@@ -6,7 +6,8 @@
                 "itemData": {
                     "143": {
                         "accessMode": {
-                            "roles": []
+                            "roles": [
+                            ]
                         },
                         "active": false,
                         "atomicity": "NODE",
@@ -15,7 +16,7 @@
                         "compoundNodeRules": null,
                         "description": null,
                         "id": 143,
-                        "name": "A Финансовые продукты для детей: E-mail кампания 25-45 лет",
+                        "name": "cam_name_placeholder",
                         "nodes": {
                             "nodes": [
                                 {
@@ -25,7 +26,8 @@
                                     "connections": [
                                         {
                                             "details": {
-                                                "data": {},
+                                                "data": {
+                                                },
                                                 "editable": false,
                                                 "formWidget": null,
                                                 "ico": "ri-add-line",
@@ -34,7 +36,8 @@
                                                 "quantity": null,
                                                 "removable": true,
                                                 "title": null,
-                                                "value": {}
+                                                "value": {
+                                                }
                                             },
                                             "nodeId": "node-2227520150",
                                             "nodeSpecificInput": null
@@ -58,12 +61,14 @@
                                             "description": null,
                                             "title": "Существующий сегмент"
                                         },
-                                        "inScheme": {},
+                                        "inScheme": {
+                                        },
                                         "outScheme": {
                                             "fields": [
                                                 {
                                                     "dataType": "INTEGER",
-                                                    "meta": {},
+                                                    "meta": {
+                                                    },
                                                     "name": "Клиенты.Идентификатор",
                                                     "options": null,
                                                     "subSchemeId": null
@@ -82,7 +87,7 @@
                                             "restartWeeklyDayTimes": null
                                         },
                                         "settings": {
-                                            "segmentId": 4
+                                            "segmentId": "segmentId_placeholder"
                                         },
                                         "techSettings": {
                                             "batchSizeMax": 1000,
@@ -105,7 +110,8 @@
                                             "mode": "STATIC",
                                             "options": [
                                                 {
-                                                    "data": {},
+                                                    "data": {
+                                                    },
                                                     "editable": false,
                                                     "formWidget": null,
                                                     "ico": "ri-add-line",
@@ -114,7 +120,8 @@
                                                     "quantity": null,
                                                     "removable": false,
                                                     "title": "Передать",
-                                                    "value": {}
+                                                    "value": {
+                                                    }
                                                 }
                                             ]
                                         }
@@ -122,7 +129,8 @@
                                     "outConnectionsPolicy": {
                                         "breakdown": null,
                                         "commonRule": {
-                                            "data": {},
+                                            "data": {
+                                            },
                                             "editable": false,
                                             "formWidget": null,
                                             "ico": null,
@@ -131,13 +139,15 @@
                                             "quantity": null,
                                             "removable": true,
                                             "title": null,
-                                            "value": {}
+                                            "value": {
+                                            }
                                         },
                                         "slots": {
                                             "mode": "STATIC",
                                             "options": [
                                                 {
-                                                    "data": {},
+                                                    "data": {
+                                                    },
                                                     "editable": false,
                                                     "formWidget": null,
                                                     "ico": "ri-add-line",
@@ -146,10 +156,12 @@
                                                     "quantity": null,
                                                     "removable": true,
                                                     "title": "Передать",
-                                                    "value": {}
+                                                    "value": {
+                                                    }
                                                 },
                                                 {
-                                                    "data": {},
+                                                    "data": {
+                                                    },
                                                     "editable": false,
                                                     "formWidget": null,
                                                     "ico": "ri-subtract-line",
@@ -158,7 +170,8 @@
                                                     "quantity": null,
                                                     "removable": true,
                                                     "title": "Удалить",
-                                                    "value": {}
+                                                    "value": {
+                                                    }
                                                 }
                                             ]
                                         }
@@ -183,7 +196,8 @@
                                         "outSchemeFromSegmentId": 4,
                                         "testmode": false
                                     },
-                                    "valueNoHashed": {}
+                                    "valueNoHashed": {
+                                    }
                                 },
                                 {
                                     "category": "Абстрактные",
@@ -192,7 +206,8 @@
                                     "connections": [
                                         {
                                             "details": {
-                                                "data": {},
+                                                "data": {
+                                                },
                                                 "editable": false,
                                                 "formWidget": null,
                                                 "ico": "ri-arrow-right-circle-line",
@@ -210,7 +225,8 @@
                                         },
                                         {
                                             "details": {
-                                                "data": {},
+                                                "data": {
+                                                },
                                                 "editable": false,
                                                 "formWidget": null,
                                                 "ico": "ri-arrow-right-circle-line",
@@ -249,7 +265,8 @@
                                             "fields": [
                                                 {
                                                     "dataType": "INTEGER",
-                                                    "meta": {},
+                                                    "meta": {
+                                                    },
                                                     "name": "Клиенты.Идентификатор",
                                                     "options": null,
                                                     "subSchemeId": null
@@ -263,7 +280,8 @@
                                             "fields": [
                                                 {
                                                     "dataType": "INTEGER",
-                                                    "meta": {},
+                                                    "meta": {
+                                                    },
                                                     "name": "Клиенты.Идентификатор",
                                                     "options": null,
                                                     "subSchemeId": null
@@ -308,7 +326,8 @@
                                             "mode": "STATIC",
                                             "options": [
                                                 {
-                                                    "data": {},
+                                                    "data": {
+                                                    },
                                                     "editable": false,
                                                     "formWidget": null,
                                                     "ico": "ri-add-line",
@@ -317,7 +336,8 @@
                                                     "quantity": null,
                                                     "removable": false,
                                                     "title": "Передать",
-                                                    "value": {}
+                                                    "value": {
+                                                    }
                                                 }
                                             ]
                                         }
@@ -329,7 +349,8 @@
                                             "mode": "STATIC",
                                             "options": [
                                                 {
-                                                    "data": {},
+                                                    "data": {
+                                                    },
                                                     "editable": false,
                                                     "formWidget": null,
                                                     "ico": "ri-arrow-right-circle-line",
@@ -343,7 +364,8 @@
                                                     }
                                                 },
                                                 {
-                                                    "data": {},
+                                                    "data": {
+                                                    },
                                                     "editable": false,
                                                     "formWidget": null,
                                                     "ico": "ri-arrow-right-circle-line",
@@ -378,13 +400,15 @@
                                         "code": "splitter",
                                         "testmode": false
                                     },
-                                    "valueNoHashed": {}
+                                    "valueNoHashed": {
+                                    }
                                 },
                                 {
                                     "category": "Абстрактные",
                                     "color": "PRIMARY",
                                     "confirmationOnDelete": null,
-                                    "connections": [],
+                                    "connections": [
+                                    ],
                                     "customActions": [
                                         {
                                             "color": null,
@@ -407,7 +431,8 @@
                                             "fields": [
                                                 {
                                                     "dataType": "INTEGER",
-                                                    "meta": {},
+                                                    "meta": {
+                                                    },
                                                     "name": "Клиенты.Идентификатор",
                                                     "options": null,
                                                     "subSchemeId": null
@@ -421,7 +446,8 @@
                                             "fields": [
                                                 {
                                                     "dataType": "INTEGER",
-                                                    "meta": {},
+                                                    "meta": {
+                                                    },
                                                     "name": "Клиенты.Идентификатор",
                                                     "options": null,
                                                     "subSchemeId": null
@@ -439,7 +465,8 @@
                                             "restartMonthlyDayTimes": null,
                                             "restartWeeklyDayTimes": null
                                         },
-                                        "settings": {},
+                                        "settings": {
+                                        },
                                         "techSettings": {
                                             "batchSizeMax": 1000,
                                             "batchSizeMin": 1,
@@ -461,7 +488,8 @@
                                             "mode": "STATIC",
                                             "options": [
                                                 {
-                                                    "data": {},
+                                                    "data": {
+                                                    },
                                                     "editable": false,
                                                     "formWidget": null,
                                                     "ico": "ri-add-line",
@@ -470,7 +498,8 @@
                                                     "quantity": null,
                                                     "removable": false,
                                                     "title": "Передать",
-                                                    "value": {}
+                                                    "value": {
+                                                    }
                                                 }
                                             ]
                                         }
@@ -478,7 +507,8 @@
                                     "outConnectionsPolicy": {
                                         "breakdown": null,
                                         "commonRule": {
-                                            "data": {},
+                                            "data": {
+                                            },
                                             "editable": false,
                                             "formWidget": null,
                                             "ico": null,
@@ -487,13 +517,15 @@
                                             "quantity": null,
                                             "removable": true,
                                             "title": null,
-                                            "value": {}
+                                            "value": {
+                                            }
                                         },
                                         "slots": {
                                             "mode": "STATIC",
                                             "options": [
                                                 {
-                                                    "data": {},
+                                                    "data": {
+                                                    },
                                                     "editable": false,
                                                     "formWidget": null,
                                                     "ico": "ri-add-line",
@@ -502,10 +534,12 @@
                                                     "quantity": null,
                                                     "removable": true,
                                                     "title": "Передать",
-                                                    "value": {}
+                                                    "value": {
+                                                    }
                                                 },
                                                 {
-                                                    "data": {},
+                                                    "data": {
+                                                    },
                                                     "editable": false,
                                                     "formWidget": null,
                                                     "ico": "ri-subtract-line",
@@ -514,7 +548,8 @@
                                                     "quantity": null,
                                                     "removable": true,
                                                     "title": "Удалить",
-                                                    "value": {}
+                                                    "value": {
+                                                    }
                                                 }
                                             ]
                                         }
@@ -535,13 +570,15 @@
                                         "code": "buffer",
                                         "testmode": false
                                     },
-                                    "valueNoHashed": {}
+                                    "valueNoHashed": {
+                                    }
                                 },
                                 {
                                     "category": "Кампейн",
                                     "color": "SUCCESS",
                                     "confirmationOnDelete": null,
-                                    "connections": [],
+                                    "connections": [
+                                    ],
                                     "customActions": [
                                         {
                                             "color": null,
@@ -564,7 +601,8 @@
                                             "fields": [
                                                 {
                                                     "dataType": "INTEGER",
-                                                    "meta": {},
+                                                    "meta": {
+                                                    },
                                                     "name": "Клиенты.Идентификатор",
                                                     "options": null,
                                                     "subSchemeId": null
@@ -578,21 +616,24 @@
                                             "fields": [
                                                 {
                                                     "dataType": "INTEGER",
-                                                    "meta": {},
+                                                    "meta": {
+                                                    },
                                                     "name": "Клиенты.Идентификатор",
                                                     "options": null,
                                                     "subSchemeId": null
                                                 },
                                                 {
                                                     "dataType": "STRING",
-                                                    "meta": {},
+                                                    "meta": {
+                                                    },
                                                     "name": "Результат отправки",
                                                     "options": null,
                                                     "subSchemeId": null
                                                 },
                                                 {
                                                     "dataType": "DATETIME",
-                                                    "meta": {},
+                                                    "meta": {
+                                                    },
                                                     "name": "Следующая попытка отправки",
                                                     "options": null,
                                                     "subSchemeId": null
@@ -611,12 +652,12 @@
                                             "restartWeeklyDayTimes": null
                                         },
                                         "settings": {
-                                            "channelName": "Email",
+                                            "channelName": "channel_placeholder",
                                             "contactAttribute": "Клиенты.Идентификатор",
                                             "contentSource": "CONTENT_UNIT",
-                                            "contentUnit": 7,
+                                            "contentUnit": "contentunit_placeholder",
                                             "receiverIdAttribute": "Клиенты.Идентификатор",
-                                            "variant": 12
+                                            "variant": "variant_placeholder"
                                         },
                                         "techSettings": {
                                             "batchSizeMax": 1000,
@@ -639,7 +680,8 @@
                                             "mode": "STATIC",
                                             "options": [
                                                 {
-                                                    "data": {},
+                                                    "data": {
+                                                    },
                                                     "editable": false,
                                                     "formWidget": null,
                                                     "ico": "ri-add-line",
@@ -648,7 +690,8 @@
                                                     "quantity": null,
                                                     "removable": false,
                                                     "title": "Передать",
-                                                    "value": {}
+                                                    "value": {
+                                                    }
                                                 }
                                             ]
                                         }
@@ -656,7 +699,8 @@
                                     "outConnectionsPolicy": {
                                         "breakdown": null,
                                         "commonRule": {
-                                            "data": {},
+                                            "data": {
+                                            },
                                             "editable": false,
                                             "formWidget": null,
                                             "ico": null,
@@ -665,13 +709,15 @@
                                             "quantity": null,
                                             "removable": true,
                                             "title": null,
-                                            "value": {}
+                                            "value": {
+                                            }
                                         },
                                         "slots": {
                                             "mode": "STATIC",
                                             "options": [
                                                 {
-                                                    "data": {},
+                                                    "data": {
+                                                    },
                                                     "editable": false,
                                                     "formWidget": null,
                                                     "ico": "ri-check-line",
@@ -680,10 +726,12 @@
                                                     "quantity": null,
                                                     "removable": true,
                                                     "title": "Отправлено",
-                                                    "value": {}
+                                                    "value": {
+                                                    }
                                                 },
                                                 {
-                                                    "data": {},
+                                                    "data": {
+                                                    },
                                                     "editable": false,
                                                     "formWidget": null,
                                                     "ico": "ri-close-line",
@@ -692,10 +740,12 @@
                                                     "quantity": null,
                                                     "removable": true,
                                                     "title": "Истек TTL",
-                                                    "value": {}
+                                                    "value": {
+                                                    }
                                                 },
                                                 {
-                                                    "data": {},
+                                                    "data": {
+                                                    },
                                                     "editable": false,
                                                     "formWidget": null,
                                                     "ico": "ri-timer-line",
@@ -704,7 +754,8 @@
                                                     "quantity": null,
                                                     "removable": true,
                                                     "title": "Повторить позже",
-                                                    "value": {}
+                                                    "value": {
+                                                    }
                                                 }
                                             ]
                                         }
@@ -728,7 +779,8 @@
                                         "code": "touch-point",
                                         "testmode": false
                                     },
-                                    "valueNoHashed": {}
+                                    "valueNoHashed": {
+                                    }
                                 }
                             ]
                         },
@@ -741,7 +793,8 @@
                                     "connections": [
                                         {
                                             "details": {
-                                                "data": {},
+                                                "data": {
+                                                },
                                                 "editable": false,
                                                 "formWidget": null,
                                                 "ico": "ri-add-line",
@@ -750,7 +803,8 @@
                                                 "quantity": null,
                                                 "removable": true,
                                                 "title": null,
-                                                "value": {}
+                                                "value": {
+                                                }
                                             },
                                             "nodeId": "node-2227520150",
                                             "nodeSpecificInput": null
@@ -774,12 +828,14 @@
                                             "description": null,
                                             "title": "Существующий сегмент"
                                         },
-                                        "inScheme": {},
+                                        "inScheme": {
+                                        },
                                         "outScheme": {
                                             "fields": [
                                                 {
                                                     "dataType": "INTEGER",
-                                                    "meta": {},
+                                                    "meta": {
+                                                    },
                                                     "name": "Клиенты.Идентификатор",
                                                     "options": null,
                                                     "subSchemeId": null
@@ -798,7 +854,7 @@
                                             "restartWeeklyDayTimes": null
                                         },
                                         "settings": {
-                                            "segmentId": 4
+                                            "segmentId": "segmentId_placeholder"
                                         },
                                         "techSettings": {
                                             "batchSizeMax": 1000,
@@ -821,7 +877,8 @@
                                             "mode": "STATIC",
                                             "options": [
                                                 {
-                                                    "data": {},
+                                                    "data": {
+                                                    },
                                                     "editable": false,
                                                     "formWidget": null,
                                                     "ico": "ri-add-line",
@@ -830,7 +887,8 @@
                                                     "quantity": null,
                                                     "removable": false,
                                                     "title": "Передать",
-                                                    "value": {}
+                                                    "value": {
+                                                    }
                                                 }
                                             ]
                                         }
@@ -838,7 +896,8 @@
                                     "outConnectionsPolicy": {
                                         "breakdown": null,
                                         "commonRule": {
-                                            "data": {},
+                                            "data": {
+                                            },
                                             "editable": false,
                                             "formWidget": null,
                                             "ico": null,
@@ -847,13 +906,15 @@
                                             "quantity": null,
                                             "removable": true,
                                             "title": null,
-                                            "value": {}
+                                            "value": {
+                                            }
                                         },
                                         "slots": {
                                             "mode": "STATIC",
                                             "options": [
                                                 {
-                                                    "data": {},
+                                                    "data": {
+                                                    },
                                                     "editable": false,
                                                     "formWidget": null,
                                                     "ico": "ri-add-line",
@@ -862,10 +923,12 @@
                                                     "quantity": null,
                                                     "removable": true,
                                                     "title": "Передать",
-                                                    "value": {}
+                                                    "value": {
+                                                    }
                                                 },
                                                 {
-                                                    "data": {},
+                                                    "data": {
+                                                    },
                                                     "editable": false,
                                                     "formWidget": null,
                                                     "ico": "ri-subtract-line",
@@ -874,7 +937,8 @@
                                                     "quantity": null,
                                                     "removable": true,
                                                     "title": "Удалить",
-                                                    "value": {}
+                                                    "value": {
+                                                    }
                                                 }
                                             ]
                                         }
@@ -898,7 +962,8 @@
                                         "code": "datamart-segment",
                                         "outSchemeFromSegmentId": 4
                                     },
-                                    "valueNoHashed": {}
+                                    "valueNoHashed": {
+                                    }
                                 },
                                 {
                                     "category": "Абстрактные",
@@ -907,7 +972,8 @@
                                     "connections": [
                                         {
                                             "details": {
-                                                "data": {},
+                                                "data": {
+                                                },
                                                 "editable": false,
                                                 "formWidget": null,
                                                 "ico": "ri-arrow-right-circle-line",
@@ -925,7 +991,8 @@
                                         },
                                         {
                                             "details": {
-                                                "data": {},
+                                                "data": {
+                                                },
                                                 "editable": false,
                                                 "formWidget": null,
                                                 "ico": "ri-arrow-right-circle-line",
@@ -964,7 +1031,8 @@
                                             "fields": [
                                                 {
                                                     "dataType": "INTEGER",
-                                                    "meta": {},
+                                                    "meta": {
+                                                    },
                                                     "name": "Клиенты.Идентификатор",
                                                     "options": null,
                                                     "subSchemeId": null
@@ -978,7 +1046,8 @@
                                             "fields": [
                                                 {
                                                     "dataType": "INTEGER",
-                                                    "meta": {},
+                                                    "meta": {
+                                                    },
                                                     "name": "Клиенты.Идентификатор",
                                                     "options": null,
                                                     "subSchemeId": null
@@ -1023,7 +1092,8 @@
                                             "mode": "STATIC",
                                             "options": [
                                                 {
-                                                    "data": {},
+                                                    "data": {
+                                                    },
                                                     "editable": false,
                                                     "formWidget": null,
                                                     "ico": "ri-add-line",
@@ -1032,7 +1102,8 @@
                                                     "quantity": null,
                                                     "removable": false,
                                                     "title": "Передать",
-                                                    "value": {}
+                                                    "value": {
+                                                    }
                                                 }
                                             ]
                                         }
@@ -1044,7 +1115,8 @@
                                             "mode": "STATIC",
                                             "options": [
                                                 {
-                                                    "data": {},
+                                                    "data": {
+                                                    },
                                                     "editable": false,
                                                     "formWidget": null,
                                                     "ico": "ri-arrow-right-circle-line",
@@ -1058,7 +1130,8 @@
                                                     }
                                                 },
                                                 {
-                                                    "data": {},
+                                                    "data": {
+                                                    },
                                                     "editable": false,
                                                     "formWidget": null,
                                                     "ico": "ri-arrow-right-circle-line",
@@ -1092,13 +1165,15 @@
                                     "value": {
                                         "code": "splitter"
                                     },
-                                    "valueNoHashed": {}
+                                    "valueNoHashed": {
+                                    }
                                 },
                                 {
                                     "category": "Абстрактные",
                                     "color": "PRIMARY",
                                     "confirmationOnDelete": null,
-                                    "connections": [],
+                                    "connections": [
+                                    ],
                                     "customActions": [
                                         {
                                             "color": null,
@@ -1121,7 +1196,8 @@
                                             "fields": [
                                                 {
                                                     "dataType": "INTEGER",
-                                                    "meta": {},
+                                                    "meta": {
+                                                    },
                                                     "name": "Клиенты.Идентификатор",
                                                     "options": null,
                                                     "subSchemeId": null
@@ -1135,7 +1211,8 @@
                                             "fields": [
                                                 {
                                                     "dataType": "INTEGER",
-                                                    "meta": {},
+                                                    "meta": {
+                                                    },
                                                     "name": "Клиенты.Идентификатор",
                                                     "options": null,
                                                     "subSchemeId": null
@@ -1153,7 +1230,8 @@
                                             "restartMonthlyDayTimes": null,
                                             "restartWeeklyDayTimes": null
                                         },
-                                        "settings": {},
+                                        "settings": {
+                                        },
                                         "techSettings": {
                                             "batchSizeMax": 1000,
                                             "batchSizeMin": 1,
@@ -1175,7 +1253,8 @@
                                             "mode": "STATIC",
                                             "options": [
                                                 {
-                                                    "data": {},
+                                                    "data": {
+                                                    },
                                                     "editable": false,
                                                     "formWidget": null,
                                                     "ico": "ri-add-line",
@@ -1184,7 +1263,8 @@
                                                     "quantity": null,
                                                     "removable": false,
                                                     "title": "Передать",
-                                                    "value": {}
+                                                    "value": {
+                                                    }
                                                 }
                                             ]
                                         }
@@ -1192,7 +1272,8 @@
                                     "outConnectionsPolicy": {
                                         "breakdown": null,
                                         "commonRule": {
-                                            "data": {},
+                                            "data": {
+                                            },
                                             "editable": false,
                                             "formWidget": null,
                                             "ico": null,
@@ -1201,13 +1282,15 @@
                                             "quantity": null,
                                             "removable": true,
                                             "title": null,
-                                            "value": {}
+                                            "value": {
+                                            }
                                         },
                                         "slots": {
                                             "mode": "STATIC",
                                             "options": [
                                                 {
-                                                    "data": {},
+                                                    "data": {
+                                                    },
                                                     "editable": false,
                                                     "formWidget": null,
                                                     "ico": "ri-add-line",
@@ -1216,10 +1299,12 @@
                                                     "quantity": null,
                                                     "removable": true,
                                                     "title": "Передать",
-                                                    "value": {}
+                                                    "value": {
+                                                    }
                                                 },
                                                 {
-                                                    "data": {},
+                                                    "data": {
+                                                    },
                                                     "editable": false,
                                                     "formWidget": null,
                                                     "ico": "ri-subtract-line",
@@ -1228,7 +1313,8 @@
                                                     "quantity": null,
                                                     "removable": true,
                                                     "title": "Удалить",
-                                                    "value": {}
+                                                    "value": {
+                                                    }
                                                 }
                                             ]
                                         }
@@ -1248,13 +1334,15 @@
                                     "value": {
                                         "code": "buffer"
                                     },
-                                    "valueNoHashed": {}
+                                    "valueNoHashed": {
+                                    }
                                 },
                                 {
                                     "category": "Кампейн",
                                     "color": "SUCCESS",
                                     "confirmationOnDelete": null,
-                                    "connections": [],
+                                    "connections": [
+                                    ],
                                     "customActions": [
                                         {
                                             "color": null,
@@ -1277,7 +1365,8 @@
                                             "fields": [
                                                 {
                                                     "dataType": "INTEGER",
-                                                    "meta": {},
+                                                    "meta": {
+                                                    },
                                                     "name": "Клиенты.Идентификатор",
                                                     "options": null,
                                                     "subSchemeId": null
@@ -1291,21 +1380,24 @@
                                             "fields": [
                                                 {
                                                     "dataType": "INTEGER",
-                                                    "meta": {},
+                                                    "meta": {
+                                                    },
                                                     "name": "Клиенты.Идентификатор",
                                                     "options": null,
                                                     "subSchemeId": null
                                                 },
                                                 {
                                                     "dataType": "STRING",
-                                                    "meta": {},
+                                                    "meta": {
+                                                    },
                                                     "name": "Результат отправки",
                                                     "options": null,
                                                     "subSchemeId": null
                                                 },
                                                 {
                                                     "dataType": "DATETIME",
-                                                    "meta": {},
+                                                    "meta": {
+                                                    },
                                                     "name": "Следующая попытка отправки",
                                                     "options": null,
                                                     "subSchemeId": null
@@ -1324,12 +1416,12 @@
                                             "restartWeeklyDayTimes": null
                                         },
                                         "settings": {
-                                            "channelName": "Email",
+                                            "channelName": "channel_placeholder",
                                             "contactAttribute": "Клиенты.Идентификатор",
                                             "contentSource": "CONTENT_UNIT",
-                                            "contentUnit": 7,
+                                            "contentUnit": "contentunit_placeholder",
                                             "receiverIdAttribute": "Клиенты.Идентификатор",
-                                            "variant": 12
+                                            "variant": "variant_placeholder"
                                         },
                                         "techSettings": {
                                             "batchSizeMax": 1000,
@@ -1352,7 +1444,8 @@
                                             "mode": "STATIC",
                                             "options": [
                                                 {
-                                                    "data": {},
+                                                    "data": {
+                                                    },
                                                     "editable": false,
                                                     "formWidget": null,
                                                     "ico": "ri-add-line",
@@ -1361,7 +1454,8 @@
                                                     "quantity": null,
                                                     "removable": false,
                                                     "title": "Передать",
-                                                    "value": {}
+                                                    "value": {
+                                                    }
                                                 }
                                             ]
                                         }
@@ -1369,7 +1463,8 @@
                                     "outConnectionsPolicy": {
                                         "breakdown": null,
                                         "commonRule": {
-                                            "data": {},
+                                            "data": {
+                                            },
                                             "editable": false,
                                             "formWidget": null,
                                             "ico": null,
@@ -1378,13 +1473,15 @@
                                             "quantity": null,
                                             "removable": true,
                                             "title": null,
-                                            "value": {}
+                                            "value": {
+                                            }
                                         },
                                         "slots": {
                                             "mode": "STATIC",
                                             "options": [
                                                 {
-                                                    "data": {},
+                                                    "data": {
+                                                    },
                                                     "editable": false,
                                                     "formWidget": null,
                                                     "ico": "ri-check-line",
@@ -1393,10 +1490,12 @@
                                                     "quantity": null,
                                                     "removable": true,
                                                     "title": "Отправлено",
-                                                    "value": {}
+                                                    "value": {
+                                                    }
                                                 },
                                                 {
-                                                    "data": {},
+                                                    "data": {
+                                                    },
                                                     "editable": false,
                                                     "formWidget": null,
                                                     "ico": "ri-close-line",
@@ -1405,10 +1504,12 @@
                                                     "quantity": null,
                                                     "removable": true,
                                                     "title": "Истек TTL",
-                                                    "value": {}
+                                                    "value": {
+                                                    }
                                                 },
                                                 {
-                                                    "data": {},
+                                                    "data": {
+                                                    },
                                                     "editable": false,
                                                     "formWidget": null,
                                                     "ico": "ri-timer-line",
@@ -1417,7 +1518,8 @@
                                                     "quantity": null,
                                                     "removable": true,
                                                     "title": "Повторить позже",
-                                                    "value": {}
+                                                    "value": {
+                                                    }
                                                 }
                                             ]
                                         }
@@ -1440,7 +1542,8 @@
                                     "value": {
                                         "code": "touch-point"
                                     },
-                                    "valueNoHashed": {}
+                                    "valueNoHashed": {
+                                    }
                                 }
                             ]
                         },
@@ -1461,6 +1564,6 @@
     "createdDatetime": "2024-05-25T09:53:52Z",
     "description": null,
     "id": 13,
-    "name": "A Финансовые продукты для детей: E-mail кампания 25-45 лет",
+    "name": "cam_name_placeholder",
     "updatedDatetime": "2024-05-25T09:53:52Z"
 }
