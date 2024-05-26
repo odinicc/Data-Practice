@@ -278,7 +278,7 @@
                                             "restartWeeklyDayTimes": null
                                         },
                                         "settings": {
-                                            "channelName": "SMS",
+                                            "channelName": "channel_placeholder",
                                             "contactAttribute": "Клиенты.Идентификатор",
                                             "contentSource": "CONTENT_UNIT",
                                             "contentUnit": "contentunit_placeholder",
@@ -671,7 +671,7 @@
                                             "restartWeeklyDayTimes": null
                                         },
                                         "settings": {
-                                            "channelName": "SMS",
+                                            "channelName": "channel_placeholder",
                                             "contactAttribute": "Клиенты.Идентификатор",
                                             "contentSource": "CONTENT_UNIT",
                                             "contentUnit": "contentunit_placeholder",

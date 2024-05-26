@@ -41,18 +41,17 @@ def find_simmilar_content_num(promt_content_embedding):
     df_content_embedding = pd.read_json(content_embedding_table)
     df_content_embedding['sim_score']= df_content_embedding.apply(lambda x: np.dot(x['embedding'],promt_content_embedding), axis=1)
     target_content = int(df_content_embedding.iloc[[df_content_embedding['sim_score'].idxmax()]]['Content_id'].iloc[0])
-    variant_content = int(df_content_embedding.iloc[[df_content_embedding['sim_score'].idxmax()]]['Variant'].iloc[0])
     target_content_channel = df_content_embedding.iloc[[df_content_embedding['sim_score'].idxmax()]]['Channel'].iloc[0]
     target_content_sim_score = df_content_embedding.iloc[[df_content_embedding['sim_score'].idxmax()]]['sim_score'].iloc[0]
-    return target_content , target_content_sim_score , target_content_channel , variant_content
+    return target_content , target_content_sim_score , target_content_channel
 
-target_content , target_content_sim_score ,target_content_channel , variant_content = find_simmilar_content_num(promt_content_embedding)
+target_content , target_content_sim_score ,target_content_channel= find_simmilar_content_num(promt_content_embedding)
 
 
 import sys
 
 sys.stdout.reconfigure(encoding='utf-8')
-print([target_content_channel,target_content,variant_content])   # This prints the result which will be captured by script
+print([target_content_channel,target_content])   # This prints the result which will be captured by script
 
 
 

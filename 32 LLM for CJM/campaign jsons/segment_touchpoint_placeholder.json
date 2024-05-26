@@ -278,12 +278,12 @@
                                             "restartWeeklyDayTimes": null
                                         },
                                         "settings": {
-                                            "channelName": "SMS",
+                                            "channelName": "channel_placeholder",
                                             "contactAttribute": "Клиенты.Идентификатор",
                                             "contentSource": "CONTENT_UNIT",
-                                            "contentUnit": 3,
+                                            "contentUnit": "contentunit_placeholder",
                                             "receiverIdAttribute": "Клиенты.Идентификатор",
-                                            "variant": 4
+                                            "variant": "variant_placeholder"
                                         },
                                         "techSettings": {
                                             "batchSizeMax": 1000,
@@ -671,12 +671,12 @@
                                             "restartWeeklyDayTimes": null
                                         },
                                         "settings": {
-                                            "channelName": "SMS",
+                                            "channelName": "channel_placeholder",
                                             "contactAttribute": "Клиенты.Идентификатор",
                                             "contentSource": "CONTENT_UNIT",
-                                            "contentUnit": 3,
+                                            "contentUnit": "contentunit_placeholder",
                                             "receiverIdAttribute": "Клиенты.Идентификатор",
-                                            "variant": 4
+                                            "variant": "variant_placeholder"
                                         },
                                         "techSettings": {
                                             "batchSizeMax": 1000,

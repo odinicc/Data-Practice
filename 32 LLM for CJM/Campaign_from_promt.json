@@ -15,7 +15,7 @@
                         "compoundNodeRules": null,
                         "description": null,
                         "id": 144,
-                        "name": "A A/B Тест SMS для Мужчин 25-44",
+                        "name": "A Финансовые возможности для пап: Email-кампания",
                         "nodes": {
                             "nodes": [
                                 {
@@ -259,12 +259,12 @@
                                             "restartWeeklyDayTimes": null
                                         },
                                         "settings": {
-                                            "channelName": "SMS",
+                                            "channelName": "Email",
                                             "contactAttribute": "Клиенты.Идентификатор",
                                             "contentSource": "CONTENT_UNIT",
-                                            "contentUnit": 3,
+                                            "contentUnit": 7,
                                             "receiverIdAttribute": "Клиенты.Идентификатор",
-                                            "variant": 4
+                                            "variant": 12
                                         },
                                         "techSettings": {
                                             "batchSizeMax": 1000,
@@ -623,12 +623,12 @@
                                             "restartWeeklyDayTimes": null
                                         },
                                         "settings": {
-                                            "channelName": "SMS",
+                                            "channelName": "Email",
                                             "contactAttribute": "Клиенты.Идентификатор",
                                             "contentSource": "CONTENT_UNIT",
-                                            "contentUnit": 3,
+                                            "contentUnit": 7,
                                             "receiverIdAttribute": "Клиенты.Идентификатор",
-                                            "variant": 4
+                                            "variant": 12
                                         },
                                         "techSettings": {
                                             "batchSizeMax": 1000,
@@ -761,6 +761,6 @@
     "createdDatetime": "2024-05-25T10:03:31Z",
     "description": null,
     "id": 15,
-    "name": "A A/B Тест SMS для Мужчин 25-44",
+    "name": "A Финансовые возможности для пап: Email-кампания",
     "updatedDatetime": "2024-05-25T10:03:31Z"
 }
