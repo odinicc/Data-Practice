@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from openai import OpenAI
 import numpy as np
 import pandas as pd
@@ -23,18 +24,19 @@ df_campaign_tree_embedding_str = " ; ".join(item.replace("\n", " ") for item in 
 #read campaign_promt
 with open('campaign_promt.txt', 'r',encoding='utf-8') as file:
     # Read the entire file content into a single string
-    content_in_promt = file.read()
-    content_in_promt = content.replace('\n', ' ')
+    content = file.read()
+    content = content.replace('\n', ' ')
 
 
-overal_promt = 'Есть описание маркетинговой кампании' + ' "' + content_in_promt + '" ' + 'Верни наиболее близкое описание из списка стандартных кампаний'+ df_campaign_tree_embedding_str + ' Важно: Отправь пожалуйста только название кампании'
+overal_promt = 'Есть описание маркетинговой кампании' + ' "' + content + '" ' + 'Верни наиболее близкое описание из списка стандартных кампаний'+ df_campaign_tree_embedding_str + ' Важно: Отправь пожалуйста только название кампании'
 
 chat_completion = client.chat.completions.create(
-    model="gpt-4o", messages=[{"role": "system", "content": overal_promt}]
+    model="gpt-4o", messages=[{"role": "user", "content": overal_promt}]
 )
 
 chat_response = chat_completion.choices[0].message.content
 chat_response_embedding = get_embedding(chat_response)
+
 
 #find items in typical campaign trees similar to response
 def find_simmilar_campaign_tree_num(promt_campaign_tree_embedding):
@@ -47,7 +49,9 @@ def find_simmilar_campaign_tree_num(promt_campaign_tree_embedding):
 
 target_campaign_tree , target_campaign_tree_sim_score = find_simmilar_campaign_tree_num(chat_response_embedding)
 
+import sys
 
+sys.stdout.reconfigure(encoding='utf-8')
 print(target_campaign_tree)  # This prints the result which will be captured by anouther script
 
 
